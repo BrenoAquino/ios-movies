@@ -1,22 +1,22 @@
 //
-//  DiscoverInterface.swift
+//  GenreInterface.swift
 //  Services
 //
-//  Created by Breno Aquino on 29/09/19.
+//  Created by Breno Aquino on 18/10/19.
 //  Copyright © 2019 Breno Aquino. All rights reserved.
 //
 
 import Foundation
 
-public class DiscoverInterface {
+public class GenreInterface {
     
-    private var network: Network<DiscoverAPI> = Network<DiscoverAPI>()
+    private var network: Network<GenreAPI> = Network<GenreAPI>()
     private var config: MovieDBConfig = MovieDBConfig()
     
     public init() {}
     
-    public func movies(genre: Int) {
-        network.request(DiscoverAPI.discoverMovie(config: config, genre: genre)) { result in
+    public func genres() {
+        network.request(GenreAPI.genres(config: config)) { result in
             switch result {
             case .success(let response):
                 print(response)

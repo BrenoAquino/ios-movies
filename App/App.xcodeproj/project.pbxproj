@@ -3,20 +3,40 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0B02B7950C46B044B95270E0 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89433D918A7C36A29EB46A0 /* Pods_App.framework */; };
+		550905ED235A8BC000529736 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550905EC235A8BC000529736 /* HomeViewModel.swift */; };
+		550905EF235A8BED00529736 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550905EE235A8BED00529736 /* Services.framework */; };
+		550905F0235A8BED00529736 /* Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 550905EE235A8BED00529736 /* Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		550D26FC233C4F1000F1CEE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D26FB233C4F1000F1CEE5 /* AppDelegate.swift */; };
 		550D26FE233C4F1000F1CEE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D26FD233C4F1000F1CEE5 /* SceneDelegate.swift */; };
 		550D2700233C4F1000F1CEE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D26FF233C4F1000F1CEE5 /* HomeViewController.swift */; };
 		550D2705233C4F1800F1CEE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550D2704233C4F1800F1CEE5 /* Assets.xcassets */; };
 		550D2708233C4F1800F1CEE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550D2706233C4F1800F1CEE5 /* LaunchScreen.storyboard */; };
+		55D4E907235A8A4B00A6C442 /* UILayoutGuide+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4E906235A8A4B00A6C442 /* UILayoutGuide+Constraints.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		550905F1235A8BED00529736 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				550905F0235A8BED00529736 /* Services.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3AEEE84B7472B1D34CE7EF43 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
+		550905EC235A8BC000529736 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = App/Utils/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
+		550905EE235A8BED00529736 /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		550D26F8233C4F1000F1CEE5 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		550D26FB233C4F1000F1CEE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		550D26FD233C4F1000F1CEE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +44,7 @@
 		550D2704233C4F1800F1CEE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		550D2707233C4F1800F1CEE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550D2709233C4F1800F1CEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D4E906235A8A4B00A6C442 /* UILayoutGuide+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+Constraints.swift"; sourceTree = "<group>"; };
 		A4F3A0B6EF0FB0531C19B439 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		B89433D918A7C36A29EB46A0 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -33,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550905EF235A8BED00529736 /* Services.framework in Frameworks */,
 				0B02B7950C46B044B95270E0 /* Pods_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,9 +95,9 @@
 			children = (
 				550D26FB233C4F1000F1CEE5 /* AppDelegate.swift */,
 				550D26FD233C4F1000F1CEE5 /* SceneDelegate.swift */,
-				558D5A2E234106C70048693C /* Models */,
 				558D5A2D234106B60048693C /* ViewModels */,
 				558D5A2C234106A80048693C /* Views */,
+				55D4E905235A8A3A00A6C442 /* Utils */,
 				558D5A2B234106420048693C /* Supporting Files */,
 			);
 			path = App;
@@ -102,20 +124,23 @@
 		558D5A2D234106B60048693C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				550905EC235A8BC000529736 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		558D5A2E234106C70048693C /* Models */ = {
+		55D4E905235A8A3A00A6C442 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				55D4E906235A8A4B00A6C442 /* UILayoutGuide+Constraints.swift */,
 			);
-			path = Models;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		795B206982748EA4B038560C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				550905EE235A8BED00529736 /* Services.framework */,
 				B89433D918A7C36A29EB46A0 /* Pods_App.framework */,
 			);
 			name = Frameworks;
@@ -133,6 +158,7 @@
 				550D26F5233C4F1000F1CEE5 /* Frameworks */,
 				550D26F6233C4F1000F1CEE5 /* Resources */,
 				2EE2EEFA3381F98D8DF16512 /* [CP] Embed Pods Frameworks */,
+				550905F1235A8BED00529736 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,6 +264,8 @@
 				550D2700233C4F1000F1CEE5 /* HomeViewController.swift in Sources */,
 				550D26FC233C4F1000F1CEE5 /* AppDelegate.swift in Sources */,
 				550D26FE233C4F1000F1CEE5 /* SceneDelegate.swift in Sources */,
+				550905ED235A8BC000529736 /* HomeViewModel.swift in Sources */,
+				55D4E907235A8A4B00A6C442 /* UILayoutGuide+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GYLCJG59BK;
-				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,7 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GYLCJG59BK;
-				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

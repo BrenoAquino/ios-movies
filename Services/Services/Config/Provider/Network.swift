@@ -9,7 +9,7 @@
 import Foundation
 import Moya
 
-class NetworkProvider<TT: TargetType>: MoyaProvider<TT> {
+class Network<TT: TargetType>: MoyaProvider<TT> {
     
     public init(plugins: [PluginType] = [], endpointClosure: @escaping (TT) -> Endpoint = MoyaProvider.defaultEndpointMapping) {
         var customPlugins: [PluginType] = plugins
@@ -26,7 +26,7 @@ class NetworkProvider<TT: TargetType>: MoyaProvider<TT> {
 enum Session {
     public static var isMock: Bool {
         #if DEBUG
-        return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil || ProcessInfo.processInfo.arguments.contains("UITest") || true
+        return false
         #else
         return false
         #endif

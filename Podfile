@@ -20,6 +20,7 @@ target 'App' do
   platform :ios, version
   project 'App/App.xcodeproj'
   default_pods
+  network_pods
 end
 
 target 'Services' do

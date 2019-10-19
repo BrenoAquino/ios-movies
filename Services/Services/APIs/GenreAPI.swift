@@ -1,52 +1,51 @@
 //
-//  DiscoverAPI.swift
+//  GenreAPI.swift
 //  Services
 //
-//  Created by Breno Aquino on 25/09/19.
+//  Created by Breno Aquino on 18/10/19.
 //  Copyright © 2019 Breno Aquino. All rights reserved.
 //
 
 import Foundation
 import Moya
 
-enum DiscoverAPI {
-    case discoverMovie(config: Config, genre: Int)
+enum GenreAPI {
+    case genres(config: Config)
 }
 
-extension DiscoverAPI: TargetType {
+extension GenreAPI: TargetType {
     
     var baseURL: URL {
         switch self {
-        case .discoverMovie(let config, _):
+        case .genres(let config):
             return try! config.baseURL.asURL()
         }
     }
     
     var path: String {
         switch self {
-        case .discoverMovie(let config, _):
-            return config.path("/discover/movie")
+        case .genres(let config):
+            return config.path("/genre/movie/list")
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .discoverMovie:
+        case .genres:
             return .get
         }
     }
     
     var task: Task {
         switch self {
-        case .discoverMovie(let config, let genre):
-            let params: [String: Any] = ["api_key": config.apiKey, "with_genres": genre]
-            return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
+        case .genres(let config):
+            return .requestParameters(parameters: ["api_key": config.apiKey], encoding: URLEncoding.queryString)
         }
     }
     
     var headers: [String : String]? {
         switch self {
-        case .discoverMovie(let config, _):
+        case .genres(let config):
             return config.headers
         }
     }

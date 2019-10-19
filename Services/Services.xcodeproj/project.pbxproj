@@ -7,29 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F01FEFC71DDEF519708D7A6 /* Pods_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C45C0C60EB581F9FEF607E /* Pods_Services.framework */; };
+		550905F3235A8E0600529736 /* Pods_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550905F2235A8E0600529736 /* Pods_Services.framework */; };
+		550905F4235A8E0600529736 /* Pods_Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 550905F2235A8E0600529736 /* Pods_Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		55C5232923410A6A0038F6CA /* MovieDBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232823410A6A0038F6CA /* MovieDBConfig.swift */; };
 		55C5232B23410A760038F6CA /* ConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232A23410A760038F6CA /* ConfigProtocol.swift */; };
 		55CCB98923410DDE000A71D4 /* DiscoverInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCB98823410DDE000A71D4 /* DiscoverInterface.swift */; };
-		55CCB98C23410E6F000A71D4 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCB98B23410E6F000A71D4 /* NetworkProvider.swift */; };
+		55CCB98C23410E6F000A71D4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCB98B23410E6F000A71D4 /* Network.swift */; };
 		55CCB98F23410F0E000A71D4 /* CachePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCB98E23410F0E000A71D4 /* CachePlugin.swift */; };
 		55CE0AC9233C4E6B007E6A9D /* Services.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CE0AC7233C4E6B007E6A9D /* Services.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55CE0AD0233C4EC3007E6A9D /* DiscoverAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0ACF233C4EC3007E6A9D /* DiscoverAPI.swift */; };
+		55D4E902235A878500A6C442 /* GenreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4E901235A878500A6C442 /* GenreAPI.swift */; };
+		55D4E904235A88C500A6C442 /* GenreInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4E903235A88C500A6C442 /* GenreInterface.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		550905F5235A8E0600529736 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				550905F4235A8E0600529736 /* Pods_Services.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		02C45C0C60EB581F9FEF607E /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DE92EA42EFB1F870E5C45B /* Pods-Services.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.release.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.release.xcconfig"; sourceTree = "<group>"; };
 		33C0F1295B086BC8CC7E958D /* Pods-Services.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.debug.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.debug.xcconfig"; sourceTree = "<group>"; };
+		550905F2235A8E0600529736 /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550905F6235A8E1000529736 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C5232823410A6A0038F6CA /* MovieDBConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBConfig.swift; sourceTree = "<group>"; };
 		55C5232A23410A760038F6CA /* ConfigProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigProtocol.swift; sourceTree = "<group>"; };
 		55CCB98823410DDE000A71D4 /* DiscoverInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverInterface.swift; sourceTree = "<group>"; };
-		55CCB98B23410E6F000A71D4 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		55CCB98B23410E6F000A71D4 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		55CCB98E23410F0E000A71D4 /* CachePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePlugin.swift; sourceTree = "<group>"; };
 		55CE0AC4233C4E6B007E6A9D /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CE0AC7233C4E6B007E6A9D /* Services.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Services.h; sourceTree = "<group>"; };
 		55CE0AC8233C4E6B007E6A9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55CE0ACF233C4EC3007E6A9D /* DiscoverAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverAPI.swift; sourceTree = "<group>"; };
+		55D4E901235A878500A6C442 /* GenreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreAPI.swift; sourceTree = "<group>"; };
+		55D4E903235A88C500A6C442 /* GenreInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F01FEFC71DDEF519708D7A6 /* Pods_Services.framework in Frameworks */,
+				550905F3235A8E0600529736 /* Pods_Services.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				55CE0ACF233C4EC3007E6A9D /* DiscoverAPI.swift */,
+				55D4E901235A878500A6C442 /* GenreAPI.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -65,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				55CCB98823410DDE000A71D4 /* DiscoverInterface.swift */,
+				55D4E903235A88C500A6C442 /* GenreInterface.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -82,7 +105,7 @@
 		55CCB98A23410E62000A71D4 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
-				55CCB98B23410E6F000A71D4 /* NetworkProvider.swift */,
+				55CCB98B23410E6F000A71D4 /* Network.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -136,6 +159,8 @@
 		77861268043ADB48F42110D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				550905F6235A8E1000529736 /* Alamofire.framework */,
+				550905F2235A8E0600529736 /* Pods_Services.framework */,
 				02C45C0C60EB581F9FEF607E /* Pods_Services.framework */,
 			);
 			name = Frameworks;
@@ -174,6 +199,7 @@
 				55CE0AC0233C4E6B007E6A9D /* Sources */,
 				55CE0AC1233C4E6B007E6A9D /* Frameworks */,
 				55CE0AC2233C4E6B007E6A9D /* Resources */,
+				550905F5235A8E0600529736 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,10 +284,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C5232B23410A760038F6CA /* ConfigProtocol.swift in Sources */,
+				55D4E904235A88C500A6C442 /* GenreInterface.swift in Sources */,
 				55C5232923410A6A0038F6CA /* MovieDBConfig.swift in Sources */,
 				55CCB98923410DDE000A71D4 /* DiscoverInterface.swift in Sources */,
+				55D4E902235A878500A6C442 /* GenreAPI.swift in Sources */,
 				55CE0AD0233C4EC3007E6A9D /* DiscoverAPI.swift in Sources */,
-				55CCB98C23410E6F000A71D4 /* NetworkProvider.swift in Sources */,
+				55CCB98C23410E6F000A71D4 /* Network.swift in Sources */,
 				55CCB98F23410F0E000A71D4 /* CachePlugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
