@@ -57,8 +57,8 @@ extension HomeViewModel {
                 self.discoverNetwork.movies(genre: genre.id) { [weak self] result in
                     switch result {
                     case .success(let movies):
-                        self?.matrix[genre.id] = movies
-                        self?.success?(.movieSuccess)
+                        let moviesUI = movies.map { Movie(movie: $0) }
+                        self?.matrix[genre.id] = moviesUI
 
                     case .failure(let error):
                         self?.failure?(.failure(error))
@@ -77,7 +77,7 @@ extension HomeViewModel {
         genreNetwork.genres { [weak self] result in
             switch result {
             case .success(let genres):
-                self?.genres = genres
+                self?.genres = genres.map { Genre(genre: $0) }
                 self?.success?(.genreSuccess)
                 completion?()
                 
@@ -87,12 +87,14 @@ extension HomeViewModel {
         }
     }
     
-    func getMovies(genre: Int) {
+    func getMovies(genre: Int, completion: (() -> Void)? = nil) {
         discoverNetwork.movies(genre: genre) { [weak self] result in
             switch result {
             case .success(let movies):
-                self?.matrix[genre] = movies
+                let moviesUI = movies.map { Movie(movie: $0) }
+                self?.matrix[genre] = moviesUI
                 self?.success?(.movieSuccess)
+                completion?()
                 
             case .failure(let error):
                 self?.failure?(.failure(error))

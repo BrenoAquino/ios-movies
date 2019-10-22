@@ -11,16 +11,23 @@ import Services
 
 class MoviesCarouselTableViewCell: UITableViewCell {
     
-    var movies: [Movie] = []
+    var movies: [Movie] = [] {
+        didSet { collectionView.reloadData() }
+    }
     
     // MARK: - Layout View
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: HomeStyle.movieHeight * .landscapeAspect, height: HomeStyle.movieHeight)
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: HomeStyle.carouselHeight * .portraitAspect, height: HomeStyle.carouselHeight)
+        layout.minimumInteritemSpacing = HomeStyle.movieSpacing
+        layout.sectionInset = UIEdgeInsets(top: 0, left: .defaultSpacing, bottom: 0, right: .defaultSpacing)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.register(MovieCollectionViewCell.self, forCellWithReuseIdentifier: MovieCollectionViewCell.description())
         return collectionView
     }()
@@ -40,14 +47,15 @@ class MoviesCarouselTableViewCell: UITableViewCell {
 extension MoviesCarouselTableViewCell {
     // MARK: Layout
     func setupLayout() {
-        contentView.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+        addSubview(collectionView)
+        subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
-        contentView.addSubview(collectionView)
         collectionView
-            .top(anchor: contentView.topAnchor)
-            .leading(anchor: contentView.leadingAnchor)
-            .trailing(anchor: contentView.trailingAnchor)
-            .bottom(anchor: contentView.bottomAnchor)
+            .top(anchor: topAnchor)
+            .leading(anchor: leadingAnchor)
+            .trailing(anchor: trailingAnchor)
+            .bottom(anchor: bottomAnchor)
+//            .height(constant: HomeStyle.carouselHeight)
     }
 }
 

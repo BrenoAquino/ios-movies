@@ -39,7 +39,8 @@ extension GenreAPI: TargetType {
     var task: Task {
         switch self {
         case .genres(let config):
-            return .requestParameters(parameters: ["api_key": config.apiKey], encoding: URLEncoding.queryString)
+            let params: [String: Any] = ["language": "pt-br", "api_key": config.apiKey]
+            return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
         }
     }
     

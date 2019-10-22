@@ -17,7 +17,11 @@ class HomeViewController: UIViewController {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(CarouselHeaderView.self, forHeaderFooterViewReuseIdentifier: CarouselHeaderView.description())
         tableView.register(MoviesCarouselTableViewCell.self, forCellReuseIdentifier: MoviesCarouselTableViewCell.description())
+        tableView.backgroundColor = .black
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
         return tableView
     }()
     
@@ -36,9 +40,9 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     // MARK: Layout
     private func setupLayout() {
+        view.addSubview(tableView)
         view.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
-        view.addSubview(tableView)
         tableView
             .top(anchor: view.topAnchor)
             .leading(anchor: view.leadingAnchor)
@@ -65,7 +69,7 @@ extension HomeViewController {
         viewModel.failure = { status in
             switch status {
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
     }
@@ -73,18 +77,42 @@ extension HomeViewController {
 
 // MARK: - TableView
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.matrix.count
     }
     
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return HomeStyle.carouselHeaderHeight
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return HomeStyle.movieSpacing
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return HomeStyle.carouselHeight
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let genre = viewModel.genres[section]
+        let view = CarouselHeaderView(title: genre.name, reuseIdentifier: CarouselHeaderView.description())
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let genre = viewModel.genres[indexPath.row]
+        let genre = viewModel.genres[indexPath.section]
         let cell = tableView.dequeueReusableCell(withIdentifier: MoviesCarouselTableViewCell.description(), for: indexPath) as! MoviesCarouselTableViewCell
         cell.movies = viewModel.matrix[genre.id] ?? []
+        cell.backgroundColor = indexPath.row % 2 == 0 ? .gray : .blue
         return cell
     }
 }

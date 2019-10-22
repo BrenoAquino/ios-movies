@@ -18,6 +18,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     // MARK: - Layout Var
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.backgroundColor = .yellow
         return imageView
     }()
     
@@ -36,18 +37,18 @@ class MovieCollectionViewCell: UICollectionViewCell {
 extension MovieCollectionViewCell {
     // MARK: Layout
     private func setupLayout() {
-        contentView.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+        addSubview(imageView)
+        subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
-        contentView.addSubview(imageView)
         imageView
-            .top(anchor: imageView.topAnchor)
-            .leading(anchor: imageView.leadingAnchor)
-            .trailing(anchor: imageView.trailingAnchor)
-            .bottom(anchor: imageView.bottomAnchor)
+            .top(anchor: topAnchor)
+            .leading(anchor: leadingAnchor)
+            .trailing(anchor: trailingAnchor)
+            .bottom(anchor: bottomAnchor)
     }
     
     // MARK: Bind
     private func rebind() {
-        imageView.imageWithUrl(urlImage: movie?.poster, placeholder: nil)
+        imageView.imageWithUrl(urlImage: movie?.poster, placeholder: .placeholder)
     }
 }

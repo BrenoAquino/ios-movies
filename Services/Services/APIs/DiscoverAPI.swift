@@ -39,7 +39,7 @@ extension DiscoverAPI: TargetType {
     var task: Task {
         switch self {
         case .discoverMovie(let config, let genre):
-            let params: [String: Any] = ["api_key": config.apiKey, "with_genres": genre]
+            let params: [String: Any] = ["language": "pt-br", "api_key": config.apiKey, "with_genres": genre]
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
         }
     }

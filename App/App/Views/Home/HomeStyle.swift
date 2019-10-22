@@ -9,5 +9,7 @@
 import UIKit
 
 enum HomeStyle {
-    static let movieHeight: CGFloat = 100
+    static let carouselHeaderHeight: CGFloat = 48
+    static let carouselHeight: CGFloat = 250
+    static let movieSpacing: CGFloat = 16
 }
