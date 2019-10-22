@@ -165,4 +165,42 @@ extension UIView {
         bottomAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
         return self
     }
+    
+    @discardableResult
+    func firstBaseline(anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        firstBaselineAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+        return self
+    }
+    
+    @discardableResult
+    func lastBaseline(anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        lastBaselineAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+        return self
+    }
+}
+
+public extension UIView {
+    
+    func constraint(first: NSLayoutAnchor<NSLayoutXAxisAnchor>, second: NSLayoutAnchor<NSLayoutXAxisAnchor>) -> NSLayoutConstraint? {
+        return superview?.constraints.first(where: { $0.firstAnchor == first && $0.secondAnchor == second })
+    }
+    
+    func constraint(first: NSLayoutAnchor<NSLayoutYAxisAnchor>, second: NSLayoutAnchor<NSLayoutYAxisAnchor>) -> NSLayoutConstraint? {
+        return superview?.constraints.first(where: { $0.firstAnchor == first && $0.secondAnchor == second })
+    }
+    
+    func widthConstraint() -> NSLayoutConstraint? {
+        return constraints.first(where: { $0.firstAnchor.hashValue == widthAnchor.hashValue })
+    }
+    
+    func heightConstraint() -> NSLayoutConstraint? {
+        return constraints.first(where: { $0.firstAnchor.hashValue == heightAnchor.hashValue })
+    }
+    
+    func constraint(id: String) -> NSLayoutConstraint? {
+        if let constraint = superview?.constraints.first(where: { $0.identifier == id }) {
+            return constraint
+        }
+        return constraints.first(where: { $0.identifier == id })
+    }
 }

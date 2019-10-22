@@ -10,10 +10,37 @@ import Foundation
 import Services
 
 class HomeViewModel {
+    
+    // MARK: - Enum Status
+    enum HomeStatus {
+        case genreSuccess
+        case movieSuccess
+        case matrixSuccess
+    }
+    
+    enum HomeFailureStatus {
+        case failure(NSError)
+    }
+    
+    // MARK: - Vars
+    var genres: [Genre]
+    var movies: [Movie]
+    var matrix: [Int: [Movie]]
+    
+    // MARK: Network Interfaces
     let genreNetwork: GenreInterface
     let discoverNetwork: DiscoverInterface
     
+    // MARK: Status Callbacks
+    var success: ((HomeStatus) -> Void)?
+    var failure: ((HomeFailureStatus) -> Void)?
+    
+    // MARK: - Life Cycle
     init() {
+        genres = []
+        movies = []
+        matrix = [:]
+        
         genreNetwork = GenreInterface()
         discoverNetwork = DiscoverInterface()
     }
@@ -21,7 +48,55 @@ class HomeViewModel {
 
 // MARK: - Network Calls
 extension HomeViewModel {
-    func genres() {
-        genreNetwork.genres()
+    func getMatrix() {
+        getGenres { [weak self] in
+            guard let self = self else { return }
+            let taskGroup = DispatchGroup()
+            for genre in self.genres {
+                taskGroup.enter()
+                self.discoverNetwork.movies(genre: genre.id) { [weak self] result in
+                    switch result {
+                    case .success(let movies):
+                        self?.matrix[genre.id] = movies
+                        self?.success?(.movieSuccess)
+
+                    case .failure(let error):
+                        self?.failure?(.failure(error))
+                    }
+                    taskGroup.leave()
+                }
+            }
+            
+            taskGroup.notify(queue: .global()) {
+                self.success?(.matrixSuccess)
+            }
+        }
+    }
+    
+    func getGenres(completion: (() -> Void)? = nil) {
+        genreNetwork.genres { [weak self] result in
+            switch result {
+            case .success(let genres):
+                self?.genres = genres
+                self?.success?(.genreSuccess)
+                completion?()
+                
+            case .failure(let error):
+                self?.failure?(.failure(error))
+            }
+        }
+    }
+    
+    func getMovies(genre: Int) {
+        discoverNetwork.movies(genre: genre) { [weak self] result in
+            switch result {
+            case .success(let movies):
+                self?.matrix[genre] = movies
+                self?.success?(.movieSuccess)
+                
+            case .failure(let error):
+                self?.failure?(.failure(error))
+            }
+        }
     }
 }

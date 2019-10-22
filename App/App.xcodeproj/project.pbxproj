@@ -11,12 +11,17 @@
 		550905ED235A8BC000529736 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550905EC235A8BC000529736 /* HomeViewModel.swift */; };
 		550905EF235A8BED00529736 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550905EE235A8BED00529736 /* Services.framework */; };
 		550905F0235A8BED00529736 /* Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 550905EE235A8BED00529736 /* Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		55090601235AAF4500529736 /* MoviesCarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55090600235AAF4500529736 /* MoviesCarouselTableViewCell.swift */; };
+		55090604235AAFD600529736 /* CGFloat+DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55090603235AAFD600529736 /* CGFloat+DefaultValues.swift */; };
+		55090606235AB04000529736 /* HomeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55090605235AB04000529736 /* HomeStyle.swift */; };
+		55090608235AB1C300529736 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55090607235AB1C300529736 /* MovieCollectionViewCell.swift */; };
 		550D26FC233C4F1000F1CEE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D26FB233C4F1000F1CEE5 /* AppDelegate.swift */; };
 		550D26FE233C4F1000F1CEE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D26FD233C4F1000F1CEE5 /* SceneDelegate.swift */; };
 		550D2700233C4F1000F1CEE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D26FF233C4F1000F1CEE5 /* HomeViewController.swift */; };
 		550D2705233C4F1800F1CEE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550D2704233C4F1800F1CEE5 /* Assets.xcassets */; };
 		550D2708233C4F1800F1CEE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550D2706233C4F1800F1CEE5 /* LaunchScreen.storyboard */; };
-		55D4E907235A8A4B00A6C442 /* UILayoutGuide+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4E906235A8A4B00A6C442 /* UILayoutGuide+Constraints.swift */; };
+		55D4E907235A8A4B00A6C442 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4E906235A8A4B00A6C442 /* UIView+Constraints.swift */; };
+		55E0D346235AB49F008A6107 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E0D345235AB49F008A6107 /* UIImageView+Kingfisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +42,10 @@
 		3AEEE84B7472B1D34CE7EF43 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		550905EC235A8BC000529736 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = App/Utils/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
 		550905EE235A8BED00529736 /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55090600235AAF4500529736 /* MoviesCarouselTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCarouselTableViewCell.swift; sourceTree = "<group>"; };
+		55090603235AAFD600529736 /* CGFloat+DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+DefaultValues.swift"; sourceTree = "<group>"; };
+		55090605235AB04000529736 /* HomeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStyle.swift; sourceTree = "<group>"; };
+		55090607235AB1C300529736 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		550D26F8233C4F1000F1CEE5 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		550D26FB233C4F1000F1CEE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		550D26FD233C4F1000F1CEE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +53,8 @@
 		550D2704233C4F1800F1CEE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		550D2707233C4F1800F1CEE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550D2709233C4F1800F1CEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55D4E906235A8A4B00A6C442 /* UILayoutGuide+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+Constraints.swift"; sourceTree = "<group>"; };
+		55D4E906235A8A4B00A6C442 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		55E0D345235AB49F008A6107 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		A4F3A0B6EF0FB0531C19B439 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		B89433D918A7C36A29EB46A0 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +82,33 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		550905FE235AAF0D00529736 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				550905FF235AAF1500529736 /* Layout */,
+				550D26FF233C4F1000F1CEE5 /* HomeViewController.swift */,
+				55090605235AB04000529736 /* HomeStyle.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		550905FF235AAF1500529736 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				55090600235AAF4500529736 /* MoviesCarouselTableViewCell.swift */,
+				55090607235AB1C300529736 /* MovieCollectionViewCell.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		55090602235AAFBE00529736 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				55090603235AAFD600529736 /* CGFloat+DefaultValues.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		550D26EF233C4F1000F1CEE5 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +132,7 @@
 			children = (
 				550D26FB233C4F1000F1CEE5 /* AppDelegate.swift */,
 				550D26FD233C4F1000F1CEE5 /* SceneDelegate.swift */,
+				55090602235AAFBE00529736 /* Style */,
 				558D5A2D234106B60048693C /* ViewModels */,
 				558D5A2C234106A80048693C /* Views */,
 				55D4E905235A8A3A00A6C442 /* Utils */,
@@ -116,7 +154,7 @@
 		558D5A2C234106A80048693C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				550D26FF233C4F1000F1CEE5 /* HomeViewController.swift */,
+				550905FE235AAF0D00529736 /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,7 +170,8 @@
 		55D4E905235A8A3A00A6C442 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				55D4E906235A8A4B00A6C442 /* UILayoutGuide+Constraints.swift */,
+				55D4E906235A8A4B00A6C442 /* UIView+Constraints.swift */,
+				55E0D345235AB49F008A6107 /* UIImageView+Kingfisher.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -261,11 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55090601235AAF4500529736 /* MoviesCarouselTableViewCell.swift in Sources */,
+				55090604235AAFD600529736 /* CGFloat+DefaultValues.swift in Sources */,
+				55E0D346235AB49F008A6107 /* UIImageView+Kingfisher.swift in Sources */,
 				550D2700233C4F1000F1CEE5 /* HomeViewController.swift in Sources */,
 				550D26FC233C4F1000F1CEE5 /* AppDelegate.swift in Sources */,
+				55090606235AB04000529736 /* HomeStyle.swift in Sources */,
 				550D26FE233C4F1000F1CEE5 /* SceneDelegate.swift in Sources */,
+				55090608235AB1C300529736 /* MovieCollectionViewCell.swift in Sources */,
 				550905ED235A8BC000529736 /* HomeViewModel.swift in Sources */,
-				55D4E907235A8A4B00A6C442 /* UILayoutGuide+Constraints.swift in Sources */,
+				55D4E907235A8A4B00A6C442 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

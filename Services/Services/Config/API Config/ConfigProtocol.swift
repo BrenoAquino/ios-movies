@@ -18,6 +18,6 @@ protocol Config {
 
 extension Config {
     func path(_ string: String) -> String {
-        return baseURL + string
+        return string
     }
 }

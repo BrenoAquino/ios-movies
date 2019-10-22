@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		550905F3235A8E0600529736 /* Pods_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550905F2235A8E0600529736 /* Pods_Services.framework */; };
 		550905F4235A8E0600529736 /* Pods_Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 550905F2235A8E0600529736 /* Pods_Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		550905FB235AA7A800529736 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550905FA235AA7A800529736 /* Genre.swift */; };
+		550905FD235AAC3000529736 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550905FC235AAC3000529736 /* Movie.swift */; };
 		55C5232923410A6A0038F6CA /* MovieDBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232823410A6A0038F6CA /* MovieDBConfig.swift */; };
 		55C5232B23410A760038F6CA /* ConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232A23410A760038F6CA /* ConfigProtocol.swift */; };
 		55CCB98923410DDE000A71D4 /* DiscoverInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCB98823410DDE000A71D4 /* DiscoverInterface.swift */; };
@@ -40,6 +42,8 @@
 		33C0F1295B086BC8CC7E958D /* Pods-Services.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.debug.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.debug.xcconfig"; sourceTree = "<group>"; };
 		550905F2235A8E0600529736 /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		550905F6235A8E1000529736 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550905FA235AA7A800529736 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		550905FC235AAC3000529736 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		55C5232823410A6A0038F6CA /* MovieDBConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBConfig.swift; sourceTree = "<group>"; };
 		55C5232A23410A760038F6CA /* ConfigProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigProtocol.swift; sourceTree = "<group>"; };
 		55CCB98823410DDE000A71D4 /* DiscoverInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverInterface.swift; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550905F9235AA78B00529736 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				550905FA235AA7A800529736 /* Genre.swift */,
+				550905FC235AAC3000529736 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		558D5A28234105D50048693C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +161,7 @@
 		55CE0AC6233C4E6B007E6A9D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				550905F9235AA78B00529736 /* Model */,
 				55C5232723410A570038F6CA /* Config */,
 				558D5A2A234105F20048693C /* Interfaces */,
 				558D5A29234105EC0048693C /* APIs */,
@@ -283,9 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550905FB235AA7A800529736 /* Genre.swift in Sources */,
 				55C5232B23410A760038F6CA /* ConfigProtocol.swift in Sources */,
 				55D4E904235A88C500A6C442 /* GenreInterface.swift in Sources */,
 				55C5232923410A6A0038F6CA /* MovieDBConfig.swift in Sources */,
+				550905FD235AAC3000529736 /* Movie.swift in Sources */,
 				55CCB98923410DDE000A71D4 /* DiscoverInterface.swift in Sources */,
 				55D4E902235A878500A6C442 /* GenreAPI.swift in Sources */,
 				55CE0AD0233C4EC3007E6A9D /* DiscoverAPI.swift in Sources */,
