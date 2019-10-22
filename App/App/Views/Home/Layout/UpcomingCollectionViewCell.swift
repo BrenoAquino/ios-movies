@@ -1,14 +1,14 @@
 //
-//  MovieCollectionViewCell.swift
+//  UpcomingCollectionViewCell.swift
 //  App
 //
-//  Created by Breno Aquino on 18/10/19.
+//  Created by Breno Aquino on 21/10/19.
 //  Copyright © 2019 Breno Aquino. All rights reserved.
 //
 
 import UIKit
 
-class MovieCollectionViewCell: UICollectionViewCell {
+class UpcomingCollectionViewCell: UICollectionViewCell {
     
     var movie: Movie? {
         didSet { rebind() }
@@ -17,8 +17,15 @@ class MovieCollectionViewCell: UICollectionViewCell {
     // MARK: - Layout Var
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .yellow
         return imageView
+    }()
+    
+    private lazy var title: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
+        label.textColor = .white
+        label.textAlignment = .center
+        return label
     }()
     
     // MARK: - Life Cycle
@@ -33,10 +40,11 @@ class MovieCollectionViewCell: UICollectionViewCell {
 }
 
 // MARK: - Setups
-extension MovieCollectionViewCell {
+extension UpcomingCollectionViewCell {
     // MARK: Layout
     private func setupLayout() {
         addSubview(imageView)
+        addSubview(title)
         subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
         imageView
@@ -44,10 +52,16 @@ extension MovieCollectionViewCell {
             .leading(anchor: leadingAnchor)
             .trailing(anchor: trailingAnchor)
             .bottom(anchor: bottomAnchor)
+        
+        title
+            .leading(anchor: leadingAnchor)
+            .trailing(anchor: trailingAnchor)
+            .bottom(anchor: bottomAnchor, constant: HomeStyle.movieTitleBottom)
     }
     
     // MARK: Bind
     private func rebind() {
-        imageView.imageWithUrl(urlImage: movie?.poster, placeholder: .placeholder)
+        imageView.imageWithUrl(urlImage: movie?.backdrop, placeholder: .placeholder)
+        title.text = movie?.title
     }
 }

@@ -18,6 +18,8 @@
 		55CCB98F23410F0E000A71D4 /* CachePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCB98E23410F0E000A71D4 /* CachePlugin.swift */; };
 		55CE0AC9233C4E6B007E6A9D /* Services.h in Headers */ = {isa = PBXBuildFile; fileRef = 55CE0AC7233C4E6B007E6A9D /* Services.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55CE0AD0233C4EC3007E6A9D /* DiscoverAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0ACF233C4EC3007E6A9D /* DiscoverAPI.swift */; };
+		55D08650235E95F4004C0312 /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D0864F235E95F4004C0312 /* MovieAPI.swift */; };
+		55D08652235E961F004C0312 /* MovieInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D08651235E961F004C0312 /* MovieInterface.swift */; };
 		55D4E902235A878500A6C442 /* GenreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4E901235A878500A6C442 /* GenreAPI.swift */; };
 		55D4E904235A88C500A6C442 /* GenreInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4E903235A88C500A6C442 /* GenreInterface.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +55,8 @@
 		55CE0AC7233C4E6B007E6A9D /* Services.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Services.h; sourceTree = "<group>"; };
 		55CE0AC8233C4E6B007E6A9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55CE0ACF233C4EC3007E6A9D /* DiscoverAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverAPI.swift; sourceTree = "<group>"; };
+		55D0864F235E95F4004C0312 /* MovieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPI.swift; sourceTree = "<group>"; };
+		55D08651235E961F004C0312 /* MovieInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInterface.swift; sourceTree = "<group>"; };
 		55D4E901235A878500A6C442 /* GenreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreAPI.swift; sourceTree = "<group>"; };
 		55D4E903235A88C500A6C442 /* GenreInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +96,7 @@
 			children = (
 				55CE0ACF233C4EC3007E6A9D /* DiscoverAPI.swift */,
 				55D4E901235A878500A6C442 /* GenreAPI.swift */,
+				55D0864F235E95F4004C0312 /* MovieAPI.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 			children = (
 				55CCB98823410DDE000A71D4 /* DiscoverInterface.swift */,
 				55D4E903235A88C500A6C442 /* GenreInterface.swift */,
+				55D08651235E961F004C0312 /* MovieInterface.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -297,10 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D08652235E961F004C0312 /* MovieInterface.swift in Sources */,
 				550905FB235AA7A800529736 /* Genre.swift in Sources */,
 				55C5232B23410A760038F6CA /* ConfigProtocol.swift in Sources */,
 				55D4E904235A88C500A6C442 /* GenreInterface.swift in Sources */,
 				55C5232923410A6A0038F6CA /* MovieDBConfig.swift in Sources */,
+				55D08650235E95F4004C0312 /* MovieAPI.swift in Sources */,
 				550905FD235AAC3000529736 /* Movie.swift in Sources */,
 				55CCB98923410DDE000A71D4 /* DiscoverInterface.swift in Sources */,
 				55D4E902235A878500A6C442 /* GenreAPI.swift in Sources */,

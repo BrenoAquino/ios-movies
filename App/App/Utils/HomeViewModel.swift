@@ -15,6 +15,7 @@ class HomeViewModel {
     enum HomeStatus {
         case genreSuccess
         case movieSuccess
+        case upcomingSuccess
         case matrixSuccess
     }
     
@@ -30,6 +31,7 @@ class HomeViewModel {
     // MARK: Network Interfaces
     let genreNetwork: GenreInterface
     let discoverNetwork: DiscoverInterface
+    let movieNetwork: MovieInterface
     
     // MARK: Status Callbacks
     var success: ((HomeStatus) -> Void)?
@@ -43,6 +45,7 @@ class HomeViewModel {
         
         genreNetwork = GenreInterface()
         discoverNetwork = DiscoverInterface()
+        movieNetwork = MovieInterface()
     }
 }
 
@@ -52,6 +55,10 @@ extension HomeViewModel {
         getGenres { [weak self] in
             guard let self = self else { return }
             let taskGroup = DispatchGroup()
+            
+            taskGroup.enter()
+            self.getUpcoming { taskGroup.leave() }
+            
             for genre in self.genres {
                 taskGroup.enter()
                 self.discoverNetwork.movies(genre: genre.id) { [weak self] result in
@@ -70,6 +77,21 @@ extension HomeViewModel {
             taskGroup.notify(queue: .global()) {
                 self.success?(.matrixSuccess)
             }
+        }
+    }
+    
+    func getUpcoming(completion: (() -> Void)? = nil) {
+        movieNetwork.upcoming { [weak self] result in
+            switch result {
+            case .success(let movies):
+                let moviesUI = movies.map { Movie(movie: $0) }
+                self?.matrix[-1] = moviesUI
+                self?.success?(.upcomingSuccess)
+                
+            case .failure(let error):
+                self?.failure?(.failure(error))
+            }
+            completion?()
         }
     }
     

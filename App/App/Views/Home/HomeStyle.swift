@@ -12,4 +12,5 @@ enum HomeStyle {
     static let carouselHeaderHeight: CGFloat = 48
     static let carouselHeight: CGFloat = 250
     static let movieSpacing: CGFloat = 16
+    static let movieTitleBottom: CGFloat = -8
 }

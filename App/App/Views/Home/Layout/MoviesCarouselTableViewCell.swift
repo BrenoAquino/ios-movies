@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Services
 
 class MoviesCarouselTableViewCell: UITableViewCell {
     
