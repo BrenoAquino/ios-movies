@@ -50,7 +50,6 @@ class UpcomingTableViewCell: UITableViewCell {
         if  currentCollectionIndex(collectionView) < totalItens / 10 || currentCollectionIndex(collectionView) > 9 * totalItens / 10 {
             moveToContentOffset(collectionView: collectionView, index: totalItens/2, animated: false)
         }
-        setupTimer()
     }
 }
 
@@ -68,7 +67,8 @@ extension UpcomingTableViewCell {
     }
     
     // MARK: Timer
-    private func setupTimer() {
+    func setupTimer() {
+        guard timer.isNil else { return }
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { [weak self] _ in
             guard let collectionView = self?.collectionView else { return }
             DispatchQueue.main.async {
@@ -78,6 +78,7 @@ extension UpcomingTableViewCell {
     }
     
     func stopTimer() {
+        timer?.invalidate()
         timer = nil
     }
 }
@@ -109,6 +110,15 @@ extension UpcomingTableViewCell {
 
 // MARK: - CollectionView
 extension UpcomingTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        stopTimer()
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        setupTimer()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return totalItens
     }

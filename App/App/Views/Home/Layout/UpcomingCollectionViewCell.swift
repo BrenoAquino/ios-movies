@@ -17,6 +17,7 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
     // MARK: - Layout Var
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     

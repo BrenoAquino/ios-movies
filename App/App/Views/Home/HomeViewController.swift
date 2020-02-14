@@ -30,13 +30,13 @@ class HomeViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Home"
+        title = Localizable.Home.title
         
         setupLayout()
         setupSuccessCallback()
         setupFailureCallback()
         
-        viewModel.getMatrix()
+        viewModel.home()
     }
 }
 
@@ -54,27 +54,18 @@ extension HomeViewController {
             .bottom(anchor: view.bottomAnchor)
     }
     
-    // MARK: Status
+    // MARK: States
     private func setupSuccessCallback() {
-        viewModel.success = { [weak self] status in
-            switch status {
-            case .genreSuccess, .movieSuccess, .upcomingSuccess:
-                break
-                
-            case .matrixSuccess:
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
+        viewModel.onHomeSucess = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
             }
         }
     }
     
     private func setupFailureCallback() {
-        viewModel.failure = { status in
-            switch status {
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
+        viewModel.onFailure = { error in
+            print(error.localizedDescription)
         }
     }
 }
@@ -116,16 +107,23 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        switch indexPath.section {
+        case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: UpcomingTableViewCell.description(), for: indexPath) as! UpcomingTableViewCell
             cell.movies = viewModel.matrix[-1] ?? []
             return cell
+            
+        default:
+            let genre = viewModel.genres[indexPath.section - 1]
+            let cell = tableView.dequeueReusableCell(withIdentifier: MoviesCarouselTableViewCell.description(), for: indexPath) as! MoviesCarouselTableViewCell
+            cell.movies = viewModel.matrix[genre.id] ?? []
+            return cell
         }
-        
-        let genre = viewModel.genres[indexPath.section - 1]
-        let cell = tableView.dequeueReusableCell(withIdentifier: MoviesCarouselTableViewCell.description(), for: indexPath) as! MoviesCarouselTableViewCell
-        cell.movies = viewModel.matrix[genre.id] ?? []
-        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? UpcomingTableViewCell else { return }
+        cell.setupTimer()
     }
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {

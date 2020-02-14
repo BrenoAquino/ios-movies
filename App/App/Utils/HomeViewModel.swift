@@ -11,18 +11,6 @@ import Services
 
 class HomeViewModel {
     
-    // MARK: - Enum Status
-    enum HomeStatus {
-        case genreSuccess
-        case movieSuccess
-        case upcomingSuccess
-        case matrixSuccess
-    }
-    
-    enum HomeFailureStatus {
-        case failure(NSError)
-    }
-    
     // MARK: - Vars
     var genres: [Genre]
     var movies: [Movie]
@@ -33,9 +21,12 @@ class HomeViewModel {
     let discoverNetwork: DiscoverInterface
     let movieNetwork: MovieInterface
     
-    // MARK: Status Callbacks
-    var success: ((HomeStatus) -> Void)?
-    var failure: ((HomeFailureStatus) -> Void)?
+    // MARK: Callbacks
+    var onGenreSuccess: (() -> Void)?
+    var onMoviesSucess: (() -> Void)?
+    var onUpcomingSucess: (() -> Void)?
+    var onHomeSucess: (() -> Void)?
+    var onFailure: ((NSError) -> Void)?
     
     // MARK: - Life Cycle
     init() {
@@ -51,76 +42,64 @@ class HomeViewModel {
 
 // MARK: - Network Calls
 extension HomeViewModel {
-    func getMatrix() {
-        getGenres { [weak self] in
+    func home() {
+        genres { [weak self] in
             guard let self = self else { return }
             let taskGroup = DispatchGroup()
-            
-            taskGroup.enter()
-            self.getUpcoming { taskGroup.leave() }
-            
-            for genre in self.genres {
-                taskGroup.enter()
-                self.discoverNetwork.movies(genre: genre.id) { [weak self] result in
-                    switch result {
-                    case .success(let movies):
-                        let moviesUI = movies.map { Movie(movie: $0) }
-                        self?.matrix[genre.id] = moviesUI
-
-                    case .failure(let error):
-                        self?.failure?(.failure(error))
-                    }
-                    taskGroup.leave()
-                }
-            }
-            
+            self.upcoming(task: taskGroup)
+            self.genres.forEach({ self.movies(task: taskGroup, genre: $0.id) })
+            self.upcoming(task: taskGroup)
             taskGroup.notify(queue: .global()) {
-                self.success?(.matrixSuccess)
+                self.onHomeSucess?()
             }
         }
     }
     
-    func getUpcoming(completion: (() -> Void)? = nil) {
+    func upcoming(task: DispatchGroup? = nil) {
+        task?.enter()
         movieNetwork.upcoming { [weak self] result in
             switch result {
             case .success(let movies):
                 let moviesUI = movies.map { Movie(movie: $0) }
                 self?.matrix[-1] = moviesUI
-                self?.success?(.upcomingSuccess)
+                self?.onUpcomingSucess?()
                 
             case .failure(let error):
-                self?.failure?(.failure(error))
+                self?.onFailure?(error)
             }
-            completion?()
+            task?.leave()
         }
     }
     
-    func getGenres(completion: (() -> Void)? = nil) {
+    func genres(task: DispatchGroup? = nil, completion: (() -> Void)? = nil) {
+        task?.enter()
         genreNetwork.genres { [weak self] result in
             switch result {
             case .success(let genres):
                 self?.genres = genres.map { Genre(genre: $0) }
-                self?.success?(.genreSuccess)
-                completion?()
+                self?.onGenreSuccess?()
                 
             case .failure(let error):
-                self?.failure?(.failure(error))
+                self?.onFailure?(error)
             }
+            completion?()
+            task?.leave()
         }
     }
     
-    func getMovies(genre: Int, completion: (() -> Void)? = nil) {
+    func movies(task: DispatchGroup? = nil, genre: Int) {
+        task?.enter()
         discoverNetwork.movies(genre: genre) { [weak self] result in
             switch result {
             case .success(let movies):
                 let moviesUI = movies.map { Movie(movie: $0) }
                 self?.matrix[genre] = moviesUI
-                self?.success?(.movieSuccess)
-                completion?()
+                self?.onMoviesSucess?()
                 
             case .failure(let error):
-                self?.failure?(.failure(error))
+                self?.onFailure?(error)
             }
+            task?.leave()
         }
     }
 }
