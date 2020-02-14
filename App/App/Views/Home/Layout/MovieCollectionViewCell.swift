@@ -17,7 +17,10 @@ class MovieCollectionViewCell: UICollectionViewCell {
     // MARK: - Layout Var
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .yellow
+        imageView.layer.cornerRadius = .defaultCornderRadius
+        imageView.clipsToBounds = true
         return imageView
     }()
     

@@ -9,12 +9,14 @@
 import UIKit
 
 extension CGFloat {
-    static var landscapeAspect: CGFloat = 16 / 9
-    static var portraitAspect: CGFloat = 2 / 3
+    static let landscapeAspect: CGFloat = 16 / 9
+    static let portraitAspect: CGFloat = 2 / 3
     
-    static var defaultSpacing: CGFloat = 24
-    static var defaultTop: CGFloat = 24
-    static var defaultLeading: CGFloat = 24
-    static var defaultTrailing: CGFloat = -24
-    static var defaultBottom: CGFloat = -24
+    static let defaultSpacing: CGFloat = 24
+    static let defaultTop: CGFloat = 24
+    static let defaultLeading: CGFloat = 24
+    static let defaultTrailing: CGFloat = -24
+    static let defaultBottom: CGFloat = -24
+    
+    static let defaultCornderRadius: CGFloat = 8
 }

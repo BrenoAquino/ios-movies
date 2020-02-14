@@ -18,15 +18,23 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.layer.addSublayer(gradient)
         return imageView
     }()
     
     private lazy var title: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         label.textColor = .white
         label.textAlignment = .center
         return label
+    }()
+    
+    private lazy var gradient: CAGradientLayer = {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.zPosition = CGFloat.leastNormalMagnitude
+        gradient.colors = [UIColor.black.cgColor, UIColor.clear.cgColor, UIColor.clear.cgColor, UIColor.black.cgColor]
+        return gradient
     }()
     
     // MARK: - Life Cycle
@@ -37,6 +45,11 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradient.frame.size = frame.size
     }
 }
 
