@@ -12,3 +12,8 @@ A request is made to obtain all genres. After the result, all other requests (on
 
 #### Improvement (WIP)
 Create an intelligent and automatic way to control the carousel pagination. There is still no paging control in any part of the app.
+
+#### APIs
+- Genres: <https://developers.themoviedb.org/3/genres/get-movie-list>
+- Movies by Gender: <https://developers.themoviedb.org/3/discover/movie-discover>
+- Upcoming: <https://developers.themoviedb.org/3/movies/get-upcoming>
