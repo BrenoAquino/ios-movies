@@ -12,93 +12,37 @@ import Services
 class HomeViewModel {
     
     // MARK: - Vars
-    var genres: [Genre]
-    var movies: [Movie]
-    var matrix: [Int: [Movie]]
+    var contents: [(genre: Genre, movies: [Movie])]
     
     // MARK: Network Interfaces
-    let genreNetwork: GenreInterface
-    let discoverNetwork: DiscoverInterface
-    let movieNetwork: MovieInterface
+    let homeBusiness: HomeBusiness
     
     // MARK: Callbacks
-    var onGenreSuccess: (() -> Void)?
-    var onMoviesSucess: (() -> Void)?
-    var onUpcomingSucess: (() -> Void)?
-    var onHomeSucess: (() -> Void)?
-    var onFailure: ((NSError) -> Void)?
+    lazy var onHomeSucess: (() -> Void)? = nil
+    lazy var onFailure: ((NSError) -> Void)? = nil
     
     // MARK: - Life Cycle
     init() {
-        genres = []
-        movies = []
-        matrix = [:]
-        
-        genreNetwork = GenreInterface()
-        discoverNetwork = DiscoverInterface()
-        movieNetwork = MovieInterface()
+        contents = []
+        homeBusiness = HomeBusiness()
     }
 }
 
 // MARK: - Network Calls
 extension HomeViewModel {
     func home() {
-        genres { [weak self] in
-            guard let self = self else { return }
-            let taskGroup = DispatchGroup()
-            self.upcoming(task: taskGroup)
-            self.genres.forEach({ self.movies(task: taskGroup, genre: $0.id) })
-            taskGroup.notify(queue: .global()) {
-                self.onHomeSucess?()
-            }
-        }
-    }
-    
-    func upcoming(task: DispatchGroup? = nil) {
-        task?.enter()
-        movieNetwork.upcoming { [weak self] result in
+        homeBusiness.home { [weak self] result in
             switch result {
             case .success(let movies):
-                let moviesUI = movies.map { Movie(movie: $0) }
-                self?.matrix[-1] = moviesUI
-                self?.onUpcomingSucess?()
-                
+                self?.contents = []
+                movies.sorted(by: { $0.0.id < $1.0.id }).forEach { (element) in
+                    let genre = Genre(genre: element.0)
+                    let movies = element.1.map { Movie(movie: $0) }
+                    self?.contents.append((genre, movies))
+                }
+                self?.onHomeSucess?()
             case .failure(let error):
                 self?.onFailure?(error)
             }
-            task?.leave()
         }
-    }
-    
-    func genres(task: DispatchGroup? = nil, completion: (() -> Void)? = nil) {
-        task?.enter()
-        genreNetwork.genres { [weak self] result in
-            switch result {
-            case .success(let genres):
-                self?.genres = genres.map { Genre(genre: $0) }
-                self?.onGenreSuccess?()
-                
-            case .failure(let error):
-                self?.onFailure?(error)
-            }
-            completion?()
-            task?.leave()
-        }
-    }
-    
-    func movies(task: DispatchGroup? = nil, genre: Int) {
-        task?.enter()
-        discoverNetwork.movies(genre: genre) { [weak self] result in
-            switch result {
-            case .success(let movies):
-                let moviesUI = movies.map { Movie(movie: $0) }
-                self?.matrix[genre] = moviesUI
-                self?.onMoviesSucess?()
-                
-            case .failure(let error):
-                self?.onFailure?(error)
-            }
-            task?.leave()
-        }
-    }
-}
+    }}

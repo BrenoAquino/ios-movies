@@ -6,6 +6,7 @@
 //  Copyright © 2019 Breno Aquino. All rights reserved.
 //
 
+import Foundation
 import Services
 
 struct Movie {

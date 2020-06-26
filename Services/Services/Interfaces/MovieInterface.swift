@@ -8,14 +8,14 @@
 
 import Foundation
 
-public class MovieInterface {
+class MovieInterface {
     
     private var network: Network<MovieAPI> = Network<MovieAPI>()
     private var config: MovieDBConfig = MovieDBConfig()
     
-    public init() {}
+    init() {}
     
-    public func upcoming(callback: @escaping (Result<[Movie], NSError>) -> Void) {
+    func upcoming(callback: @escaping (Result<[Movie], NSError>) -> Void) {
         network.request(MovieAPI.upcoming(config: config)) { result in
             switch result {
             case .success(let response):

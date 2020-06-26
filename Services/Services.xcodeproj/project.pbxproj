@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5506D2BA24A66594002B8FD6 /* HomeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506D2B924A66594002B8FD6 /* HomeBusiness.swift */; };
 		550905F3235A8E0600529736 /* Pods_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550905F2235A8E0600529736 /* Pods_Services.framework */; };
 		550905F4235A8E0600529736 /* Pods_Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 550905F2235A8E0600529736 /* Pods_Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		550905FB235AA7A800529736 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550905FA235AA7A800529736 /* Genre.swift */; };
@@ -42,6 +43,7 @@
 		02C45C0C60EB581F9FEF607E /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DE92EA42EFB1F870E5C45B /* Pods-Services.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.release.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.release.xcconfig"; sourceTree = "<group>"; };
 		33C0F1295B086BC8CC7E958D /* Pods-Services.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.debug.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.debug.xcconfig"; sourceTree = "<group>"; };
+		5506D2B924A66594002B8FD6 /* HomeBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBusiness.swift; sourceTree = "<group>"; };
 		550905F2235A8E0600529736 /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		550905F6235A8E1000529736 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		550905FA235AA7A800529736 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5506D2B824A66583002B8FD6 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				5506D2B924A66594002B8FD6 /* HomeBusiness.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
 		550905F9235AA78B00529736 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 		55CE0AC6233C4E6B007E6A9D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5506D2B824A66583002B8FD6 /* Business */,
 				550905F9235AA78B00529736 /* Model */,
 				55C5232723410A570038F6CA /* Config */,
 				558D5A2A234105F20048693C /* Interfaces */,
@@ -309,6 +320,7 @@
 				55D4E904235A88C500A6C442 /* GenreInterface.swift in Sources */,
 				55C5232923410A6A0038F6CA /* MovieDBConfig.swift in Sources */,
 				55D08650235E95F4004C0312 /* MovieAPI.swift in Sources */,
+				5506D2BA24A66594002B8FD6 /* HomeBusiness.swift in Sources */,
 				550905FD235AAC3000529736 /* Movie.swift in Sources */,
 				55CCB98923410DDE000A71D4 /* DiscoverInterface.swift in Sources */,
 				55D4E902235A878500A6C442 /* GenreAPI.swift in Sources */,

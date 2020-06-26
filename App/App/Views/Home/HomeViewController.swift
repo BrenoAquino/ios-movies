@@ -74,7 +74,7 @@ extension HomeViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.matrix.count
+        return viewModel.contents.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,7 +97,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard section != 0 else { return nil }
-        let genre = viewModel.genres[section - 1]
+        let genre = viewModel.contents[section].genre
         let view = CarouselHeaderView(title: genre.name, reuseIdentifier: CarouselHeaderView.description())
         return view
     }
@@ -110,13 +110,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: UpcomingTableViewCell.description(), for: indexPath) as! UpcomingTableViewCell
-            cell.movies = viewModel.matrix[-1] ?? []
+            cell.movies = viewModel.contents[indexPath.section].movies
             return cell
             
         default:
-            let genre = viewModel.genres[indexPath.section - 1]
             let cell = tableView.dequeueReusableCell(withIdentifier: MoviesCarouselTableViewCell.description(), for: indexPath) as! MoviesCarouselTableViewCell
-            cell.movies = viewModel.matrix[genre.id] ?? []
+            cell.movies = viewModel.contents[indexPath.section].movies
             return cell
         }
     }

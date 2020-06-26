@@ -8,14 +8,14 @@
 
 import Foundation
 
-public class DiscoverInterface {
+class DiscoverInterface {
     
     private var network: Network<DiscoverAPI> = Network<DiscoverAPI>()
     private var config: MovieDBConfig = MovieDBConfig()
     
-    public init() {}
+    init() {}
     
-    public func movies(genre: Int, callback: @escaping (Result<[Movie], NSError>) -> Void) {
+    func movies(genre: Int, callback: @escaping (Result<[Movie], NSError>) -> Void) {
         network.request(DiscoverAPI.discoverMovie(config: config, genre: genre)) { result in
             switch result {
             case .success(let response):
