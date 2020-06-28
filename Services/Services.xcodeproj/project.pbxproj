@@ -14,6 +14,8 @@
 		552F7F6224A7FBAF0040940B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 552F7F6124A7FBAF0040940B /* Moya */; };
 		55C5232923410A6A0038F6CA /* MovieDBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232823410A6A0038F6CA /* MovieDBConfig.swift */; };
 		55C5232B23410A760038F6CA /* ConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232A23410A760038F6CA /* ConfigProtocol.swift */; };
+		55C7C88324A819A80014A70E /* DetailBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7C88224A819A80014A70E /* DetailBusiness.swift */; };
+		55C7C88524A81F140014A70E /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7C88424A81F140014A70E /* Keyword.swift */; };
 		55CCB98923410DDE000A71D4 /* DiscoverInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCB98823410DDE000A71D4 /* DiscoverInterface.swift */; };
 		55CCB98C23410E6F000A71D4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCB98B23410E6F000A71D4 /* Network.swift */; };
 		55CCB98F23410F0E000A71D4 /* CachePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCB98E23410F0E000A71D4 /* CachePlugin.swift */; };
@@ -46,6 +48,8 @@
 		550905FC235AAC3000529736 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		55C5232823410A6A0038F6CA /* MovieDBConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBConfig.swift; sourceTree = "<group>"; };
 		55C5232A23410A760038F6CA /* ConfigProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigProtocol.swift; sourceTree = "<group>"; };
+		55C7C88224A819A80014A70E /* DetailBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBusiness.swift; sourceTree = "<group>"; };
+		55C7C88424A81F140014A70E /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		55CCB98823410DDE000A71D4 /* DiscoverInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverInterface.swift; sourceTree = "<group>"; };
 		55CCB98B23410E6F000A71D4 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		55CCB98E23410F0E000A71D4 /* CachePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePlugin.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				5506D2B924A66594002B8FD6 /* HomeBusiness.swift */,
+				55C7C88224A819A80014A70E /* DetailBusiness.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			children = (
 				550905FA235AA7A800529736 /* Genre.swift */,
 				550905FC235AAC3000529736 /* Movie.swift */,
+				55C7C88424A81F140014A70E /* Keyword.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D08652235E961F004C0312 /* MovieInterface.swift in Sources */,
+				55C7C88524A81F140014A70E /* Keyword.swift in Sources */,
 				550905FB235AA7A800529736 /* Genre.swift in Sources */,
 				55C5232B23410A760038F6CA /* ConfigProtocol.swift in Sources */,
 				55D4E904235A88C500A6C442 /* GenreInterface.swift in Sources */,
@@ -287,6 +294,7 @@
 				550905FD235AAC3000529736 /* Movie.swift in Sources */,
 				55CCB98923410DDE000A71D4 /* DiscoverInterface.swift in Sources */,
 				55D4E902235A878500A6C442 /* GenreAPI.swift in Sources */,
+				55C7C88324A819A80014A70E /* DetailBusiness.swift in Sources */,
 				55CE0AD0233C4EC3007E6A9D /* DiscoverAPI.swift in Sources */,
 				55CCB98C23410E6F000A71D4 /* Network.swift in Sources */,
 				55CCB98F23410F0E000A71D4 /* CachePlugin.swift in Sources */,
