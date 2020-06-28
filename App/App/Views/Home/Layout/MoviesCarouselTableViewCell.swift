@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol MoviesCarouselDelegate: class {
+    func didSelect(movie: Movie)
+}
+
 class MoviesCarouselTableViewCell: UITableViewCell {
     
+    weak var delegate: MoviesCarouselDelegate?
     var movies: [Movie] = [] {
         didSet { collectionView.reloadData() }
     }
@@ -27,6 +32,7 @@ class MoviesCarouselTableViewCell: UITableViewCell {
         collectionView.delegate = self
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.isUserInteractionEnabled = true
         collectionView.register(MovieCollectionViewCell.self, forCellWithReuseIdentifier: MovieCollectionViewCell.description())
         return collectionView
     }()
@@ -54,7 +60,6 @@ extension MoviesCarouselTableViewCell {
             .leading(anchor: leadingAnchor)
             .trailing(anchor: trailingAnchor)
             .bottom(anchor: bottomAnchor)
-//            .height(constant: HomeStyle.carouselHeight)
     }
 }
 
@@ -67,6 +72,12 @@ extension MoviesCarouselTableViewCell: UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.description(), for: indexPath) as! MovieCollectionViewCell
         cell.movie = movies[indexPath.row]
+        cell.backgroundColor = .orange
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)")
+        delegate?.didSelect(movie: movies[indexPath.row])
     }
 }

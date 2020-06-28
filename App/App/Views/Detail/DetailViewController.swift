@@ -10,6 +10,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    private let viewModel: DetailViewModel!
+    
     // MARK: - Layout Vars
     private lazy var backgropImage: UIImageView = {
         let image = UIImageView()
@@ -24,6 +26,15 @@ class DetailViewController: UIViewController {
     }()
     
     // MARK: - Live Cycle
+    required init?(coder: NSCoder) {
+        fatalError("init?(coder:)")
+    }
+    
+    init(id: Int) {
+        viewModel = DetailViewModel(id: id)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()

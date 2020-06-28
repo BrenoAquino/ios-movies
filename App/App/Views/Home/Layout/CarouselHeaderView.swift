@@ -39,8 +39,8 @@ class CarouselHeaderView: UITableViewHeaderFooterView {
 extension CarouselHeaderView {
     // Layout
     private func setupLayout() {
-        addSubview(title)
-        subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+        contentView.addSubview(title)
+        contentView.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
         title
             .top(anchor: topAnchor)

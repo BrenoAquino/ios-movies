@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    private var viewModel: HomeViewModel = HomeViewModel()
+    private let viewModel: HomeViewModel = HomeViewModel()
     
     // MARK: - Layout Vars
     private lazy var tableView: UITableView = {
@@ -70,6 +70,14 @@ extension HomeViewController {
     }
 }
 
+// MARK: - Movie Selection
+extension HomeViewController: MoviesCarouselDelegate {
+    func didSelect(movie: Movie) {
+        let controller = DetailViewController(id: movie.id)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
 // MARK: - TableView
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -103,7 +111,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
+        return nil
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -111,11 +119,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: UpcomingTableViewCell.description(), for: indexPath) as! UpcomingTableViewCell
             cell.movies = viewModel.contents[indexPath.section].movies
+            cell.delegate = self
             return cell
             
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: MoviesCarouselTableViewCell.description(), for: indexPath) as! MoviesCarouselTableViewCell
             cell.movies = viewModel.contents[indexPath.section].movies
+            cell.delegate = self
             return cell
         }
     }

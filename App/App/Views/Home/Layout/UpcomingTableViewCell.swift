@@ -10,11 +10,11 @@ import UIKit
 
 class UpcomingTableViewCell: UITableViewCell {
     
+    weak var delegate: MoviesCarouselDelegate?
+    var timer: Timer?
     var movies: [Movie] = [] {
         didSet { collectionView.reloadData() }
     }
-    
-    var timer: Timer?
     
     // MARK: - Layout View
     private var totalItens: Int { return movies.isEmpty ? 0 : 1_000_000 }
@@ -127,5 +127,10 @@ extension UpcomingTableViewCell: UICollectionViewDataSource, UICollectionViewDel
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.description(), for: indexPath) as! UpcomingCollectionViewCell
         cell.movie = movies[indexPath.row % movies.count]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)")
+        delegate?.didSelect(movie: movies[indexPath.row % movies.count])
     }
 }
