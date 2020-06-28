@@ -22,6 +22,7 @@
 		553ABF3523F63AAC00475EEE /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553ABF3423F63AAC00475EEE /* Optional.swift */; };
 		55426511235E998300E142CE /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55426510235E998300E142CE /* UpcomingCollectionViewCell.swift */; };
 		55C39CC623896FFD00CBF18F /* String+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C39CC523896FFD00CBF18F /* String+Style.swift */; };
+		55C7C87F24A8190A0014A70E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7C87E24A8190A0014A70E /* DetailViewModel.swift */; };
 		55CC52CB2417FD7A004AE6DA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC52CA2417FD7A004AE6DA /* HomeViewModel.swift */; };
 		55D08646235E8720004C0312 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D08645235E8720004C0312 /* Movie.swift */; };
 		55D08648235E9072004C0312 /* CarouselHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D08647235E9072004C0312 /* CarouselHeaderView.swift */; };
@@ -30,6 +31,8 @@
 		55D08654235E98DC004C0312 /* UpcomingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D08653235E98DC004C0312 /* UpcomingTableViewCell.swift */; };
 		55D4E907235A8A4B00A6C442 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4E906235A8A4B00A6C442 /* UIView+Constraints.swift */; };
 		55E0D346235AB49F008A6107 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E0D345235AB49F008A6107 /* UIImageView+Kingfisher.swift */; };
+		55F6E31C24A8124F002A9F32 /* DetailStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6E31B24A8124F002A9F32 /* DetailStyle.swift */; };
+		55F6E31E24A81261002A9F32 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6E31D24A81261002A9F32 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +65,7 @@
 		553ABF3423F63AAC00475EEE /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		55426510235E998300E142CE /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
 		55C39CC523896FFD00CBF18F /* String+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Style.swift"; sourceTree = "<group>"; };
+		55C7C87E24A8190A0014A70E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		55CC52CA2417FD7A004AE6DA /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		55D08645235E8720004C0312 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		55D08647235E9072004C0312 /* CarouselHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselHeaderView.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		55D08653235E98DC004C0312 /* UpcomingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewCell.swift; sourceTree = "<group>"; };
 		55D4E906235A8A4B00A6C442 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		55E0D345235AB49F008A6107 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		55F6E31B24A8124F002A9F32 /* DetailStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStyle.swift; sourceTree = "<group>"; };
+		55F6E31D24A81261002A9F32 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 		558D5A2C234106A80048693C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				55F6E31A24A81210002A9F32 /* Detail */,
 				550905FE235AAF0D00529736 /* Home */,
 			);
 			path = Views;
@@ -171,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				55CC52CA2417FD7A004AE6DA /* HomeViewModel.swift */,
+				55C7C87E24A8190A0014A70E /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -192,6 +200,23 @@
 				553ABF3423F63AAC00475EEE /* Optional.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		55F6E31A24A81210002A9F32 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				55F6E31F24A81267002A9F32 /* Layout */,
+				55F6E31D24A81261002A9F32 /* DetailViewController.swift */,
+				55F6E31B24A8124F002A9F32 /* DetailStyle.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		55F6E31F24A81267002A9F32 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		795B206982748EA4B038560C /* Frameworks */ = {
@@ -286,13 +311,16 @@
 				550D2700233C4F1000F1CEE5 /* HomeViewController.swift in Sources */,
 				550D26FC233C4F1000F1CEE5 /* AppDelegate.swift in Sources */,
 				55090606235AB04000529736 /* HomeStyle.swift in Sources */,
+				55F6E31E24A81261002A9F32 /* DetailViewController.swift in Sources */,
 				550D26FE233C4F1000F1CEE5 /* SceneDelegate.swift in Sources */,
 				55D0864E235E94C0004C0312 /* UIImage+Style.swift in Sources */,
 				55426511235E998300E142CE /* UpcomingCollectionViewCell.swift in Sources */,
+				55F6E31C24A8124F002A9F32 /* DetailStyle.swift in Sources */,
 				55090608235AB1C300529736 /* MovieCollectionViewCell.swift in Sources */,
 				55D08654235E98DC004C0312 /* UpcomingTableViewCell.swift in Sources */,
 				553ABF3523F63AAC00475EEE /* Optional.swift in Sources */,
 				55C39CC623896FFD00CBF18F /* String+Style.swift in Sources */,
+				55C7C87F24A8190A0014A70E /* DetailViewModel.swift in Sources */,
 				55D0864C235E9235004C0312 /* Genre.swift in Sources */,
 				55D08648235E9072004C0312 /* CarouselHeaderView.swift in Sources */,
 				55D08646235E8720004C0312 /* Movie.swift in Sources */,
