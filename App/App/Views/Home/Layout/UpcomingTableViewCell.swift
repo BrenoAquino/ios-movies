@@ -57,13 +57,13 @@ class UpcomingTableViewCell: UITableViewCell {
 extension UpcomingTableViewCell {
     // MARK: Layout
     private func setupLayout() {
-        addSubview(collectionView)
-        subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+        contentView.addSubview(collectionView)
+        contentView.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         collectionView
-            .top(anchor: topAnchor)
-            .leading(anchor: leadingAnchor)
-            .trailing(anchor: trailingAnchor)
-            .bottom(anchor: bottomAnchor)
+            .top(anchor: contentView.topAnchor)
+            .leading(anchor: contentView.leadingAnchor)
+            .trailing(anchor: contentView.trailingAnchor)
+            .bottom(anchor: contentView.bottomAnchor)
     }
     
     // MARK: Timer
@@ -130,7 +130,6 @@ extension UpcomingTableViewCell: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)")
         delegate?.didSelect(movie: movies[indexPath.row % movies.count])
     }
 }

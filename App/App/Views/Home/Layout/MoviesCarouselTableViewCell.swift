@@ -52,14 +52,14 @@ class MoviesCarouselTableViewCell: UITableViewCell {
 extension MoviesCarouselTableViewCell {
     // MARK: Layout
     func setupLayout() {
-        addSubview(collectionView)
-        subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+        contentView.addSubview(collectionView)
+        contentView.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
         collectionView
-            .top(anchor: topAnchor)
-            .leading(anchor: leadingAnchor)
-            .trailing(anchor: trailingAnchor)
-            .bottom(anchor: bottomAnchor)
+            .top(anchor: contentView.topAnchor)
+            .leading(anchor: contentView.leadingAnchor)
+            .trailing(anchor: contentView.trailingAnchor)
+            .bottom(anchor: contentView.bottomAnchor)
     }
 }
 
@@ -72,12 +72,10 @@ extension MoviesCarouselTableViewCell: UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.description(), for: indexPath) as! MovieCollectionViewCell
         cell.movie = movies[indexPath.row]
-        cell.backgroundColor = .orange
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)")
         delegate?.didSelect(movie: movies[indexPath.row])
     }
 }
