@@ -28,6 +28,7 @@ class MoviesCarouselTableViewCell: UITableViewCell {
         layout.sectionInset = UIEdgeInsets(top: 0, left: .defaultSpacing, bottom: 0, right: .defaultSpacing)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.showsVerticalScrollIndicator = false
@@ -52,6 +53,7 @@ class MoviesCarouselTableViewCell: UITableViewCell {
 extension MoviesCarouselTableViewCell {
     // MARK: Layout
     func setupLayout() {
+        backgroundColor = .clear
         contentView.addSubview(collectionView)
         contentView.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
@@ -60,6 +62,13 @@ extension MoviesCarouselTableViewCell {
             .leading(anchor: contentView.leadingAnchor)
             .trailing(anchor: contentView.trailingAnchor)
             .bottom(anchor: contentView.bottomAnchor)
+    }
+    
+    func setupHeight(_ value: CGFloat, aspect: CGFloat) {
+        collectionView.height(constant: value)
+        guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        layout.itemSize = CGSize(width: value * aspect, height: value)
+        layout.invalidateLayout()
     }
 }
 

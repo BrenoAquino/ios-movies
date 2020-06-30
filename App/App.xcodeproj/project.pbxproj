@@ -20,6 +20,10 @@
 		550D2705233C4F1800F1CEE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550D2704233C4F1800F1CEE5 /* Assets.xcassets */; };
 		550D2708233C4F1800F1CEE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550D2706233C4F1800F1CEE5 /* LaunchScreen.storyboard */; };
 		55253C0A24AAD1C800C6A3CF /* UINavigationController+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55253C0924AAD1C800C6A3CF /* UINavigationController+Transparent.swift */; };
+		55253C0C24AAD3B500C6A3CF /* PosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55253C0B24AAD3B500C6A3CF /* PosterTableViewCell.swift */; };
+		55253C0E24AAD55200C6A3CF /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55253C0D24AAD55200C6A3CF /* UITableView+Register.swift */; };
+		55253C1024AADC8D00C6A3CF /* MetadataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55253C0F24AADC8D00C6A3CF /* MetadataTableViewCell.swift */; };
+		55253C1224AADF2E00C6A3CF /* RecomendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55253C1124AADF2E00C6A3CF /* RecomendationTableViewCell.swift */; };
 		552F7F6524A7FC430040940B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 552F7F6424A7FC430040940B /* Kingfisher */; };
 		553ABF3523F63AAC00475EEE /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553ABF3423F63AAC00475EEE /* Optional.swift */; };
 		55426511235E998300E142CE /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55426510235E998300E142CE /* UpcomingCollectionViewCell.swift */; };
@@ -66,6 +70,10 @@
 		550D2707233C4F1800F1CEE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550D2709233C4F1800F1CEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55253C0924AAD1C800C6A3CF /* UINavigationController+Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transparent.swift"; sourceTree = "<group>"; };
+		55253C0B24AAD3B500C6A3CF /* PosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterTableViewCell.swift; sourceTree = "<group>"; };
+		55253C0D24AAD55200C6A3CF /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
+		55253C0F24AADC8D00C6A3CF /* MetadataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataTableViewCell.swift; sourceTree = "<group>"; };
+		55253C1124AADF2E00C6A3CF /* RecomendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendationTableViewCell.swift; sourceTree = "<group>"; };
 		553ABF3423F63AAC00475EEE /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		55426510235E998300E142CE /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
 		55C39CC523896FFD00CBF18F /* String+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Style.swift"; sourceTree = "<group>"; };
@@ -204,6 +212,7 @@
 				55E0D345235AB49F008A6107 /* UIImageView+Kingfisher.swift */,
 				553ABF3423F63AAC00475EEE /* Optional.swift */,
 				55253C0924AAD1C800C6A3CF /* UINavigationController+Transparent.swift */,
+				55253C0D24AAD55200C6A3CF /* UITableView+Register.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -221,6 +230,9 @@
 		55F6E31F24A81267002A9F32 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				55253C0B24AAD3B500C6A3CF /* PosterTableViewCell.swift */,
+				55253C0F24AADC8D00C6A3CF /* MetadataTableViewCell.swift */,
+				55253C1124AADF2E00C6A3CF /* RecomendationTableViewCell.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -317,17 +329,21 @@
 				55E0D346235AB49F008A6107 /* UIImageView+Kingfisher.swift in Sources */,
 				550D2700233C4F1000F1CEE5 /* HomeViewController.swift in Sources */,
 				550D26FC233C4F1000F1CEE5 /* AppDelegate.swift in Sources */,
+				55253C1224AADF2E00C6A3CF /* RecomendationTableViewCell.swift in Sources */,
 				55090606235AB04000529736 /* HomeStyle.swift in Sources */,
 				55F6E31E24A81261002A9F32 /* DetailViewController.swift in Sources */,
 				550D26FE233C4F1000F1CEE5 /* SceneDelegate.swift in Sources */,
 				55D0864E235E94C0004C0312 /* UIImage+Style.swift in Sources */,
 				55426511235E998300E142CE /* UpcomingCollectionViewCell.swift in Sources */,
+				55253C0C24AAD3B500C6A3CF /* PosterTableViewCell.swift in Sources */,
 				55F6E31C24A8124F002A9F32 /* DetailStyle.swift in Sources */,
 				55090608235AB1C300529736 /* MovieCollectionViewCell.swift in Sources */,
 				55D08654235E98DC004C0312 /* UpcomingTableViewCell.swift in Sources */,
 				553ABF3523F63AAC00475EEE /* Optional.swift in Sources */,
 				55C39CC623896FFD00CBF18F /* String+Style.swift in Sources */,
 				55253C0A24AAD1C800C6A3CF /* UINavigationController+Transparent.swift in Sources */,
+				55253C0E24AAD55200C6A3CF /* UITableView+Register.swift in Sources */,
+				55253C1024AADC8D00C6A3CF /* MetadataTableViewCell.swift in Sources */,
 				55C7C87F24A8190A0014A70E /* DetailViewModel.swift in Sources */,
 				55D0864C235E9235004C0312 /* Genre.swift in Sources */,
 				55D08648235E9072004C0312 /* CarouselHeaderView.swift in Sources */,

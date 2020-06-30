@@ -12,6 +12,7 @@ import Services
 class Movie {
     let id: Int
     let title: String
+    let overview: String?
     let poster: String
     let backdrop: String
     
@@ -21,6 +22,7 @@ class Movie {
     init(movie: Services.Movie) {
         id = movie.id ?? 0
         title = movie.title ?? ""
+        overview = movie.overview
         poster = MovieDBConfig.baseImageURL + "original" + (movie.poster ?? "")
         backdrop = MovieDBConfig.baseImageURL + "original" + (movie.backdrop ?? "")
         

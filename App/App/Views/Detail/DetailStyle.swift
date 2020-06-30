@@ -6,4 +6,8 @@
 //  Copyright © 2020 Breno Aquino. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+enum DetailStyle {
+    static let topOverview: CGFloat = 8
+}
