@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     private lazy var backgropImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
@@ -37,11 +38,20 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.setTransparent(to: true)
         setupLayout()
+        setupStatus()
+        viewModel.detail()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
     
     // MARK: - Setups
     func setupLayout() {
+        view.clipsToBounds = true
+        view.backgroundColor = .primaryBackgorund
         view.addSubview(backgropImage)
         view.addSubview(blur)
         
@@ -56,5 +66,17 @@ class DetailViewController: UIViewController {
             .leading(anchor: backgropImage.leadingAnchor)
             .trailing(anchor: backgropImage.trailingAnchor)
             .bottom(anchor: backgropImage.bottomAnchor)
+    }
+    
+    func setupStatus() {
+        viewModel.onDetailSucess = { [weak self] in
+            DispatchQueue.main.async {
+                self?.backgropImage.imageWithUrl(urlImage: self?.viewModel.movie?.backdrop)
+            }
+        }
+        
+        viewModel.onFailure = { state in
+            print(state)
+        }
     }
 }

@@ -16,7 +16,7 @@ class DetailViewModel {
     var movie: Movie?
     
     // MARK: Network Interfaces
-    let detailBusiness: Services.DetailBusiness
+    private let detailBusiness: Services.DetailBusiness
     
     // MARK: Callbacks
     lazy var onDetailSucess: (() -> Void)? = nil

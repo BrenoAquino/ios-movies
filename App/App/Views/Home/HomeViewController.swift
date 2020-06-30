@@ -38,12 +38,11 @@ class HomeViewController: UIViewController {
         
         viewModel.home()
     }
-}
-
-// MARK: - Setups
-extension HomeViewController {
+    
+    // MARK: - Setups
     // MARK: Layout
     private func setupLayout() {
+        view.backgroundColor = .primaryBackgorund
         view.addSubview(tableView)
         view.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
