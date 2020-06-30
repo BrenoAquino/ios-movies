@@ -28,10 +28,11 @@ class CarouselHeaderView: UITableViewHeaderFooterView {
         super.init(coder: coder)
     }
     
-    init(title: String, reuseIdentifier: String?) {
+    init(title: String, font: UIFont? = nil, reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         self.setupLayout()
         self.title.text = title
+        self.title.font = font ?? UIFont.systemFont(ofSize: 24, weight: .bold)
     }
 }
 
