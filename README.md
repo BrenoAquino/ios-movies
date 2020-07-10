@@ -28,6 +28,8 @@ Upcoming: <https://developers.themoviedb.org/3/movies/get-upcoming>
 <br />
 <br />
 <br />
+<br />
+<br />
 
   
 # Detail
@@ -46,8 +48,8 @@ A custom layout was created for the collectionView to follow the keyword display
 Constraint warnings in run time.
 
 #### APIs
-Genres: <https://developers.themoviedb.org/3/genres/get-movie-list>
+Detail: <https://developers.themoviedb.org/3/movies/get-movie-details>
 
-Movies by Gender: <https://developers.themoviedb.org/3/discover/movie-discover>
+Keywords: <https://developers.themoviedb.org/3/movies/get-movie-keywords>
 
-Upcoming: <https://developers.themoviedb.org/3/movies/get-upcoming>
+Recommendations: <https://developers.themoviedb.org/3/movies/get-movie-recommendations>
