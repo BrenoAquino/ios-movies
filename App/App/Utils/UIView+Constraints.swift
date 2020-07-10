@@ -11,170 +11,226 @@ import UIKit
 extension UIView {
     
     @discardableResult
-    func width(anchor: NSLayoutDimension, multiplier: CGFloat = 1, constant: CGFloat = 0) -> UIView {
-        widthAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant).isActive = true
+    func width(id: String? = nil, anchor: NSLayoutDimension, multiplier: CGFloat = 1, constant: CGFloat = 0) -> UIView {
+        let constraint = widthAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func width(constant: CGFloat) -> UIView {
-        widthAnchor.constraint(equalToConstant: constant).isActive = true
+    func width(id: String? = nil, constant: CGFloat) -> UIView {
+        let constraint = widthAnchor.constraint(equalToConstant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func width(lessThanOrEqualTo anchor: NSLayoutDimension, multiplier: CGFloat = 1, constante: CGFloat = 0) -> UIView {
-        widthAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constante).isActive = true
+    func width(id: String? = nil, lessThanOrEqualTo anchor: NSLayoutDimension, multiplier: CGFloat = 1, constante: CGFloat = 0) -> UIView {
+        let constraint = widthAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constante)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func width(greaterThanOrEqualTo anchor: NSLayoutDimension, multiplier: CGFloat = 1, constante: CGFloat = 0) -> UIView {
-        widthAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: multiplier, constant: constante).isActive = true
+    func width(id: String? = nil, greaterThanOrEqualTo anchor: NSLayoutDimension, multiplier: CGFloat = 1, constante: CGFloat = 0) -> UIView {
+        let constraint = widthAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: multiplier, constant: constante)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func width(greaterThanOrEqualToConstant constante: CGFloat) -> UIView {
-        widthAnchor.constraint(greaterThanOrEqualToConstant: constante).isActive = true
+    func width(id: String? = nil, greaterThanOrEqualToConstant constante: CGFloat) -> UIView {
+        let constraint = widthAnchor.constraint(greaterThanOrEqualToConstant: constante)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func width(lessThanOrEqualToConstant constante: CGFloat) -> UIView {
-        widthAnchor.constraint(lessThanOrEqualToConstant: constante).isActive = true
+    func width(id: String? = nil, lessThanOrEqualToConstant constante: CGFloat) -> UIView {
+        let constraint = widthAnchor.constraint(lessThanOrEqualToConstant: constante)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func height(anchor: NSLayoutDimension, multiplier: CGFloat = 1, constant: CGFloat = 0) -> UIView {
-        widthAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant).isActive = true
+    func height(id: String? = nil, anchor: NSLayoutDimension, multiplier: CGFloat = 1, constant: CGFloat = 0) -> UIView {
+        let constraint = widthAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func height(constant: CGFloat) -> UIView {
-        heightAnchor.constraint(equalToConstant: constant).isActive = true
+    func height(id: String? = nil, constant: CGFloat) -> UIView {
+        let constraint = heightAnchor.constraint(equalToConstant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func height(lessThanOrEqualTo anchor: NSLayoutDimension, multiplier: CGFloat = 1, constante: CGFloat = 0) -> UIView {
-        heightAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constante).isActive = true
+    func height(id: String? = nil, lessThanOrEqualTo anchor: NSLayoutDimension, multiplier: CGFloat = 1, constante: CGFloat = 0) -> UIView {
+        let constraint = heightAnchor.constraint(equalTo: anchor, multiplier: multiplier, constant: constante)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func height(greaterThanOrEqualTo anchor: NSLayoutDimension, multiplier: CGFloat = 1, constante: CGFloat = 0) -> UIView {
-        heightAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: multiplier, constant: constante).isActive = true
+    func height(id: String? = nil, greaterThanOrEqualTo anchor: NSLayoutDimension, multiplier: CGFloat = 1, constante: CGFloat = 0) -> UIView {
+        let constraint = heightAnchor.constraint(greaterThanOrEqualTo: anchor, multiplier: multiplier, constant: constante)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func height(greaterThanOrEqualToConstant constante: CGFloat) -> UIView {
-        heightAnchor.constraint(greaterThanOrEqualToConstant: constante).isActive = true
+    func height(id: String? = nil, greaterThanOrEqualToConstant constante: CGFloat) -> UIView {
+        let constraint = heightAnchor.constraint(greaterThanOrEqualToConstant: constante)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func height(lessThanOrEqualToConstant constante: CGFloat) -> UIView {
-        heightAnchor.constraint(lessThanOrEqualToConstant: constante).isActive = true
+    func height(id: String? = nil, lessThanOrEqualToConstant constante: CGFloat) -> UIView {
+        let constraint = heightAnchor.constraint(lessThanOrEqualToConstant: constante)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func centerY(_ centerY: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        centerYAnchor.constraint(equalTo: centerY, constant: constant).isActive = true
+    func centerY(id: String? = nil, _ centerY: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = centerYAnchor.constraint(equalTo: centerY, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func centerX(_ centerX: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        centerXAnchor.constraint(equalTo: centerX, constant: constant).isActive = true
+    func centerX(id: String? = nil, _ centerX: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = centerXAnchor.constraint(equalTo: centerX, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func top(anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        topAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+    func top(id: String? = nil, anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = topAnchor.constraint(equalTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func top(lessThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        topAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+    func top(id: String? = nil, lessThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = topAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func top(greaterThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        topAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
+    func top(id: String? = nil, greaterThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = topAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func leading(anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        leadingAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+    func leading(id: String? = nil, anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = leadingAnchor.constraint(equalTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func leading(lessThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        leadingAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+    func leading(id: String? = nil, lessThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = leadingAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func leading(greaterThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        leadingAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
+    func leading(id: String? = nil, greaterThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = leadingAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func trailing(anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        trailingAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+    func trailing(id: String? = nil, anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = trailingAnchor.constraint(equalTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func trailing(lessThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        trailingAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+    func trailing(id: String? = nil, lessThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = trailingAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func trailing(greaterThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        trailingAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
+    func trailing(id: String? = nil, greaterThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = trailingAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func bottom(anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        bottomAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+    func bottom(id: String? = nil, anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = bottomAnchor.constraint(equalTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func bottom(lessThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        bottomAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+    func bottom(id: String? = nil, lessThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = bottomAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func bottom(greaterThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        bottomAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
+    func bottom(id: String? = nil, greaterThanOrEqualTo anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = bottomAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func firstBaseline(anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        firstBaselineAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+    func firstBaseline(id: String? = nil, anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = firstBaselineAnchor.constraint(equalTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
     
     @discardableResult
-    func lastBaseline(anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
-        lastBaselineAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+    func lastBaseline(id: String? = nil, anchor: NSLayoutAnchor<NSLayoutYAxisAnchor>, constant: CGFloat = 0) -> UIView {
+        let constraint = lastBaselineAnchor.constraint(equalTo: anchor, constant: constant)
+        constraint.isActive = true
+        constraint.identifier = id
         return self
     }
 }

@@ -8,6 +8,13 @@
 
 import UIKit
 
+enum DetailTableViewSection: Int, CaseIterable {
+    case poster
+    case metadata
+    case keywords
+    case recomendations
+}
+
 class DetailViewController: UIViewController {
     
     private let viewModel: DetailViewModel!
@@ -36,9 +43,11 @@ class DetailViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
         tableView.register(CarouselHeaderView.self, forHeaderFooterViewReuseIdentifier: CarouselHeaderView.description())
         tableView.register(cells: [PosterTableViewCell.self,
                                    MetadataTableViewCell.self,
+                                   KeywordsTableViewCell.self,
                                    MoviesCarouselTableViewCell.self])
         return tableView
     }()
@@ -108,8 +117,9 @@ class DetailViewController: UIViewController {
 
 // MARK: - TableView
 extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return DetailTableViewSection.allCases.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -117,7 +127,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard section == 2 else { return nil }
+        guard let type = DetailTableViewSection(rawValue: section),  type == .recomendations else { return nil }
         return CarouselHeaderView(title: "Recomendados", font: .systemFont(ofSize: 18, weight: .semibold), reuseIdentifier: CarouselHeaderView.description())
     }
     
@@ -126,7 +136,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        guard section == 2 else { return .leastNonzeroMagnitude }
+        guard let type = DetailTableViewSection(rawValue: section),  type == .recomendations else { return .leastNonzeroMagnitude }
         return DetailStyle.carouselHeaderHeight
     }
     
@@ -135,22 +145,28 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
+        guard let section = DetailTableViewSection(rawValue: indexPath.section) else { return UITableViewCell() }
+        switch section {
+        case .poster:
             let cell = tableView.dequeueReusableCell(withIdentifier: PosterTableViewCell.description()) as! PosterTableViewCell
             cell.movie = viewModel.movie
             return cell
-        case 1:
+            
+        case .metadata:
             let cell = tableView.dequeueReusableCell(withIdentifier: MetadataTableViewCell.description()) as! MetadataTableViewCell
             cell.movie = viewModel.movie
             return cell
-        case 2:
+            
+        case .keywords:
+            let cell = tableView.dequeueReusableCell(withIdentifier: KeywordsTableViewCell.description()) as! KeywordsTableViewCell
+            cell.keywords = viewModel.movie?.keywords ?? []
+            return cell
+            
+        case .recomendations:
             let cell = tableView.dequeueReusableCell(withIdentifier: MoviesCarouselTableViewCell.description()) as! MoviesCarouselTableViewCell
             cell.movies = viewModel.movie?.recomendations ?? []
             cell.setupHeight(200, aspect: .portraitAspect)
             return cell
-        default:
-            return UITableViewCell()
         }
     }
 }
