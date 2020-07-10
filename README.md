@@ -1,3 +1,15 @@
+# Overview
+
+This project replicates an architecture for large projects in order to feel some of the problems that could arise in large projects. It serves as a base project for POCs and to try to evolve the architecture.
+
+This repository was born with cocoapods but was migrated to the swift package. The screens were created using view code and the project was configured for the minimum version iOS 13.0.
+
+Here screens were created using view code with a workspace of 3 projects. One project to create a communication interface with TheMovieDB APIs, another project that creates the app for iOS / iPad / MacOS and the other project is responsible for creating the app for AppleTV.
+
+### Future and SwiftUI
+
+This project will be fragmented into 3 other repositories. A repository will be destined to create the interface with TheMovieDB APIs, it will be made compatible with both Cocoapods and SwitfPackage. Another repository will recreate the features implemented here, but using SwiftUI. The other project will replicate the same features presented in the AppleTV app, but will also use SwiftUI.
+
 # Home
 
 <img src="/images/home.png" width="400" align="left">
