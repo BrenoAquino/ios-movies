@@ -20,17 +20,6 @@ Movies by Gender: <https://developers.themoviedb.org/3/discover/movie-discover>
 
 Upcoming: <https://developers.themoviedb.org/3/movies/get-upcoming>
 
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
   
 # Detail
 
