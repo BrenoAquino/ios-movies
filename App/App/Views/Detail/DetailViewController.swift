@@ -20,6 +20,14 @@ class DetailViewController: UIViewController {
     private let viewModel: DetailViewModel!
     
     // MARK: - Layout Vars
+    private lazy var navigationBlur: UIVisualEffectView = {
+        let blurView  = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        blurView.isUserInteractionEnabled = false
+        blurView.alpha = 0
+        return blurView
+    }()
+    
     private lazy var backgropImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -64,14 +72,19 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.setTransparent(to: true)
         setupLayout()
         setupStatus()
         viewModel.detail()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.setTransparent(to: true)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        navigationController?.navigationBar.setTransparent(to: false)
     }
     
     // MARK: - Setups
@@ -81,6 +94,13 @@ class DetailViewController: UIViewController {
         view.addSubview(backgropImage)
         view.addSubview(blur)
         view.addSubview(tableView)
+        view.addSubview(navigationBlur)
+        
+        navigationBlur
+            .top(anchor: view.topAnchor)
+            .leading(anchor: view.leadingAnchor)
+            .trailing(anchor: view.trailingAnchor)
+            .bottom(anchor: view.safeAreaLayoutGuide.topAnchor)
         
         backgropImage
             .top(anchor: view.topAnchor)
@@ -115,8 +135,25 @@ class DetailViewController: UIViewController {
     }
 }
 
+// MARK: - Select Movie
+extension DetailViewController: MoviesCarouselDelegate {
+    func didSelect(movie: Movie) {
+        let controller = DetailViewController(id: movie.id)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
 // MARK: - TableView
 extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let statusBarHeight = UIApplication.shared.keyWindow?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        let navigationBarHeight = navigationController?.navigationBar.frame.height ?? 0
+        
+        let offset = scrollView.contentOffset.y + statusBarHeight + navigationBarHeight
+        let normalizedAlpha = min(max((offset/100 * 3), 0), 1)
+        navigationBlur.alpha = normalizedAlpha
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return DetailTableViewSection.allCases.count
@@ -165,7 +202,8 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
         case .recomendations:
             let cell = tableView.dequeueReusableCell(withIdentifier: MoviesCarouselTableViewCell.description()) as! MoviesCarouselTableViewCell
             cell.movies = viewModel.movie?.recomendations ?? []
-            cell.setupHeight(200, aspect: .portraitAspect)
+            cell.setupHeight(DetailStyle.carouselHeight, aspect: .portraitAspect)
+            cell.delegate = self
             return cell
         }
     }

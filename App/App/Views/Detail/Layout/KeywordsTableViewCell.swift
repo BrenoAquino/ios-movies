@@ -52,6 +52,7 @@ class KeywordsTableViewCell: UITableViewCell {
     
     // MARK: - Setups
     private func setupLayout() {
+        selectionStyle = .none
         backgroundColor = .clear
         addSubview(collectionView)
         

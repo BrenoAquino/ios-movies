@@ -11,6 +11,7 @@ import UIKit
 enum DetailStyle {
     static let topOverview: CGFloat = 8
     static let carouselHeaderHeight: CGFloat = 32
+    static let carouselHeight: CGFloat = 200
     
     static let keywordTitleLeading: CGFloat = 8
     static let keywordTitleTrailing: CGFloat = -8

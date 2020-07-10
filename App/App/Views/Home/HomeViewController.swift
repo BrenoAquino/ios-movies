@@ -30,13 +30,21 @@ class HomeViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = Localizable.Home.title
-        
         setupLayout()
         setupSuccessCallback()
         setupFailureCallback()
         
         viewModel.home()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.setTransparent(to: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.setTransparent(to: false)
     }
     
     // MARK: - Setups
