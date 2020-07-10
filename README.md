@@ -10,6 +10,10 @@ Here screens were created using view code with a workspace of 3 projects. One pr
 
 This project will be fragmented into 3 other repositories. A repository will be destined to create the interface with TheMovieDB APIs, it will be made compatible with both Cocoapods and SwitfPackage. Another repository will recreate the features implemented here, but using SwiftUI. The other project will replicate the same features presented in the AppleTV app, but will also use SwiftUI.
 
+# Architecture
+
+<img src="/images/architecture.png">
+
 # Home
 
 <img src="/images/home.png" width="400" align="left">
