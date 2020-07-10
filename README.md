@@ -19,3 +19,35 @@ Genres: <https://developers.themoviedb.org/3/genres/get-movie-list>
 Movies by Gender: <https://developers.themoviedb.org/3/discover/movie-discover>
 
 Upcoming: <https://developers.themoviedb.org/3/movies/get-upcoming>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+  
+# Detail
+
+<img src="/images/detail.png" width="400" align="right">
+
+#### Feature
+The movie detail feature introduces the movie's synopsis along with its title and poster image. In addition to this information, a set of recommended movies based on the current movie and a set of keywords referring to the film are shown.
+
+#### Technical Point
+The blur in navigation has a dynamic alpha depending on the tableView scroll. The blur opacity follows a linear rule to be defined.
+
+A custom layout was created for the collectionView to follow the keyword display rule, that is, populate horizontally and skip the line if it no longer fits on the screen.
+
+#### Improvement (WIP)
+Constraint warnings in run time.
+
+#### APIs
+Genres: <https://developers.themoviedb.org/3/genres/get-movie-list>
+
+Movies by Gender: <https://developers.themoviedb.org/3/discover/movie-discover>
+
+Upcoming: <https://developers.themoviedb.org/3/movies/get-upcoming>
