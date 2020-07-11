@@ -41,7 +41,7 @@ Upcoming: <https://developers.themoviedb.org/3/movies/get-upcoming>
 # Detail
 
 <p align="center">
-  <img src="/images/detail.png" width="400">
+  <img src="/images/detail.png" width="300">
 </p>
 
 #### Feature
