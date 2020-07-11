@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5506D2BA24A66594002B8FD6 /* HomeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506D2B924A66594002B8FD6 /* HomeBusiness.swift */; };
-		550905F4235A8E0600529736 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		550905F4235A8E0600529736 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		550905FB235AA7A800529736 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550905FA235AA7A800529736 /* Genre.swift */; };
 		550905FD235AAC3000529736 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550905FC235AAC3000529736 /* Movie.swift */; };
-		552F7F6224A7FBAF0040940B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 552F7F6124A7FBAF0040940B /* Moya */; };
+		552F7F6224A7FBAF0040940B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 552F7F6124A7FBAF0040940B /* SwiftPackageProductDependency */; };
 		55C5232923410A6A0038F6CA /* MovieDBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232823410A6A0038F6CA /* MovieDBConfig.swift */; };
 		55C5232B23410A760038F6CA /* ConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232A23410A760038F6CA /* ConfigProtocol.swift */; };
 		55C7C88324A819A80014A70E /* DetailBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7C88224A819A80014A70E /* DetailBusiness.swift */; };
@@ -34,7 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				550905F4235A8E0600529736 /* (null) in Embed Frameworks */,
+				550905F4235A8E0600529736 /* BuildFile in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				552F7F6224A7FBAF0040940B /* Moya in Frameworks */,
+				552F7F6224A7FBAF0040940B /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +226,7 @@
 			);
 			name = Services;
 			packageProductDependencies = (
-				552F7F6124A7FBAF0040940B /* Moya */,
+				552F7F6124A7FBAF0040940B /* SwiftPackageProductDependency */,
 			);
 			productName = Services;
 			productReference = 55CE0AC4233C4E6B007E6A9D /* Services.framework */;
@@ -257,7 +257,7 @@
 			);
 			mainGroup = 55CE0ABA233C4E6B007E6A9D;
 			packageReferences = (
-				552F7F6024A7FBAF0040940B /* XCRemoteSwiftPackageReference "Moya" */,
+				552F7F6024A7FBAF0040940B /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 55CE0AC5233C4E6B007E6A9D /* Products */;
 			projectDirPath = "";
@@ -499,7 +499,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		552F7F6024A7FBAF0040940B /* XCRemoteSwiftPackageReference "Moya" */ = {
+		552F7F6024A7FBAF0040940B /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
 			requirement = {
@@ -510,9 +510,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		552F7F6124A7FBAF0040940B /* Moya */ = {
+		552F7F6124A7FBAF0040940B /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 552F7F6024A7FBAF0040940B /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 552F7F6024A7FBAF0040940B /* RemoteSwiftPackageReference */;
 			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
