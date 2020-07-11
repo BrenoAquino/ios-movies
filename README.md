@@ -16,7 +16,9 @@ This project will be fragmented into 3 other repositories. A repository will be 
 
 # Home
 
-<div style="text-align:center"> <img src="/images/home.png" width="300"></div>.
+<p align="center">
+  <img src="/images/home.png" width="300">
+</p>
 
 #### Feature
 The app's Home features an upcoming carousel that has the infinity behavior and the autoscroll behavior every 5 seconds. A carousel is also shown for each film genre returned by TheMovieDB.
