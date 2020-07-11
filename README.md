@@ -6,9 +6,13 @@ This repository was born with cocoapods but was migrated to the swift package. T
 
 Here screens were created using view code with a workspace of 3 projects. One project to create a communication interface with TheMovieDB APIs, another project that creates the app for iOS / iPad / MacOS and the other project is responsible for creating the app for AppleTV.
 
-### Future and SwiftUI
+### Linked Repos
 
 This project will be fragmented into 3 other repositories. A repository will be destined to create the interface with TheMovieDB APIs, it will be made compatible with both Cocoapods and SwitfPackage. Another repository will recreate the features implemented here, but using SwiftUI. The other project will replicate the same features presented in the AppleTV app, but will also use SwiftUI.
+
+- Services: <https://github.com/BrenoAquino/ios-services.git>
+- SwiftUI Mobile: WIP
+- SwiftUI AppleTV: WIP
 
 # Architecture
 
@@ -16,7 +20,9 @@ This project will be fragmented into 3 other repositories. A repository will be 
 
 # Home
 
-<img src="/images/home.png" width="400" align="left">
+<p align="center">
+  <img src="/images/detail.png" width="300">
+</p>
 
 #### Feature
 The app's Home features an upcoming carousel that has the infinity behavior and the autoscroll behavior every 5 seconds. A carousel is also shown for each film genre returned by TheMovieDB.
@@ -36,10 +42,11 @@ Movies by Gender: <https://developers.themoviedb.org/3/discover/movie-discover>
 
 Upcoming: <https://developers.themoviedb.org/3/movies/get-upcoming>
 
-  
 # Detail
 
-<img src="/images/detail.png" width="400" align="right">
+<p align="center">
+  <img src="/images/detail.png" width="300">
+</p>
 
 #### Feature
 The movie detail feature introduces the movie's synopsis along with its title and poster image. In addition to this information, a set of recommended movies based on the current movie and a set of keywords referring to the film are shown.
