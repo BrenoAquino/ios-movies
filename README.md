@@ -23,7 +23,7 @@ This project will be fragmented into 3 other repositories. A repository will be 
 # Home
 
 <p align="center">
-  <img src="/images/detail.png" width="300">
+  <img src="/images/home.png" width="300">
 </p>
 
 #### Feature
