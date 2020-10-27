@@ -34,7 +34,7 @@ For the app to be able to set up the home, about 22 requests are made (depending
 
 A request is made to obtain all genres. After the result, all other requests (one for gender + one for upcoming) are triggered, in parallel.
 
-#### Improvement (WIP)
+#### Improvement
 Create an intelligent and automatic way to control the carousel pagination. There is still no paging control in any part of the app.
 
 #### APIs
@@ -58,7 +58,7 @@ The blur in navigation has a dynamic alpha depending on the tableView scroll. Th
 
 A custom layout was created for the collectionView to follow the keyword display rule, that is, populate horizontally and skip the line if it no longer fits on the screen.
 
-#### Improvement (WIP)
+#### Improvement
 Constraint warnings in run time.
 
 #### APIs
