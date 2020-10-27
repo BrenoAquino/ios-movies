@@ -58,9 +58,6 @@ The blur in navigation has a dynamic alpha depending on the tableView scroll. Th
 
 A custom layout was created for the collectionView to follow the keyword display rule, that is, populate horizontally and skip the line if it no longer fits on the screen.
 
-#### Improvement
-Constraint warnings in run time.
-
 #### APIs
 Detail: <https://developers.themoviedb.org/3/movies/get-movie-details>
 
