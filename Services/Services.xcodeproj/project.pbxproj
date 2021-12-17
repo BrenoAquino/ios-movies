@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		550905F4235A8E0600529736 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		550905FB235AA7A800529736 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550905FA235AA7A800529736 /* Genre.swift */; };
 		550905FD235AAC3000529736 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550905FC235AAC3000529736 /* Movie.swift */; };
-		552F7F6224A7FBAF0040940B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 552F7F6124A7FBAF0040940B /* SwiftPackageProductDependency */; };
 		55C5232923410A6A0038F6CA /* MovieDBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232823410A6A0038F6CA /* MovieDBConfig.swift */; };
 		55C5232B23410A760038F6CA /* ConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232A23410A760038F6CA /* ConfigProtocol.swift */; };
 		55C7C88324A819A80014A70E /* DetailBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7C88224A819A80014A70E /* DetailBusiness.swift */; };
@@ -25,6 +24,7 @@
 		55D08652235E961F004C0312 /* MovieInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D08651235E961F004C0312 /* MovieInterface.swift */; };
 		55D4E902235A878500A6C442 /* GenreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4E901235A878500A6C442 /* GenreAPI.swift */; };
 		55D4E904235A88C500A6C442 /* GenreInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4E903235A88C500A6C442 /* GenreInterface.swift */; };
+		A8F52422E9ED968618AB8249 /* Pods_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5D4675407C588934C067D1 /* Pods_Services.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A5D4675407C588934C067D1 /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3785E052B7CC333A4E4E2ECC /* Pods-Services.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.debug.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.debug.xcconfig"; sourceTree = "<group>"; };
 		5506D2B924A66594002B8FD6 /* HomeBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBusiness.swift; sourceTree = "<group>"; };
 		550905F6235A8E1000529736 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		550905FA235AA7A800529736 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		55D08651235E961F004C0312 /* MovieInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInterface.swift; sourceTree = "<group>"; };
 		55D4E901235A878500A6C442 /* GenreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreAPI.swift; sourceTree = "<group>"; };
 		55D4E903235A88C500A6C442 /* GenreInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreInterface.swift; sourceTree = "<group>"; };
+		72DEFA396AFEA26692CF8411 /* Pods-Services.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.release.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				552F7F6224A7FBAF0040940B /* BuildFile in Frameworks */,
+				A8F52422E9ED968618AB8249 /* Pods_Services.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +167,7 @@
 				55CE0AC6233C4E6B007E6A9D /* Services */,
 				55CE0AC5233C4E6B007E6A9D /* Products */,
 				77861268043ADB48F42110D1 /* Frameworks */,
+				7756CF781DA232BC26D744D6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,10 +192,21 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		7756CF781DA232BC26D744D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3785E052B7CC333A4E4E2ECC /* Pods-Services.debug.xcconfig */,
+				72DEFA396AFEA26692CF8411 /* Pods-Services.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		77861268043ADB48F42110D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				550905F6235A8E1000529736 /* Alamofire.framework */,
+				2A5D4675407C588934C067D1 /* Pods_Services.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,6 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55CE0ACC233C4E6B007E6A9D /* Build configuration list for PBXNativeTarget "Services" */;
 			buildPhases = (
+				E603FC591DAC40FE5E676592 /* [CP] Check Pods Manifest.lock */,
 				55CE0ABF233C4E6B007E6A9D /* Headers */,
 				55CE0AC0233C4E6B007E6A9D /* Sources */,
 				55CE0AC1233C4E6B007E6A9D /* Frameworks */,
@@ -225,9 +241,6 @@
 			dependencies = (
 			);
 			name = Services;
-			packageProductDependencies = (
-				552F7F6124A7FBAF0040940B /* SwiftPackageProductDependency */,
-			);
 			productName = Services;
 			productReference = 55CE0AC4233C4E6B007E6A9D /* Services.framework */;
 			productType = "com.apple.product-type.framework";
@@ -256,9 +269,6 @@
 				Base,
 			);
 			mainGroup = 55CE0ABA233C4E6B007E6A9D;
-			packageReferences = (
-				552F7F6024A7FBAF0040940B /* RemoteSwiftPackageReference */,
-			);
 			productRefGroup = 55CE0AC5233C4E6B007E6A9D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,6 +287,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E603FC591DAC40FE5E676592 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Services-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55CE0AC0233C4E6B007E6A9D /* Sources */ = {
@@ -426,6 +461,7 @@
 		};
 		55CE0ACD233C4E6B007E6A9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3785E052B7CC333A4E4E2ECC /* Pods-Services.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +488,7 @@
 		};
 		55CE0ACE233C4E6B007E6A9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72DEFA396AFEA26692CF8411 /* Pods-Services.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -497,25 +534,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		552F7F6024A7FBAF0040940B /* RemoteSwiftPackageReference */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 14.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		552F7F6124A7FBAF0040940B /* SwiftPackageProductDependency */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 552F7F6024A7FBAF0040940B /* RemoteSwiftPackageReference */;
-			productName = Moya;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 55CE0ABB233C4E6B007E6A9D /* Project object */;
 }
