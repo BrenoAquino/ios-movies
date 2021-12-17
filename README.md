@@ -1,4 +1,5 @@
-# Overview
+# Movies
+![iOS version](https://img.shields.io/badge/iOS-13\+-blue) ![Swift version](https://img.shields.io/badge/Swift-v5.3-orange)
 
 This project replicates an architecture for large projects in order to feel some of the problems that could arise in large projects. It serves as a base project for POCs and to try to evolve the architecture.
 
