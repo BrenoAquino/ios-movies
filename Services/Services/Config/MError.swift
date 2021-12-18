@@ -17,6 +17,7 @@ enum MoviesErrorType: CaseIterable {
     case unknow
     
     // MARK: HTTP
+    case unauthorized
     case tooManyRequests
     
     // MARK: Variables
@@ -29,13 +30,14 @@ enum MoviesErrorType: CaseIterable {
         case .unknow: return -1
             
         // HTTP
+        case .unauthorized: return 401
         case .tooManyRequests: return 429
         }
     }
     
     // MARK: Create HTTP Error
     static func httpError(code: Int?) -> MoviesErrorType {
-        let httpCases: [MoviesErrorType] = [.tooManyRequests]
+        let httpCases: [MoviesErrorType] = [.unauthorized, .tooManyRequests]
         return httpCases.first(where: { $0.code == code }) ?? .unknow
     }
 }
