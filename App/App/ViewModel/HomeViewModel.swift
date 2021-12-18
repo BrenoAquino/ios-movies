@@ -15,16 +15,16 @@ class HomeViewModel {
     var contents: [(genre: Genre, movies: [Movie])]
     
     // MARK: Network Interfaces
-    let homeBusiness: Services.HomeBusiness
+    let homeBusiness: HomeBusiness
     
     // MARK: Callbacks
     lazy var onHomeSucess: (() -> Void)? = nil
-    lazy var onFailure: ((NSError) -> Void)? = nil
+    lazy var onFailure: ((MoviesError) -> Void)? = nil
     
     // MARK: - Life Cycle
     init() {
         contents = []
-        homeBusiness = Services.HomeBusiness()
+        homeBusiness = BusinessFactory.home()
     }
 }
 

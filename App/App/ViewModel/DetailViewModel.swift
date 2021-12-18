@@ -16,17 +16,17 @@ class DetailViewModel {
     var movie: Movie?
     
     // MARK: Network Interfaces
-    private let detailBusiness: Services.DetailBusiness
+    private let detailBusiness: DetailBusiness
     
     // MARK: Callbacks
     lazy var onDetailSucess: (() -> Void)? = nil
-    lazy var onFailure: ((NSError) -> Void)? = nil
+    lazy var onFailure: ((MoviesError) -> Void)? = nil
     
     // MARK: - Life Cycle
     required init(id: Int) {
         self.id = id
         movie = nil
-        detailBusiness = Services.DetailBusiness()
+        detailBusiness = BusinessFactory.detail()
     }
 }
 

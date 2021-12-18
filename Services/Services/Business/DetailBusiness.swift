@@ -14,18 +14,18 @@ public class DetailBusiness {
     var movie: Movie?
     var keywords: [Keyword]?
     var recommendations: [Movie]?
-    private var error: NSError?
+    private var error: MoviesError?
     
     // MARK: Network Interfaces
-    private let movieNetwork: MovieInterface
+    private let movieNetwork: MovieNetwork
     
     // MARK: - Life Cycle
-    public init() {
-        movieNetwork = MovieInterface()
+    init(movieNetwork: MovieNetwork) {
+        self.movieNetwork = movieNetwork
     }
     
     // MARK: - Network Methods
-    private func getDetail(task: DispatchGroup? = nil, id: Int, callback: ((Result<Movie, NSError>) -> Void)? = nil) {
+    private func getDetail(task: DispatchGroup? = nil, id: Int, callback: ((Result<Movie, MoviesError>) -> Void)? = nil) {
         task?.enter()
         movieNetwork.detail(id: id) { [weak self] result in
             switch result {
@@ -39,7 +39,7 @@ public class DetailBusiness {
         }
     }
     
-    private func getKeywords(task: DispatchGroup? = nil, id: Int, callback: ((Result<[Keyword], NSError>) -> Void)? = nil) {
+    private func getKeywords(task: DispatchGroup? = nil, id: Int, callback: ((Result<[Keyword], MoviesError>) -> Void)? = nil) {
         task?.enter()
         movieNetwork.keywords(id: id) { [weak self] result in
             switch result {
@@ -53,7 +53,7 @@ public class DetailBusiness {
         }
     }
     
-    private func getRecommendations(task: DispatchGroup? = nil, id: Int, callback: ((Result<[Movie], NSError>) -> Void)? = nil) {
+    private func getRecommendations(task: DispatchGroup? = nil, id: Int, callback: ((Result<[Movie], MoviesError>) -> Void)? = nil) {
         task?.enter()
         movieNetwork.recommendations(id: id) { [weak self] result in
             switch result {
@@ -68,7 +68,7 @@ public class DetailBusiness {
     }
     
     // MARK: - Interfaces
-    public func detail(id: Int, callback: @escaping (Result<(Movie, [Keyword], [Movie]), NSError>) -> Void) {
+    public func detail(id: Int, callback: @escaping (Result<(Movie, [Keyword], [Movie]), MoviesError>) -> Void) {
         movie = nil
         keywords = nil
         recommendations = nil
@@ -86,7 +86,7 @@ public class DetailBusiness {
                     let model = (movie, self?.keywords ?? [], self?.recommendations ?? [])
                     callback(.success(model))
                 } else {
-                    callback(.failure(NSError()))
+                    callback(.failure(MoviesError()))
                 }
             }
         }

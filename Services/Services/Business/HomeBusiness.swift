@@ -14,26 +14,26 @@ public class HomeBusiness {
     var genres: [Genre]
     var movies: [Movie]
     var matrix: [(genre: Genre, movie: [Movie])]
-    private var error: NSError?
+    private var error: MoviesError?
     
     // MARK: Network Interfaces
-    private let genreNetwork: GenreInterface
-    private let discoverNetwork: DiscoverInterface
-    private let movieNetwork: MovieInterface
+    private let genreNetwork: GenreNetwork
+    private let discoverNetwork: DiscoverNetwork
+    private let movieNetwork: MovieNetwork
     
     // MARK: - Life Cycle
-    public init() {
+    init(genreNetwork: GenreNetwork, discoverNetwork: DiscoverNetwork, movieNetwork: MovieNetwork) {
         genres = []
         movies = []
         matrix = []
         
-        genreNetwork = GenreInterface()
-        discoverNetwork = DiscoverInterface()
-        movieNetwork = MovieInterface()
+        self.genreNetwork = genreNetwork
+        self.discoverNetwork = discoverNetwork
+        self.movieNetwork = movieNetwork
     }
     
     // MARK: - Network Methods
-    private func upcoming(task: DispatchGroup? = nil, callback: ((Result<[Movie], NSError>) -> Void)? = nil) {
+    private func upcoming(task: DispatchGroup? = nil, callback: ((Result<[Movie], MoviesError>) -> Void)? = nil) {
         task?.enter()
         movieNetwork.upcoming { [weak self] result in
             switch result {
@@ -48,7 +48,7 @@ public class HomeBusiness {
         }
     }
     
-    private func genres(task: DispatchGroup? = nil, callback: ((Result<[Genre], NSError>) -> Void)? = nil) {
+    private func genres(task: DispatchGroup? = nil, callback: ((Result<[Genre], MoviesError>) -> Void)? = nil) {
         task?.enter()
         genreNetwork.genres { [weak self] result in
             switch result {
@@ -62,7 +62,7 @@ public class HomeBusiness {
         }
     }
     
-    private func movies(task: DispatchGroup? = nil, genre: Genre, callback: ((Result<[Movie], NSError>) -> Void)? = nil) {
+    private func movies(task: DispatchGroup? = nil, genre: Genre, callback: ((Result<[Movie], MoviesError>) -> Void)? = nil) {
         task?.enter()
         discoverNetwork.movies(genre: genre.id) { [weak self] result in
             switch result {
@@ -77,7 +77,7 @@ public class HomeBusiness {
     }
     
     // MARK: - Interfaces
-    public func home(callback: @escaping (Result<[(Genre, [Movie])], NSError>) -> Void) {
+    public func home(callback: @escaping (Result<[(Genre, [Movie])], MoviesError>) -> Void) {
         genres = []
         movies = []
         matrix = []
