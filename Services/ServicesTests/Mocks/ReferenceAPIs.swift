@@ -19,6 +19,13 @@ enum ReferenceAPIs {
     }
     
     enum Discover {
-        static let movies = DiscoverAPIs.discoverMovie(config: ReferenceAPIs.config, genre: .zero)
+        static let movies = DiscoverAPIs.discoverMovie(genre: .zero, config: ReferenceAPIs.config)
+    }
+    
+    enum Movie {
+        static let upcoming = MovieAPIs.upcoming(config: ReferenceAPIs.config)
+        static let detail = MovieAPIs.detail(id: .zero, config: ReferenceAPIs.config)
+        static let keywords = MovieAPIs.keywords(id: .zero, config: ReferenceAPIs.config)
+        static let recommendations = MovieAPIs.recommendations(id: .zero, config: ReferenceAPIs.config)
     }
 }

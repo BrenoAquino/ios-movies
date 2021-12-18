@@ -27,7 +27,7 @@ class DiscoverNetworkImpl: Network {
 
 extension DiscoverNetworkImpl: DiscoverNetwork {
     func movies(genre: Int, callback: @escaping (Result<[Movie], MoviesError>) -> Void) {
-        let api = DiscoverAPIs.discoverMovie(config: config, genre: genre)
+        let api = DiscoverAPIs.discoverMovie(genre: genre, config: config)
         execute(api: api, atKeyPath: "results", callback: callback)
     }
 }

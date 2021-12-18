@@ -10,21 +10,21 @@ import Foundation
 import Moya
 
 enum DiscoverAPIs {
-    case discoverMovie(config: Config, genre: Int)
+    case discoverMovie(genre: Int, config: Config)
 }
 
 extension DiscoverAPIs: TargetType {
     
     var baseURL: URL {
         switch self {
-        case .discoverMovie(let config, _):
+        case .discoverMovie(_, let config):
             return try! config.baseURL.asURL()
         }
     }
     
     var path: String {
         switch self {
-        case .discoverMovie(let config, _):
+        case .discoverMovie(_, let config):
             return config.path("/discover/movie")
         }
     }
@@ -38,7 +38,7 @@ extension DiscoverAPIs: TargetType {
     
     var task: Task {
         switch self {
-        case .discoverMovie(let config, let genre):
+        case .discoverMovie(let genre, let config):
             let params: [String: Any] = ["language": "pt-br", "api_key": config.apiKey, "with_genres": genre]
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
         }
@@ -46,7 +46,7 @@ extension DiscoverAPIs: TargetType {
     
     var headers: [String : String]? {
         switch self {
-        case .discoverMovie(let config, _):
+        case .discoverMovie(_, let config):
             return config.headers
         }
     }
