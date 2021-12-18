@@ -1,0 +1,411 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/VlHt27nCqOuTnuX6bku8QZapzO.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 634649,
+            "original_language": "en",
+            "original_title": "Spider-Man: No Way Home",
+            "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+            "popularity": 11147.352,
+            "poster_path": "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+            "release_date": "2021-12-15",
+            "title": "Spider-Man: No Way Home",
+            "video": false,
+            "vote_average": 8.8,
+            "vote_count": 836
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/eENEf62tMXbhyVvdcXlnQz2wcuT.jpg",
+            "genre_ids": [
+                878,
+                28,
+                12
+            ],
+            "id": 580489,
+            "original_language": "en",
+            "original_title": "Venom: Let There Be Carnage",
+            "overview": "After finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.",
+            "popularity": 9995.218,
+            "poster_path": "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
+            "release_date": "2021-09-30",
+            "title": "Venom: Let There Be Carnage",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 4635
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/7ajHGIAYNMiIzejy1LJWdPrcAx8.jpg",
+            "genre_ids": [
+                28,
+                35,
+                80,
+                53
+            ],
+            "id": 512195,
+            "original_language": "en",
+            "original_title": "Red Notice",
+            "overview": "An Interpol-issued Red Notice is a global alert to hunt and capture the world's most wanted. But when a daring heist brings together the FBI's top profiler and two rival criminals, there's no telling what will happen.",
+            "popularity": 3608.636,
+            "poster_path": "/wdE6ewaKZHr62bLqCn7A2DiGShm.jpg",
+            "release_date": "2021-11-04",
+            "title": "Red Notice",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 2067
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/cinER0ESG0eJ49kXlExM0MEWGxW.jpg",
+            "genre_ids": [
+                28,
+                12,
+                14
+            ],
+            "id": 566525,
+            "original_language": "en",
+            "original_title": "Shang-Chi and the Legend of the Ten Rings",
+            "overview": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
+            "popularity": 3466.13,
+            "poster_path": "/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg",
+            "release_date": "2021-09-01",
+            "title": "Shang-Chi and the Legend of the Ten Rings",
+            "video": false,
+            "vote_average": 7.8,
+            "vote_count": 4312
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/tTlAA0REGPXSZPBfWyTW9ipIv1I.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878,
+                18
+            ],
+            "id": 315635,
+            "original_language": "en",
+            "original_title": "Spider-Man: Homecoming",
+            "overview": "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.",
+            "popularity": 2526.828,
+            "poster_path": "/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
+            "release_date": "2017-07-05",
+            "title": "Spider-Man: Homecoming",
+            "video": false,
+            "vote_average": 7.4,
+            "vote_count": 17374
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/ng6SSB3JhbcpKTwbPDsRwUYK8Cq.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 429617,
+            "original_language": "en",
+            "original_title": "Spider-Man: Far From Home",
+            "overview": "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+            "popularity": 2462.26,
+            "poster_path": "/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg",
+            "release_date": "2019-06-28",
+            "title": "Spider-Man: Far From Home",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 11251
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/sLWUtbrpiLp23a0XDSiUiltdFPJ.jpg",
+            "genre_ids": [
+                28,
+                12,
+                14
+            ],
+            "id": 1930,
+            "original_language": "en",
+            "original_title": "The Amazing Spider-Man",
+            "overview": "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance – leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with Connors' alter ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
+            "popularity": 2439.14,
+            "poster_path": "/fSbqPbqXa7ePo8bcnZYN9AHv6zA.jpg",
+            "release_date": "2012-06-23",
+            "title": "The Amazing Spider-Man",
+            "video": false,
+            "vote_average": 6.6,
+            "vote_count": 13795
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/mFbS5TwN95BcSEfiztdchLgTQ0v.jpg",
+            "genre_ids": [
+                28,
+                18,
+                36
+            ],
+            "id": 617653,
+            "original_language": "en",
+            "original_title": "The Last Duel",
+            "overview": "King Charles VI declares that Knight Jean de Carrouges settle his dispute with his squire, Jacques Le Gris, by challenging him to a duel.",
+            "popularity": 1928.088,
+            "poster_path": "/zjrJE0fpzPvX8saJXj8VNfcjBoU.jpg",
+            "release_date": "2021-10-13",
+            "title": "The Last Duel",
+            "video": false,
+            "vote_average": 7.6,
+            "vote_count": 970
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/lyvszvJJqqI8aqBJ70XzdCNoK0y.jpg",
+            "genre_ids": [
+                28,
+                12,
+                18,
+                14,
+                878
+            ],
+            "id": 524434,
+            "original_language": "en",
+            "original_title": "Eternals",
+            "overview": "The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants.",
+            "popularity": 1899.653,
+            "poster_path": "/uaEIEIw9Y7DsvbWWMbG9ySjNF73.jpg",
+            "release_date": "2021-11-03",
+            "title": "Eternals",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 1437
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/iWrDibFusV4JEz5Qw79RuWSGfX4.jpg",
+            "genre_ids": [
+                28,
+                12,
+                14
+            ],
+            "id": 102382,
+            "original_language": "en",
+            "original_title": "The Amazing Spider-Man 2",
+            "overview": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen’s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
+            "popularity": 1784.154,
+            "poster_path": "/c3e9e18SSlvFd1cQaGmUj5tqL5P.jpg",
+            "release_date": "2014-04-16",
+            "title": "The Amazing Spider-Man 2",
+            "video": false,
+            "vote_average": 6.4,
+            "vote_count": 10085
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/sWvxBXNtCOaGdtpKNLiOqmwb10N.jpg",
+            "genre_ids": [
+                14,
+                28
+            ],
+            "id": 557,
+            "original_language": "en",
+            "original_title": "Spider-Man",
+            "overview": "After being bitten by a genetically altered spider at Oscorp, nerdy but endearing high school student Peter Parker is endowed with amazing powers to become the superhero known as Spider-Man.",
+            "popularity": 1753.72,
+            "poster_path": "/gSZyYEK5AfZuOFFjnVPUCLvdOD6.jpg",
+            "release_date": "2002-05-01",
+            "title": "Spider-Man",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 14614
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6MQmtWk4cFwSDyNvIgoJRBIHUT3.jpg",
+            "genre_ids": [
+                14,
+                28,
+                12
+            ],
+            "id": 559,
+            "original_language": "en",
+            "original_title": "Spider-Man 3",
+            "overview": "The seemingly invincible Spider-Man goes up against an all-new crop of villains—including the shape-shifting Sandman. While Spider-Man’s superpowers are altered by an alien organism, his alter ego, Peter Parker, deals with nemesis Eddie Brock and also gets caught up in a love triangle.",
+            "popularity": 1612.908,
+            "poster_path": "/2jLxKF73SAPkyhIWrnv67IH7kJ1.jpg",
+            "release_date": "2007-05-01",
+            "title": "Spider-Man 3",
+            "video": false,
+            "vote_average": 6.3,
+            "vote_count": 10739
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/upOi9aVqPPky7Ba4GsiyFdjc82I.jpg",
+            "genre_ids": [
+                37,
+                28,
+                53
+            ],
+            "id": 887767,
+            "original_language": "en",
+            "original_title": "Last Shoot Out",
+            "overview": "Soon after a newlywed learns that her husband had her father shot down, she flees from the Callahan ranch in fear. She's rescued by a gunman who safeguards her at a remote outpost as he staves off her husband's attempts to reclaim his bride.",
+            "popularity": 1444.653,
+            "poster_path": "/pvEtPxotI3POlVPvNxgrHJuDXfe.jpg",
+            "release_date": "2021-12-03",
+            "title": "Last Shoot Out",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 38
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/r2GAjd4rNOHJh6i6Y0FntmYuPQW.jpg",
+            "genre_ids": [
+                12,
+                28,
+                53
+            ],
+            "id": 370172,
+            "original_language": "en",
+            "original_title": "No Time to Die",
+            "overview": "Bond has left active service and is enjoying a tranquil life in Jamaica. His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help. The mission to rescue a kidnapped scientist turns out to be far more treacherous than expected, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
+            "popularity": 1397.389,
+            "poster_path": "/iUgygt3fscRoKWCV1d0C7FbM9TP.jpg",
+            "release_date": "2021-09-29",
+            "title": "No Time to Die",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 2584
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/7h5WAPAcUzOWpp2jrwHBB48790j.jpg",
+            "genre_ids": [
+                16,
+                28
+            ],
+            "id": 843241,
+            "original_language": "ja",
+            "original_title": "劇場版 七つの大罪 光に呪われし者たち",
+            "overview": "With the help of the \"Dragon Sin of Wrath\" Meliodas and the worst rebels in history, the Seven Deadly Sins, the \"Holy War\", in which four races, including Humans, Goddesses, Fairies and Giants fought against the Demons, is finally over. At the cost of the \"Lion Sin of Pride\" Escanor's life, the Demon King was defeated and the world regained peace. After that, each of the Sins take their own path.",
+            "popularity": 1339.072,
+            "poster_path": "/k0ThmZQl5nHe4JefC2bXjqtgYp0.jpg",
+            "release_date": "2021-07-02",
+            "title": "The Seven Deadly Sins: Cursed by Light",
+            "video": false,
+            "vote_average": 8.1,
+            "vote_count": 245
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6qVF0gnLnbKCgcMfCpCB8GH7B5I.jpg",
+            "genre_ids": [
+                28,
+                12,
+                16,
+                878,
+                35
+            ],
+            "id": 324857,
+            "original_language": "en",
+            "original_title": "Spider-Man: Into the Spider-Verse",
+            "overview": "Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson \"Kingpin\" Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension.",
+            "popularity": 1333.098,
+            "poster_path": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+            "release_date": "2018-12-06",
+            "title": "Spider-Man: Into the Spider-Verse",
+            "video": false,
+            "vote_average": 8.4,
+            "vote_count": 10359
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/xPpXYnCWfjkt3zzE0dpCNME1pXF.jpg",
+            "genre_ids": [
+                16,
+                28,
+                12,
+                14
+            ],
+            "id": 635302,
+            "original_language": "ja",
+            "original_title": "劇場版「鬼滅の刃」無限列車編",
+            "overview": "Tanjirō Kamado, joined with Inosuke Hashibira, a boy raised by boars who wears a boar's head, and Zenitsu Agatsuma, a scared boy who reveals his true power when he sleeps, boards the Infinity Train on a new mission with the Fire Hashira, Kyōjurō Rengoku, to defeat a demon who has been tormenting the people and killing the demon slayers who oppose it!",
+            "popularity": 1188.824,
+            "poster_path": "/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg",
+            "release_date": "2020-10-16",
+            "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+            "video": false,
+            "vote_average": 8.4,
+            "vote_count": 1933
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg",
+            "genre_ids": [
+                35,
+                28,
+                12,
+                878
+            ],
+            "id": 550988,
+            "original_language": "en",
+            "original_title": "Free Guy",
+            "overview": "A bank teller called Guy realizes he is a background character in an open world video game called Free City that will soon go offline.",
+            "popularity": 1141.645,
+            "poster_path": "/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg",
+            "release_date": "2021-08-11",
+            "title": "Free Guy",
+            "video": false,
+            "vote_average": 7.8,
+            "vote_count": 4134
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/3cMfwbF1J9fglSssim4zKG6scIs.jpg",
+            "genre_ids": [
+                28
+            ],
+            "id": 876262,
+            "original_language": "pt",
+            "original_title": "Garota da Moto",
+            "overview": "",
+            "popularity": 1027.276,
+            "poster_path": "/sYoWjGSW4XQRWwFDHf3kdMqtCLr.jpg",
+            "release_date": "2021-09-23",
+            "title": "Garota da Moto",
+            "video": false,
+            "vote_average": 4.9,
+            "vote_count": 4
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/4gKxQIW91hOTELjY5lzjMbLoGxB.jpg",
+            "genre_ids": [
+                28,
+                53,
+                878
+            ],
+            "id": 763164,
+            "original_language": "en",
+            "original_title": "Apex",
+            "overview": "Ex-cop Thomas Malone is serving a life sentence for a crime he didn’t commit. He is offered a chance at freedom if he can survive a deadly game of Apex, in which six hunters pay for the pleasure of hunting another human on a remote island. He accepts, and once he arrives, all hell breaks loose.",
+            "popularity": 725.679,
+            "poster_path": "/chTkFGToW5bsyw3hgLAe4S5Gt3.jpg",
+            "release_date": "2021-11-12",
+            "title": "Apex",
+            "video": false,
+            "vote_average": 5.5,
+            "vote_count": 280
+        }
+    ],
+    "total_pages": 1546,
+    "total_results": 30906
+}

@@ -1,0 +1,436 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/gHz4ZQytRs8YGrqFMwB3Vrr8pig.jpg",
+            "genre_ids": [
+                18,
+                10749,
+                878
+            ],
+            "id": 274870,
+            "media_type": "movie",
+            "title": "Passageiros",
+            "original_language": "en",
+            "original_title": "Passengers",
+            "overview": "Uma nave espacial viajando para uma colônia em um distante planeta e transportando milhares de pessoas tem um mau funcionamento em suas câmaras do sono. Como resultado, dois passageiros são despertados 90 anos antes.",
+            "popularity": 36.577,
+            "poster_path": "/4ttmnglFa2WxDK3yBkMX1VlpkTo.jpg",
+            "release_date": "2016-12-21",
+            "video": false,
+            "vote_average": 6.91,
+            "vote_count": 11000
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nzMmMevQsL6HvHfi4rwNT0xLNuu.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 1402,
+            "media_type": "movie",
+            "title": "À Procura da Felicidade",
+            "original_language": "en",
+            "original_title": "The Pursuit of Happyness",
+            "overview": "Chris enfrenta sérios problemas financeiros e Linda, sua esposa, decide partir. Ele agora é pai solteiro e precisa cuidar de Christopher, seu filho de 5 anos. Chris tenta usar sua habilidade como vendedor para conseguir um emprego melhor, mas só consegue um estágio não remunerado. Seus problemas financeiros não podem esperar uma promoção e eles acabam despejados. Chris e Christopher passam a dormir em abrigos ou onde quer que consigam um refúgio, mantendo a esperança de que dias melhores virão.",
+            "popularity": 31.526,
+            "poster_path": "/hKIzxWRb391Tu7uXIwYkINs8FQ9.jpg",
+            "release_date": "2006-12-14",
+            "video": false,
+            "vote_average": 7.906,
+            "vote_count": 7871
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/thrdnh41KH0vDqV4nRoYukVcdh5.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 11321,
+            "media_type": "movie",
+            "title": "Sete Vidas",
+            "original_language": "en",
+            "original_title": "Seven Pounds",
+            "overview": "Ben Thomas (Will Smith) é um agente do imposto de renda que possui um segredo trágico. Por conta disso, ele é um homem que tem um grande sentimento de culpa, o que faz com que salve as vidas de completos desconhecidos. Porém, tudo muda quando ele conhece Emily Posa (Rosario Dawnson), pela primeira vez é Ben quem tem a chance de ser salvo.",
+            "popularity": 14.108,
+            "poster_path": "/pxJOJUV9UVYMlHmQVUh4zcXCOSf.jpg",
+            "release_date": "2008-12-18",
+            "video": false,
+            "vote_average": 7.608,
+            "vote_count": 5574
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/7jjwdoIVPJp7gcDo9uE1sVZi2Rs.jpg",
+            "genre_ids": [
+                18,
+                10749
+            ],
+            "id": 296096,
+            "media_type": "movie",
+            "title": "Como Eu Era Antes de Você",
+            "original_language": "en",
+            "original_title": "Me Before You",
+            "overview": "Will é um garoto rico e bem-sucedido, até sofrer um grave acidente que o deixa preso a uma cadeira de rodas. Ele está profundamente depressivo e contrata uma garota do campo para cuidar dele. Ela sempre levou uma vida modesta, com dificuldades financeiras e problemas no trabalho, mas está disposta a provar para Will que ainda existem razões para viver.",
+            "popularity": 106.492,
+            "poster_path": "/1a60KPNTC4JKYphNQveAB37Lyif.jpg",
+            "release_date": "2016-06-01",
+            "video": false,
+            "vote_average": 7.88,
+            "vote_count": 9601
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/uHHwliWkaCbeVfWM9O36PYHj3Cj.jpg",
+            "genre_ids": [
+                28,
+                18,
+                10752,
+                10749,
+                53
+            ],
+            "id": 369885,
+            "media_type": "movie",
+            "title": "Aliados",
+            "original_language": "en",
+            "original_title": "Allied",
+            "overview": "Em uma missão para eliminar um embaixador nazista em Casablanca, no Marrocos, os espiões Max Vatan e Marianne Beausejour se apaixonam perdidamente e decidem se casar. Os problemas começam anos depois, com suspeitas sobre uma conexão entre Marianne e os alemães. Intrigado, Max decide investigar o passado da companheira e os dias de felicidade do casal vão por água abaixo.",
+            "popularity": 21.607,
+            "poster_path": "/57FDGagZiTxJdj56605UJM9cY4D.jpg",
+            "release_date": "2016-11-17",
+            "video": false,
+            "vote_average": 6.764,
+            "vote_count": 3803
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/tJMvfYI2m6npeKRU9rAlLNTLlIj.jpg",
+            "genre_ids": [
+                10749,
+                35,
+                80,
+                18
+            ],
+            "id": 256591,
+            "media_type": "movie",
+            "title": "Golpe Duplo",
+            "original_language": "en",
+            "original_title": "Focus",
+            "overview": "Nicky é um trapaceiro profissional que acaba sendo escolhido como vítima por uma iniciante na profissão, Jess. Esperto como é, ele se deixa cair no golpe para desmascará-la no momento certo. Decepcionada, a ambiciosa Jess insiste para que Nicky lhe ensine seu método de trabalho e a aceite em sua equipe. Após uma certa relutância, Nicky concorda. Mas o problema maior é que ele também acaba se envolvendo romanticamente com ela, o que vai de encontro a uma de suas principais regras.",
+            "popularity": 45.744,
+            "poster_path": "/7kFmz3geXBWtBI5MivEepLcxXdv.jpg",
+            "release_date": "2015-02-25",
+            "video": false,
+            "vote_average": 6.891,
+            "vote_count": 6431
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/rfkIeCaIHhN3K5wjJJqKmfUjYp8.jpg",
+            "genre_ids": [
+                18,
+                36
+            ],
+            "id": 381284,
+            "media_type": "movie",
+            "title": "Estrelas Além do Tempo",
+            "original_language": "en",
+            "original_title": "Hidden Figures",
+            "overview": "Ano 1961, em plena Guerra Fria, Estados Unidos e União Soviética disputam a supremacia na corrida espacial ao mesmo tempo em que a sociedade norte-americana lida com uma profunda cisão racial, entre brancos e negros. Tal situação é refletida também na NASA, onde um grupo de funcionárias negras é obrigada a trabalhar a parte. É lá que estão Katherine Johnson (Taraji P. Henson), Dorothy Vaughn (Octavia Spencer) e Mary Jackson (Janelle Monáe), grandes amigas que, além de provar sua competência dia após dia, precisam lidar com o preconceito arraigado para que consigam ascender na hierarquia da NASA.",
+            "popularity": 49.612,
+            "poster_path": "/6A1Jn0tooQYgi2C8sNz5OaIW98C.jpg",
+            "release_date": "2016-12-10",
+            "video": false,
+            "vote_average": 8.055,
+            "vote_count": 7370
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nyuzfjAbuSel6dVKY4zFo95ugUf.jpg",
+            "genre_ids": [
+                35,
+                18,
+                10749,
+                10402
+            ],
+            "id": 313369,
+            "media_type": "movie",
+            "title": "La La Land: Cantando Estações",
+            "original_language": "en",
+            "original_title": "La La Land",
+            "overview": "O pianista Sebastian conhece a atriz Mia, e os dois se apaixonam perdidamente. Em busca de oportunidades para suas carreiras na competitiva Los Angeles, os jovens tentam fazer o relacionamento amoroso dar certo, enquanto perseguem fama e sucesso.",
+            "popularity": 23.962,
+            "poster_path": "/AvMietG6xuobpSSdmVnKuTjv4bL.jpg",
+            "release_date": "2016-11-29",
+            "video": false,
+            "vote_average": 7.876,
+            "vote_count": 13824
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/fgffluhvdOv79SkYaKrfRA0xkf4.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 334543,
+            "media_type": "movie",
+            "title": "Lion: Uma Jornada para Casa",
+            "original_language": "en",
+            "original_title": "Lion",
+            "overview": "Quando tinha apenas cinco anos, o indiano Saroo se perdeu do irmão numa estação de trem de Calcutá e enfrentou grandes desafios para sobreviver sozinho até de ser adotado por uma família australiana. Incapaz de superar o que aconteceu, aos 25 anos ele decide buscar uma forma de reencontrar sua família biológica.",
+            "popularity": 22.707,
+            "poster_path": "/svbUqOL9FdwCF9cKe4aEagVmteR.jpg",
+            "release_date": "2016-01-20",
+            "video": false,
+            "vote_average": 8.112,
+            "vote_count": 5532
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/75EGlY25WUUkFKFVMoB8WglSMeJ.jpg",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "id": 381341,
+            "media_type": "movie",
+            "title": "Perfeitos Desconhecidos",
+            "original_language": "it",
+            "original_title": "Perfetti sconosciuti",
+            "overview": "Sete amigos de longa data se reúnem para um jantar. Em uma brincadeira, decidem compartilhar um com o outro, na mesa, o conteúdo de cada mensagem de texto, e-mail e ligações que recebem. No jogo, muitos segredos começam a revelar, provando que nem todos se conhecem de verdade.",
+            "popularity": 10.4,
+            "poster_path": "/43EjlczfdIoF8afSgt6MsLlKCN2.jpg",
+            "release_date": "2016-02-11",
+            "video": false,
+            "vote_average": 7.898,
+            "vote_count": 3712
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jE43L9ni4OWhjwXcDlEKkVnfscW.jpg",
+            "genre_ids": [
+                18,
+                10749
+            ],
+            "id": 266856,
+            "media_type": "movie",
+            "title": "A Teoria de Tudo",
+            "original_language": "en",
+            "original_title": "The Theory of Everything",
+            "overview": "Baseado na biografia de Stephen Hawking, o filme mostra como o jovem astrofísico (Eddie Redmayne) fez descobertas importantes sobre o tempo, além de retratar o seu romance com a aluna de Cambridge Jane Wide (Felicity Jones) e a descoberta de uma doença motora degenerativa quando tinha apenas 21 anos.",
+            "popularity": 19.197,
+            "poster_path": "/6q1XGbTJQqOGUpX9OlO0bGmtpql.jpg",
+            "release_date": "2014-11-26",
+            "video": false,
+            "vote_average": 7.887,
+            "vote_count": 8992
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/tb440cwQMRoVHnhYJlzlxfv1ikm.jpg",
+            "genre_ids": [
+                18,
+                10749
+            ],
+            "id": 64682,
+            "media_type": "movie",
+            "title": "O Grande Gatsby",
+            "original_language": "en",
+            "original_title": "The Great Gatsby",
+            "overview": "Nick Carraway (Tobey Maguire) tinha um grande fascínio por seu vizinho, o misterioso Jay Gatsby (Leonardo DiCaprio). Após ser convidado pelo milionário para uma festa incrível, o relacionamento de ambos torna-se uma forte amizade. Quando Nick descobre que seu amigo tem uma antiga paixão por sua prima Daisy Buchanan (Carey Mulligan), ele resolve reaproximar os dois, esquecendo o fato dela ser casada com seu velho amigo dos tempos de faculdade, o também endinheirado Tom Buchanan (Joel Edgerton). Agora, o conflito está armado e as consequências serão trágicas.",
+            "popularity": 25.488,
+            "poster_path": "/p6ukaFwMbjqZVl77PLpUIoJS4u1.jpg",
+            "release_date": "2013-05-10",
+            "video": false,
+            "vote_average": 7.392,
+            "vote_count": 10081
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/a6tIX4fGgp60w2d9pqYRbFM91ne.jpg",
+            "genre_ids": [
+                35,
+                18,
+                10749
+            ],
+            "id": 8488,
+            "media_type": "movie",
+            "title": "Hitch: Conselheiro Amoroso",
+            "original_language": "en",
+            "original_title": "Hitch",
+            "overview": "Um consultor de relacionamentos que trabalha de forma anônima é contratado para ajudar um contador tímido a conquistar a mulher dos seus sonhos. Ele acaba se apaixonando por uma jornalista, porém, e corre o risco de ter sua identidade revelada.",
+            "popularity": 16.215,
+            "poster_path": "/lc02ygGRvkjUDULK3iFG1xR6pts.jpg",
+            "release_date": "2005-02-11",
+            "video": false,
+            "vote_average": 6.533,
+            "vote_count": 4660
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/4SO6pbGJTpM9YYovYxFLY3MXqZn.jpg",
+            "genre_ids": [
+                80,
+                18,
+                9648,
+                53
+            ],
+            "id": 346685,
+            "media_type": "movie",
+            "title": "A Garota no Trem",
+            "original_language": "en",
+            "original_title": "The Girl on the Train",
+            "overview": "Rachel, uma alcoólatra desempregada e deprimida, sofre pelo seu divórcio recente. Todas as manhãs ela viaja de trem de Ashbury a Londres, fantasiando sobre a vida de um jovem casal que vigia pela janela. Certo dia ela testemunha uma cena chocante e mais tarde descobre que a mulher está desaparecida. Inquieta, Rachel recorre a polícia e se vê completamente envolvida no mistério.",
+            "popularity": 26.422,
+            "poster_path": "/AktZTeympJEIK2QgyB29IiWfCI8.jpg",
+            "release_date": "2016-10-05",
+            "video": false,
+            "vote_average": 6.425,
+            "vote_count": 4836
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/w89trVfLmEdBxv7rxWKy5HyckXR.jpg",
+            "genre_ids": [
+                10749,
+                14,
+                18
+            ],
+            "id": 293863,
+            "media_type": "movie",
+            "title": "A Incrível História de Adaline",
+            "original_language": "en",
+            "original_title": "The Age of Adaline",
+            "overview": "Adaline Bowman (Blake Lively) nasceu na virada do século XX. Ela tinha uma vida normal até sofrer um grave acidente de carro. Desde então, ela, milagrosamente, não consegue mais envelhecer, se tornando um ser imortal com a aparência de 29 anos. Ela vive uma existência solitária, nunca se permitindo criar laços com ninguém, para não ter seu segredo revelado. Mas ela conhece o jovem filantropo, Ellis Jones (Michiel Huisman), um homem por quem pode valer a pena arriscar sua imortalidade.",
+            "popularity": 26.422,
+            "poster_path": "/gU84OUm9c4R44Zx8U1YPbCzKqIo.jpg",
+            "release_date": "2015-04-16",
+            "video": false,
+            "vote_average": 7.454,
+            "vote_count": 5317
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/9lpGLWrRxpDlqvO5DVjYkJN1Gzz.jpg",
+            "genre_ids": [
+                18,
+                10749,
+                10752
+            ],
+            "id": 22971,
+            "media_type": "movie",
+            "title": "Querido John",
+            "original_language": "en",
+            "original_title": "Dear John",
+            "overview": "John Tyree (Channing Tatum) é um jovem soldado que está em casa, licenciado. Um dia ele conhece Savannah Curtis (Amanda Seyfried), uma universitária idealista em férias, por quem se apaixona. Eles iniciam um relacionamento, só que logo John precisará retornar ao trabalho. Dentro de um ano ele terminará o serviço militar, quando poderão enfim ficar juntos. Neste período eles trocam diversas cartas, onde cada um conta o que lhe acontece a cada dia.",
+            "popularity": 12.923,
+            "poster_path": "/uD0p6CgVhBBJKiYFdqeU1C6PMmd.jpg",
+            "release_date": "2010-02-04",
+            "video": false,
+            "vote_average": 6.86,
+            "vote_count": 3603
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8ybSuxeEkFoMKMY9lkzzC4tBaI6.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 334541,
+            "media_type": "movie",
+            "title": "Manchester à Beira-Mar",
+            "original_language": "en",
+            "original_title": "Manchester by the Sea",
+            "overview": "Lee Chandler, zelador de prédios em Boston, Massachusetts, é forçado a retornar a sua cidade natal, Manchester na Inglaterra, para assumir a guarda de seu sobrinho adolescente Patrick após o pai do rapaz, seu irmão Joe, falecer precocemente. Este retorno ficará ainda mais complicado quando Lee precisar enfrentar as razões que o fizeram ir embora e deixar sua família para trás, anos antes.",
+            "popularity": 18.496,
+            "poster_path": "/pbR4LWqpuxFWBCMfU2NuUq1L6EZ.jpg",
+            "release_date": "2016-11-18",
+            "video": false,
+            "vote_average": 7.526,
+            "vote_count": 4664
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/qom1SZSENdmHFNZBXbtJAU0WTlC.jpg",
+            "genre_ids": [
+                10749,
+                18
+            ],
+            "id": 11036,
+            "media_type": "movie",
+            "title": "Diário de uma Paixão",
+            "original_language": "en",
+            "original_title": "The Notebook",
+            "overview": "Na década de 40, o operário Noah Calhoun e a rica Allie estão desesperadamente apaixonados, mas os pais da jovem não aprovam o namoro. Quando Noah vai para a Segunda Guerra Mundial, parece ser o fim do romance. Enquanto isso, Allie se envolve com outro homem. Mas quando Noah retorna para a pequena cidade anos mais tarde, próximo ao casamento de Allie, logo se torna claro que a paixão ainda não acabou.",
+            "popularity": 48.233,
+            "poster_path": "/r1ttV3XhgryvmJMlBfpbzUfm6bG.jpg",
+            "release_date": "2004-06-25",
+            "video": false,
+            "vote_average": 7.885,
+            "vote_count": 9186
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/oQaVV7p916HO5MDI820zzs1pin9.jpg",
+            "genre_ids": [
+                10749,
+                18
+            ],
+            "id": 222935,
+            "media_type": "movie",
+            "title": "A Culpa é das Estrelas",
+            "original_language": "en",
+            "original_title": "The Fault in Our Stars",
+            "overview": "Hazel e Gus dividem um senso de humor sarcástico, um desgosto por convenções sociais e, por fim uma amor que vai levá-lo para uma jornada transformadora e inesquecível. Embora os dois adolescentes enfrentem desafios extraordinários, sua coragem e dedicação ao outro provam que a vida pode não ser perfeita, mas o amor é.",
+            "popularity": 52.169,
+            "poster_path": "/nEbSB6eCozhIZZORPAlNQLDDPDG.jpg",
+            "release_date": "2014-05-16",
+            "video": false,
+            "vote_average": 7.606,
+            "vote_count": 9713
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/edKzvUYvMusauHVHybnXUpbSt95.jpg",
+            "genre_ids": [
+                18,
+                36
+            ],
+            "id": 321741,
+            "media_type": "movie",
+            "title": "Um Homem Entre Gigantes",
+            "original_language": "en",
+            "original_title": "Concussion",
+            "overview": "Dr. Bennet Omalu (Will Smith), neuropatologista forense, diagnostica um severo trauma cerebral em um jogador de futebol americano, e investigando o assunto ele descobre se tratar de um mal comum entre os profissionais do esporte. Determinado a reverter o quadro e expor para o mundo a grave situação, ele trava uma guerra contra a poderosa NFL.",
+            "popularity": 15.166,
+            "poster_path": "/n8dQeUiQPs46U9nRSJdMsiXth69.jpg",
+            "release_date": "2015-11-12",
+            "video": false,
+            "vote_average": 7.101,
+            "vote_count": 2085
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/fO0qXJnBJYuWJ5dvWWGXfRF8MXA.jpg",
+            "genre_ids": [
+                18,
+                35
+            ],
+            "id": 382591,
+            "media_type": "movie",
+            "title": "Uma Família de Dois",
+            "original_language": "fr",
+            "original_title": "Demain tout commence",
+            "overview": "Samuel (Omar Sy) nunca foi de ter muitas responsabilidades. Levando uma vida tranquila ao lado das pessoas que ama no litoral sul da França, ele vê tudo mudar com a chegada inesperada de uma bebê de poucos meses chamada Glória, sua filha. Incapaz de cuidar da criança, ele corre para Londres a fim de encontrar a mãe biológica, mas, sem sucesso, decide criá-la sozinho. Oito anos depois, quando Samuel e Glória se tornam inseparáveis, a mãe retorna para recuperar a menina.",
+            "popularity": 19.394,
+            "poster_path": "/wn3Sjt1igkXnrpo0wy4NniP3EcJ.jpg",
+            "release_date": "2016-12-07",
+            "video": false,
+            "vote_average": 7.766,
+            "vote_count": 2626
+        }
+    ],
+    "total_pages": 2,
+    "total_results": 40
+}
