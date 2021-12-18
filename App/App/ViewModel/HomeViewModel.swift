@@ -15,16 +15,16 @@ class HomeViewModel {
     var contents: [(genre: Genre, movies: [Movie])]
     
     // MARK: Network Interfaces
-    let homeBusiness: Services.HomeBusiness
+    let homeBusiness: HomeBusiness
     
     // MARK: Callbacks
     lazy var onHomeSucess: (() -> Void)? = nil
-    lazy var onFailure: ((NSError) -> Void)? = nil
+    lazy var onFailure: ((MoviesError) -> Void)? = nil
     
     // MARK: - Life Cycle
     init() {
         contents = []
-        homeBusiness = Services.HomeBusiness()
+        homeBusiness = BusinessFactory.home()
     }
 }
 
@@ -33,14 +33,15 @@ extension HomeViewModel {
     func home() {
         homeBusiness.home { [weak self] result in
             switch result {
-            case .success(let movies):
+            case .success(let carousels):
                 self?.contents = []
-                movies.sorted(by: { $0.0.id < $1.0.id }).forEach { (element) in
-                    let genre = Genre(genre: element.0)
-                    let movies = element.1.map { Movie(movie: $0) }
+                carousels.sorted(by: { $0.genre.id < $1.genre.id }).forEach { carousel in
+                    let genre = Genre(genre: carousel.genre)
+                    let movies = carousel.movies.map { Movie(movie: $0) }
                     self?.contents.append((genre, movies))
                 }
                 self?.onHomeSucess?()
+                
             case .failure(let error):
                 self?.onFailure?(error)
             }

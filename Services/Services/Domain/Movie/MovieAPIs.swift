@@ -1,5 +1,5 @@
 //
-//  MovieAPI.swift
+//  MovieAPIs.swift
 //  Services
 //
 //  Created by Breno Aquino on 21/10/19.
@@ -9,14 +9,14 @@
 import Foundation
 import Moya
 
-enum MovieAPI {
+enum MovieAPIs {
     case upcoming(config: Config)
     case detail(id: Int, config: Config)
     case keywords(id: Int, config: Config)
     case recommendations(id: Int, config: Config)
 }
 
-extension MovieAPI: TargetType {
+extension MovieAPIs: TargetType {
     
     var baseURL: URL {
         switch self {

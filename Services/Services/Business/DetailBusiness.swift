@@ -10,84 +10,58 @@ import Foundation
 
 public class DetailBusiness {
     
-    // MARK: - Vars
-    var movie: Movie?
-    var keywords: [Keyword]?
-    var recommendations: [Movie]?
-    private var error: NSError?
-    
     // MARK: Network Interfaces
-    private let movieNetwork: MovieInterface
+    private let movieNetwork: MovieNetwork
     
     // MARK: - Life Cycle
-    public init() {
-        movieNetwork = MovieInterface()
+    init(movieNetwork: MovieNetwork) {
+        self.movieNetwork = movieNetwork
     }
     
     // MARK: - Network Methods
-    private func getDetail(task: DispatchGroup? = nil, id: Int, callback: ((Result<Movie, NSError>) -> Void)? = nil) {
-        task?.enter()
-        movieNetwork.detail(id: id) { [weak self] result in
-            switch result {
-            case .success(let movie):
-                self?.movie = movie
-            case .failure(let error):
-                self?.error = error
-            }
+    private func getDetail(group: DispatchGroup? = nil, id: Int, callback: ((Result<Movie, MoviesError>) -> Void)? = nil) {
+        group?.enter()
+        movieNetwork.detail(id: id) { result in
             callback?(result)
-            task?.leave()
+            group?.leave()
         }
     }
     
-    private func getKeywords(task: DispatchGroup? = nil, id: Int, callback: ((Result<[Keyword], NSError>) -> Void)? = nil) {
-        task?.enter()
-        movieNetwork.keywords(id: id) { [weak self] result in
-            switch result {
-            case .success(let keywords):
-                self?.keywords = keywords
-            case .failure(let error):
-                self?.error = error
-            }
+    private func getKeywords(group: DispatchGroup? = nil, id: Int, callback: ((Result<[Keyword], MoviesError>) -> Void)? = nil) {
+        group?.enter()
+        movieNetwork.keywords(id: id) { result in
             callback?(result)
-            task?.leave()
+            group?.leave()
         }
     }
     
-    private func getRecommendations(task: DispatchGroup? = nil, id: Int, callback: ((Result<[Movie], NSError>) -> Void)? = nil) {
-        task?.enter()
-        movieNetwork.recommendations(id: id) { [weak self] result in
-            switch result {
-            case .success(let recommendations):
-                self?.recommendations = recommendations
-            case .failure(let error):
-                self?.error = error
-            }
+    private func getRecommendations(group: DispatchGroup? = nil, id: Int, callback: ((Result<[Movie], MoviesError>) -> Void)? = nil) {
+        group?.enter()
+        movieNetwork.recommendations(id: id) { result in
             callback?(result)
-            task?.leave()
+            group?.leave()
         }
     }
     
     // MARK: - Interfaces
-    public func detail(id: Int, callback: @escaping (Result<(Movie, [Keyword], [Movie]), NSError>) -> Void) {
-        movie = nil
-        keywords = nil
-        recommendations = nil
-        error = nil
+    public func detail(id: Int, callback: @escaping (Result<(Movie, [Keyword], [Movie]), MoviesError>) -> Void) {
+        var movie: Movie?
+        var keywords: [Keyword]?
+        var recommendations: [Movie]?
+        var movieError: MoviesError?
+        let group = DispatchGroup()
         
-        let taskGroup = DispatchGroup()
-        getDetail(task: taskGroup, id: id)
-        getKeywords(task: taskGroup, id: id)
-        getRecommendations(task: taskGroup, id: id)
-        taskGroup.notify(queue: .global()) { [weak self] in
-            if let error = self?.error {
+        getDetail(group: group, id: id) { $0.unwrapper(&movie, &movieError) }
+        getKeywords(group: group, id: id) { $0.unwrapper(&keywords, &movieError) }
+        getRecommendations(group: group, id: id) { $0.unwrapper(&recommendations, &movieError) }
+        
+        group.notify(queue: .global()) {
+            if let error = movieError {
                 callback(.failure(error))
+            } else if let movie = movie, let keywords = keywords, let recommendations = recommendations {
+                callback(.success((movie, keywords, recommendations)))
             } else {
-                if let movie = self?.movie {
-                    let model = (movie, self?.keywords ?? [], self?.recommendations ?? [])
-                    callback(.success(model))
-                } else {
-                    callback(.failure(NSError()))
-                }
+                callback(.failure(MoviesError()))
             }
         }
     }
