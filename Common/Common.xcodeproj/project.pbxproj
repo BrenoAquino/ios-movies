@@ -23,6 +23,13 @@
 		555A2CF2276D9304000E5D24 /* SGSpace+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A2CF1276D9304000E5D24 /* SGSpace+Extensions.swift */; };
 		555A2CF6276D93AA000E5D24 /* UIView+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A2CF5276D93AA000E5D24 /* UIView+Setup.swift */; };
 		555A2CF8276D93FD000E5D24 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A2CF7276D93FD000E5D24 /* UIView+Constraints.swift */; };
+		555A2CFB276D959D000E5D24 /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A2CFA276D959D000E5D24 /* UITableView+Register.swift */; };
+		555A2CFD276D9608000E5D24 /* UITableView+Header+Footer+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A2CFC276D9608000E5D24 /* UITableView+Header+Footer+Background.swift */; };
+		555A2CFF276D9619000E5D24 /* UITableView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A2CFE276D9619000E5D24 /* UITableView+Dequeue.swift */; };
+		555A2D02276D967B000E5D24 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A2D01276D967B000E5D24 /* UICollectionView+Register.swift */; };
+		555A2D04276D969C000E5D24 /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A2D03276D969C000E5D24 /* UICollectionView+Dequeue.swift */; };
+		555A2D07276D96DB000E5D24 /* UIScrollView+ScrollIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A2D06276D96DB000E5D24 /* UIScrollView+ScrollIndicator.swift */; };
+		555A2D0A276D971C000E5D24 /* NSLayoutConstraint+setContraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A2D09276D971C000E5D24 /* NSLayoutConstraint+setContraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +50,13 @@
 		555A2CF1276D9304000E5D24 /* SGSpace+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SGSpace+Extensions.swift"; sourceTree = "<group>"; };
 		555A2CF5276D93AA000E5D24 /* UIView+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Setup.swift"; sourceTree = "<group>"; };
 		555A2CF7276D93FD000E5D24 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		555A2CFA276D959D000E5D24 /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
+		555A2CFC276D9608000E5D24 /* UITableView+Header+Footer+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Header+Footer+Background.swift"; sourceTree = "<group>"; };
+		555A2CFE276D9619000E5D24 /* UITableView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue.swift"; sourceTree = "<group>"; };
+		555A2D01276D967B000E5D24 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
+		555A2D03276D969C000E5D24 /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
+		555A2D06276D96DB000E5D24 /* UIScrollView+ScrollIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ScrollIndicator.swift"; sourceTree = "<group>"; };
+		555A2D09276D971C000E5D24 /* NSLayoutConstraint+setContraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+setContraint.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +167,10 @@
 		555A2CF3276D9363000E5D24 /* Builders */ = {
 			isa = PBXGroup;
 			children = (
+				555A2D05276D96C9000E5D24 /* UIScrollView */,
+				555A2D00276D9663000E5D24 /* UICollectionView */,
+				555A2CF9276D9587000E5D24 /* UITableView */,
+				555A2D08276D970E000E5D24 /* NSLayoutConstraint */,
 				555A2CF4276D939C000E5D24 /* UIView */,
 			);
 			path = Builders;
@@ -165,6 +183,41 @@
 				555A2CF7276D93FD000E5D24 /* UIView+Constraints.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		555A2CF9276D9587000E5D24 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				555A2CFA276D959D000E5D24 /* UITableView+Register.swift */,
+				555A2CFC276D9608000E5D24 /* UITableView+Header+Footer+Background.swift */,
+				555A2CFE276D9619000E5D24 /* UITableView+Dequeue.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		555A2D00276D9663000E5D24 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				555A2D01276D967B000E5D24 /* UICollectionView+Register.swift */,
+				555A2D03276D969C000E5D24 /* UICollectionView+Dequeue.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		555A2D05276D96C9000E5D24 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				555A2D06276D96DB000E5D24 /* UIScrollView+ScrollIndicator.swift */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		555A2D08276D970E000E5D24 /* NSLayoutConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				555A2D09276D971C000E5D24 /* NSLayoutConstraint+setContraint.swift */,
+			);
+			path = NSLayoutConstraint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,20 +300,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555A2CFF276D9619000E5D24 /* UITableView+Dequeue.swift in Sources */,
 				555A2CEC276D92D6000E5D24 /* SGSpace.swift in Sources */,
+				555A2D02276D967B000E5D24 /* UICollectionView+Register.swift in Sources */,
 				555A2CDB276D91BD000E5D24 /* SGColor.swift in Sources */,
 				555A2CE9276D9296000E5D24 /* PrimaryType+Constants.swift in Sources */,
+				555A2CFD276D9608000E5D24 /* UITableView+Header+Footer+Background.swift in Sources */,
 				555A2CF6276D93AA000E5D24 /* UIView+Setup.swift in Sources */,
+				555A2D0A276D971C000E5D24 /* NSLayoutConstraint+setContraint.swift in Sources */,
 				555A2CE7276D9284000E5D24 /* SGConstants+Extensions.swift in Sources */,
 				555A2CF0276D92F9000E5D24 /* SGHorizontalSpace+Extensions.swift in Sources */,
+				555A2CFB276D959D000E5D24 /* UITableView+Register.swift in Sources */,
 				555A2CF2276D9304000E5D24 /* SGSpace+Extensions.swift in Sources */,
 				555A2CE5276D926C000E5D24 /* SGConstants.swift in Sources */,
 				555A2CD8276D91A5000E5D24 /* StyleGuide.swift in Sources */,
 				555A2CE2276D921D000E5D24 /* SGFont+Extensions.swift in Sources */,
 				555A2CD2276D89E7000E5D24 /* Result+Unwrapper.swift in Sources */,
+				555A2D04276D969C000E5D24 /* UICollectionView+Dequeue.swift in Sources */,
 				555A2CE0276D9213000E5D24 /* SGFont.swift in Sources */,
 				555A2CF8276D93FD000E5D24 /* UIView+Constraints.swift in Sources */,
 				555A2CEE276D92F0000E5D24 /* SGVerticalSpace+Extensions.swift in Sources */,
+				555A2D07276D96DB000E5D24 /* UIScrollView+ScrollIndicator.swift in Sources */,
 				555A2CDD276D91C6000E5D24 /* SGColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIEdgeInsets {
+public extension UIEdgeInsets {
     init(top: SGVerticalSpace, left: SGHorizontalSpace, bottom: SGVerticalSpace, right: SGHorizontalSpace) {
         self.init(top: top.rawValue, left: left.rawValue, bottom: bottom.rawValue, right: right.rawValue)
     }

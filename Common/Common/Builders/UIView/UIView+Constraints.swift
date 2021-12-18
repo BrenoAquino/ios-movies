@@ -8,18 +8,8 @@
 import UIKit
 
 /// The top, bottom, trailing and leading implemented with style guide
-
-// MARK: - Setup Contraint
-extension NSLayoutConstraint {
-    func set(id: String? = nil, priority: UILayoutPriority? = nil, isActive: Bool = true) {
-        identifier = id
-        if let priority = priority { self.priority = priority }
-        self.isActive = isActive
-    }
-}
-
 // MARK: - Find Constraint
-extension UIView {
+public extension UIView {
     func constraint(id: String) -> NSLayoutConstraint? {
         if let constraint = superview?.constraints.first(where: { $0.identifier == id }) {
             return constraint
@@ -29,7 +19,7 @@ extension UIView {
 }
 
 // MARK: - Fill
-extension UIView {
+public extension UIView {
     @discardableResult
     func fill(in view: UIView, priority: UILayoutPriority? = nil) -> Self {
         top(anchor: view.topAnchor, priority: priority)
@@ -50,7 +40,7 @@ extension UIView {
 }
 
 // MARK: - Size
-extension UIView {
+public extension UIView {
     @discardableResult
     func size(_ size: CGSize) -> UIView {
         height(constant: size.height)
