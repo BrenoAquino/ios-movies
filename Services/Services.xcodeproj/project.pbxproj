@@ -40,6 +40,10 @@
 		55FE46C0276E4A9200C5AA58 /* ReferenceAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE46BF276E4A9200C5AA58 /* ReferenceAPIs.swift */; };
 		55FE46C3276E4B4E00C5AA58 /* XCTestCase+Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE46C2276E4B4E00C5AA58 /* XCTestCase+Expectation.swift */; };
 		55FE46C5276E4BB800C5AA58 /* Nimble+beResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE46C4276E4BB800C5AA58 /* Nimble+beResult.swift */; };
+		55FE46C8276E544400C5AA58 /* movies_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 55FE46C7276E544400C5AA58 /* movies_success.json */; };
+		55FE46CA276E545100C5AA58 /* movies_wrong_object.json in Resources */ = {isa = PBXBuildFile; fileRef = 55FE46C9276E545100C5AA58 /* movies_wrong_object.json */; };
+		55FE46CC276E546000C5AA58 /* movies_failure.json in Resources */ = {isa = PBXBuildFile; fileRef = 55FE46CB276E546000C5AA58 /* movies_failure.json */; };
+		55FE46CE276E54F800C5AA58 /* DiscoverNetworkSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE46CD276E54F800C5AA58 /* DiscoverNetworkSpec.swift */; };
 		A8F52422E9ED968618AB8249 /* Pods_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5D4675407C588934C067D1 /* Pods_Services.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +108,10 @@
 		55FE46BF276E4A9200C5AA58 /* ReferenceAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceAPIs.swift; sourceTree = "<group>"; };
 		55FE46C2276E4B4E00C5AA58 /* XCTestCase+Expectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Expectation.swift"; sourceTree = "<group>"; };
 		55FE46C4276E4BB800C5AA58 /* Nimble+beResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nimble+beResult.swift"; sourceTree = "<group>"; };
+		55FE46C7276E544400C5AA58 /* movies_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies_success.json; sourceTree = "<group>"; };
+		55FE46C9276E545100C5AA58 /* movies_wrong_object.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies_wrong_object.json; sourceTree = "<group>"; };
+		55FE46CB276E546000C5AA58 /* movies_failure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies_failure.json; sourceTree = "<group>"; };
+		55FE46CD276E54F800C5AA58 /* DiscoverNetworkSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverNetworkSpec.swift; sourceTree = "<group>"; };
 		6CB7A76A9F2B99D12C12B3CE /* Pods_Services_ServicesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services_ServicesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DEFA396AFEA26692CF8411 /* Pods-Services.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.release.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.release.xcconfig"; sourceTree = "<group>"; };
 		86B8DA149A136E2E9F72E72F /* Pods-Services-ServicesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services-ServicesTests.debug.xcconfig"; path = "Target Support Files/Pods-Services-ServicesTests/Pods-Services-ServicesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				55FE46B1276E478900C5AA58 /* GenreNetworkSpec.swift */,
+				55FE46CD276E54F800C5AA58 /* DiscoverNetworkSpec.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -307,6 +316,7 @@
 		55FE46B5276E496B00C5AA58 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				55FE46C6276E542900C5AA58 /* Discover */,
 				55FE46B6276E497300C5AA58 /* Genre */,
 			);
 			path = Resources;
@@ -329,6 +339,16 @@
 				55FE46C4276E4BB800C5AA58 /* Nimble+beResult.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		55FE46C6276E542900C5AA58 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				55FE46C7276E544400C5AA58 /* movies_success.json */,
+				55FE46CB276E546000C5AA58 /* movies_failure.json */,
+				55FE46C9276E545100C5AA58 /* movies_wrong_object.json */,
+			);
+			path = Discover;
 			sourceTree = "<group>";
 		};
 		7756CF781DA232BC26D744D6 /* Pods */ = {
@@ -452,7 +472,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FE46BC276E499800C5AA58 /* genres_wrong_object.json in Resources */,
+				55FE46CC276E546000C5AA58 /* movies_failure.json in Resources */,
 				55FE46BA276E499000C5AA58 /* genres_failure.json in Resources */,
+				55FE46C8276E544400C5AA58 /* movies_success.json in Resources */,
+				55FE46CA276E545100C5AA58 /* movies_wrong_object.json in Resources */,
 				55FE46B8276E498700C5AA58 /* genres_success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +561,7 @@
 				55FE46C0276E4A9200C5AA58 /* ReferenceAPIs.swift in Sources */,
 				55FE46C5276E4BB800C5AA58 /* Nimble+beResult.swift in Sources */,
 				55FE46C3276E4B4E00C5AA58 /* XCTestCase+Expectation.swift in Sources */,
+				55FE46CE276E54F800C5AA58 /* DiscoverNetworkSpec.swift in Sources */,
 				55FE46BE276E4A2900C5AA58 /* MockNetwork.swift in Sources */,
 				55FE46B2276E478900C5AA58 /* GenreNetworkSpec.swift in Sources */,
 				55FE46B4276E484E00C5AA58 /* MockFile.swift in Sources */,

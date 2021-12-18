@@ -17,4 +17,8 @@ enum ReferenceAPIs {
     enum Genre {
         static let genres = GenreAPIs.genres(config: ReferenceAPIs.config)
     }
+    
+    enum Discover {
+        static let movies = DiscoverAPIs.discoverMovie(config: ReferenceAPIs.config, genre: .zero)
+    }
 }

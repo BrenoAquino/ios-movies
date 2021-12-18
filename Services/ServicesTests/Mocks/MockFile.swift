@@ -19,6 +19,12 @@ enum MockFile: String {
     case genresSuccess = "genres_success"
     case genresFailure = "genres_failure"
     case genresWrongObject = "genres_wrong_object"
+    
+    // MARK: Discover
+    // Stats
+    case moviesSuccess = "movies_success"
+    case moviesFailure = "movies_failure"
+    case moviesWrongObject = "movies_wrong_object"
         
     // MARK: Utils
     private func dataFromFile(name: String, `extension`: String) -> Data {
