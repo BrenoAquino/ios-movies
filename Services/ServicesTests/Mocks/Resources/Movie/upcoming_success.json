@@ -1,0 +1,405 @@
+{
+    "dates": {
+        "maximum": "2022-01-10",
+        "minimum": "2021-12-24"
+    },
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/VlHt27nCqOuTnuX6bku8QZapzO.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 634649,
+            "original_language": "en",
+            "original_title": "Spider-Man: No Way Home",
+            "overview": "Peter Parker é desmascarado e não consegue mais separar sua vida normal dos grandes riscos de ser um super-herói. Quando ele pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais perigosos, e o forçam a descobrir o que realmente significa ser o Homem-Aranha.",
+            "popularity": 11147.352,
+            "poster_path": "/6vVRYbIjDLMMwZJ2jo6enrdN76U.jpg",
+            "release_date": "2021-12-15",
+            "title": "Homem-Aranha: Sem Volta a Casa",
+            "video": false,
+            "vote_average": 8.8,
+            "vote_count": 836
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/1Wlwnhn5sXUIwlxpJgWszT622PS.jpg",
+            "genre_ids": [
+                16,
+                35,
+                10751
+            ],
+            "id": 585245,
+            "original_language": "en",
+            "original_title": "Clifford the Big Red Dog",
+            "overview": "",
+            "popularity": 2364.029,
+            "poster_path": "/s7Cn3OsY32tH5cyz7CHxYdEiXMn.jpg",
+            "release_date": "2021-11-10",
+            "title": "Clifford the Big Red Dog",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 597
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/srFi3oLy8tBcpq07xusnAE5XhwE.jpg",
+            "genre_ids": [
+                16,
+                35,
+                10751,
+                10402
+            ],
+            "id": 438695,
+            "original_language": "en",
+            "original_title": "Sing 2",
+            "overview": "",
+            "popularity": 649.637,
+            "poster_path": "/aWeKITRFbbwY8txG5uCj4rMCfSP.jpg",
+            "release_date": "2021-12-01",
+            "title": "Sing 2",
+            "video": false,
+            "vote_average": 7.8,
+            "vote_count": 27
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/wfrfxivLOBtGMC98tIr2LSOeKSe.jpg",
+            "genre_ids": [
+                16,
+                12,
+                35,
+                10751
+            ],
+            "id": 639721,
+            "original_language": "en",
+            "original_title": "The Addams Family 2",
+            "overview": "",
+            "popularity": 507.282,
+            "poster_path": "/ig0RMUyjiAw7hdCRsXYnOCKSucg.jpg",
+            "release_date": "2021-10-01",
+            "title": "The Addams Family 2",
+            "video": false,
+            "vote_average": 7.3,
+            "vote_count": 642
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/3NiiRAKt2L5bUuAvSOkv6Yn7u6T.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 624860,
+            "original_language": "en",
+            "original_title": "The Matrix Resurrections",
+            "overview": "",
+            "popularity": 483.891,
+            "poster_path": "/xLNtaLaHudIzOqdEZ7R3lcDLrQQ.jpg",
+            "release_date": "2021-12-16",
+            "title": "The Matrix Resurrections",
+            "video": false,
+            "vote_average": 8.3,
+            "vote_count": 24
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/o76ZDm8PS9791XiuieNB93UZcRV.jpg",
+            "genre_ids": [
+                27,
+                28,
+                878
+            ],
+            "id": 460458,
+            "original_language": "en",
+            "original_title": "Resident Evil: Welcome to Raccoon City",
+            "overview": "Quase três décadas após a descoberta do T-vírus, um surto revela os segredos obscuros da Umbrella Corporation. Baseado na série de jogos e filmes de terror.",
+            "popularity": 437.086,
+            "poster_path": "/x2juEWrlen956bjp1Z8lEDw68aq.jpg",
+            "release_date": "2021-11-24",
+            "title": "Resident Evil",
+            "video": false,
+            "vote_average": 5.9,
+            "vote_count": 146
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/qknLmBKDyjGMC40b7ZehqdfIi2A.jpg",
+            "genre_ids": [
+                35,
+                14,
+                12,
+                878
+            ],
+            "id": 425909,
+            "original_language": "en",
+            "original_title": "Ghostbusters: Afterlife",
+            "overview": "Uma mãe solteira e os seus dois filhos chegam a uma pequena cidade. Após a chegada, as crianças começam a descobrir a sua ligação com os caça-fantasmas originais e o legado secreto que o seu avô deixou para trás.",
+            "popularity": 388.476,
+            "poster_path": "/e9nSrwh0H9n1YCbITxO4d2nN9xm.jpg",
+            "release_date": "2021-11-11",
+            "title": "Caça-Fantasmas: O Legado",
+            "video": false,
+            "vote_average": 7.3,
+            "vote_count": 327
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jdLsmpqmP1wTdFUPtmxMnYgoifT.jpg",
+            "genre_ids": [
+                18,
+                80,
+                53
+            ],
+            "id": 644495,
+            "original_language": "en",
+            "original_title": "House of Gucci",
+            "overview": "",
+            "popularity": 250.701,
+            "poster_path": "/rxrVdr5x5FxOtbqS14UovcswFby.jpg",
+            "release_date": "2021-11-24",
+            "title": "House of Gucci",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 334
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/3GgkzCDq6KYpcmJmcOKh27hYRyj.jpg",
+            "genre_ids": [
+                12,
+                16,
+                10751,
+                14
+            ],
+            "id": 588921,
+            "original_language": "en",
+            "original_title": "Ainbo: Spirit of the Amazon",
+            "overview": "Uma menina nasceu e cresceu na selva mais profunda da Amazônia, Colônia, que repousa nas costas do Espírito Materno mais poderoso da Amazônia, a Tartaruga Motelo Mama. Um dia ela descobre que sua terra natal está sendo ameaçada e percebe que existem outros humanos no mundo além de seu povo. Enquanto ela luta para salvar seu paraíso contra a ganância e exploração de crianças, extração de madeira e mineração ilegal, ela começa a lutar para reverter essa destruição e o mal iminente do Yucuruna, a escuridão que vive na Amazônia. Guiada pelo espírito de sua mãe, Ainbo está determinada a salvar sua terra e salvar seu povo antes que seja tarde demais.",
+            "popularity": 249.013,
+            "poster_path": "/xGkmm8YB1HzM3GaQ3FBv1NTwWxS.jpg",
+            "release_date": "2021-02-09",
+            "title": "Ainbo: A Guerreira da Amazônia",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 249
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/wPjtacig0kIkVcTQmXoNt6jbMwo.jpg",
+            "genre_ids": [
+                28,
+                35
+            ],
+            "id": 617502,
+            "original_language": "en",
+            "original_title": "Jolt",
+            "overview": "Uma segurança com tendências homicidas e um problema de controlo de fúria usa um colete de elétrodos para voltar à normalidade através de choques sempre que as tendências assassinas a dominam. Quando o primeiro homem por quem se apaixona é assassinado, ela embarca numa onda de vingança para encontrar o assassino, ao mesmo tempo que a polícia a persegue como principal suspeita.",
+            "popularity": 184.173,
+            "poster_path": "/gYZAHan5CHPFXORpQMvOjCTug4E.jpg",
+            "release_date": "2021-07-15",
+            "title": "Choque",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 794
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6UxCO59sdhvp43OCkrYx4EX61J.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 766798,
+            "original_language": "es",
+            "original_title": "Madres paralelas",
+            "overview": "",
+            "popularity": 155.537,
+            "poster_path": "/w6RhGdQ6u38BCa0L0IOrosmFdOT.jpg",
+            "release_date": "2021-10-08",
+            "title": "Madres paralelas",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 154
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/ovggmAOu1IbPGTQE8lg4lBasNC7.jpg",
+            "genre_ids": [
+                878
+            ],
+            "id": 412656,
+            "original_language": "en",
+            "original_title": "Chaos Walking",
+            "overview": "Todd Hewitt (Tom Holland) vive num planeta distante do Novo Mundo, uma nova esperança para a humanidade até ter ser atingido pelo O Ruído, uma infeção rara e perigosa que causou o inimaginável: todas as mulheres foram mortas, e agora os pensamentos de todos os homens tornam-se audíveis.  O jovem faz entretanto uma descoberta silenciosa e escondida: existe uma rapariga chamada Viola (Daisy Ridley), que pode ser a chave para desvendar muitos dos segredos guardados do Novo Mundo. Juntos, os dois jovens são forçados a entrar numa aventura complicada e perturbadora num planeta inexplorado – e precisam descobrir a verdade sobre a vida que deixaram para trás e o espetacular mundo que estão a conhecer.",
+            "popularity": 112.029,
+            "poster_path": "/oMSumadgRiygK1DUtBurdnZb9Jz.jpg",
+            "release_date": "2021-02-24",
+            "title": "Chaos Walking - O Ruído",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 1427
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/4OTYefcAlaShn6TGVK33UxLW9R7.jpg",
+            "genre_ids": [
+                28,
+                12,
+                53
+            ],
+            "id": 476669,
+            "original_language": "en",
+            "original_title": "The King's Man",
+            "overview": "Enquanto os piores tiranos e criminosos da história se reúnem com o objetivo de planear uma guerra para roubar milhões, um homem vai correr contra o tempo para detê-los.",
+            "popularity": 111.622,
+            "poster_path": "/509rj2kjXyf69B31cfXjPizIkgt.jpg",
+            "release_date": "2021-12-21",
+            "title": "The King’s Man: O Início",
+            "video": false,
+            "vote_average": 9,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 674164,
+            "original_language": "en",
+            "original_title": "Return of Chucky",
+            "overview": "",
+            "popularity": 101.801,
+            "poster_path": "/oHBhzKR2QViBakHdVpQq7E0cyfa.jpg",
+            "release_date": "2021-12-31",
+            "title": "Return of Chucky",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/x3UVh44oov4LGkAg2zVFXoPeYra.jpg",
+            "genre_ids": [
+                18,
+                53,
+                27
+            ],
+            "id": 630240,
+            "original_language": "fr",
+            "original_title": "Titane",
+            "overview": "",
+            "popularity": 72.044,
+            "poster_path": "/y93w5MGC9fbXjy1qfN6rUpSbBti.jpg",
+            "release_date": "2021-07-14",
+            "title": "Titane",
+            "video": false,
+            "vote_average": 6.6,
+            "vote_count": 422
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/r4VQbiydjDH7ULo1HWjkkrNt3da.jpg",
+            "genre_ids": [
+                10749,
+                18,
+                80
+            ],
+            "id": 511809,
+            "original_language": "en",
+            "original_title": "West Side Story",
+            "overview": "Amor, Sublime Amor é o primeiro musical de Steven Spielberg, premiado diretor de sucessos como The Post: A Guerra Secreta (2017), O Resgate do Soldado Ryan (1998) e A Lista de Schindler (1993). Em Nova York, duas gangues de diferentes etnias, os Jets e os Sharks, vivem em conflito na luta pelo domínio de um território do bairro. Para esquentar ainda mais o clima de guerra das ruas, os líderes rivais Tony (Ansel Elgort) e Riff (Mike Faist) se apaixonam pela jovem Maria (Rachel Zegler). A consequência desse triângulo amoroso pode terminar em tragédia. Refilmagem de West Side Story (1961), clássico ganhador de 10 estatuetas do Oscar, adaptado da igualmente premiada peça da Broadway.",
+            "popularity": 67.006,
+            "poster_path": "/4AUsofyvvNFNjXY5wXoZlqHU681.jpg",
+            "release_date": "2021-12-08",
+            "title": "Amor, Sublime Amor",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 95
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/qKVOTKPPtvoXd75L1HOSBPLtKWS.jpg",
+            "genre_ids": [
+                16,
+                28,
+                14,
+                878
+            ],
+            "id": 761898,
+            "original_language": "ja",
+            "original_title": "劇場版 ソードアート・オンライン プログレッシブ 星なき夜のアリア",
+            "overview": "Um mês após o jogo da morte de Kayaba Akihiko começar, o número de mortos continua a aumentar, dois mil jogadores já perderam suas vidas para o ultra-difícil mundo VRMMO de Sword Art Online. No dia da reunião de estratégia para planejar a batalha contra o chefe do primeiro andar, Kirito, um jogador solo que jura lutar sozinho para ficar mais forte, encontra uma rara jogadora de alto nível. Ela graciosamente despacha monstros poderosos com um único florete que brilha como uma estrela cadente na noite ...",
+            "popularity": 56.68,
+            "poster_path": "/w1hkX6SqGnEWHmr4Ynxcwm9Vari.jpg",
+            "release_date": "2021-10-30",
+            "title": "Sword Art Online: Progressivo - Ária de uma Noite sem Estrelas",
+            "video": false,
+            "vote_average": 9,
+            "vote_count": 5
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/2nJJxHjBTDVDIbpHylCsDVQ3alG.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 716612,
+            "original_language": "en",
+            "original_title": "Spencer",
+            "overview": "",
+            "popularity": 56.411,
+            "poster_path": "/7GcqdBKaMM9BWXWN07BirBMkcBF.jpg",
+            "release_date": "2021-11-04",
+            "title": "Spencer",
+            "video": false,
+            "vote_average": 7.4,
+            "vote_count": 222
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/1KIWr83GPeO1Z54lndzs2H4OoBe.jpg",
+            "genre_ids": [
+                18,
+                53
+            ],
+            "id": 663260,
+            "original_language": "fr",
+            "original_title": "Boîte noire",
+            "overview": "",
+            "popularity": 52.125,
+            "poster_path": "/jIfFFC4YwiI8TVaGtbl1eT9BRaI.jpg",
+            "release_date": "2021-09-08",
+            "title": "Boîte noire",
+            "video": false,
+            "vote_average": 7.7,
+            "vote_count": 267
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/rcEDPOOOUTLFxLLQJggfLffbofe.jpg",
+            "genre_ids": [
+                16,
+                28,
+                12,
+                9648
+            ],
+            "id": 810693,
+            "original_language": "ja",
+            "original_title": "劇場版 呪術廻戦 0",
+            "overview": "",
+            "popularity": 51.774,
+            "poster_path": "/eiSlgyx7G61Ey69K9MmCw9OaHMA.jpg",
+            "release_date": "2021-12-24",
+            "title": "劇場版 呪術廻戦 0",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        }
+    ],
+    "total_pages": 33,
+    "total_results": 660
+}

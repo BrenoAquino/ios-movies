@@ -1,0 +1,31 @@
+{
+    "dates": {
+        "maximum": "2022-01-10",
+        "minimum": "2021-12-24"
+    },
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/VlHt27nCqOuTnuX6bku8QZapzO.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 634649,
+            "original_language": "en",
+            "original_title": "Spider-Man: No Way Home",
+            "overview": "Peter Parker é desmascarado e não consegue mais separar sua vida normal dos grandes riscos de ser um super-herói. Quando ele pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais perigosos, e o forçam a descobrir o que realmente significa ser o Homem-Aranha.",
+            "popularity": 11147.352,
+            "poster_path": "/6vVRYbIjDLMMwZJ2jo6enrdN76U.jpg",
+            "release_date": "2021-12-15",
+            "title": "Homem-Aranha: Sem Volta a Casa",
+            "video": false,
+            "vote_average": 8.8,
+            "vote_count": 836
+        }
+    ],
+    "total_pages": 33,
+    "total_results": 660
+}

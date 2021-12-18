@@ -1,0 +1,84 @@
+{
+    "adult": false,
+    "backdrop_path": "/iovi35nPfjbYTw2gRo7uImWblRU.jpg",
+    "belongs_to_collection": null,
+    "budget": 36000000,
+    "genres": [
+        {
+            "id": 18,
+            "name": "Drama"
+        },
+        {
+            "id": 10749,
+            "name": "Romance"
+        }
+    ],
+    "homepage": "http://collateralbeauty-movie.com/",
+    "id": "345920",
+    "imdb_id": "tt4682786",
+    "original_language": "en",
+    "original_title": "Collateral Beauty",
+    "overview": "Howard entra em depressão após uma tragédia pessoal e passa a escrever cartas para a Morte, o Tempo e o Amor, algo que preocupa seus amigos. Mas o que parece impossível, se torna realidade quando essas três partes do universo decidem responder. Morte, Tempo e Amor vão tentar ensinar o valor da vida para Howard.",
+    "popularity": 29.6,
+    "poster_path": "/l7rwGxhH2ZDaViuxzT0qMPfhfo3.jpg",
+    "production_companies": [
+        {
+            "id": 79,
+            "logo_path": "/tpFpsqbleCzEE2p5EgvUq6ozfCA.png",
+            "name": "Village Roadshow Pictures",
+            "origin_country": "US"
+        },
+        {
+            "id": 1785,
+            "logo_path": "/wT6aIkuQTNuq8XFoDGACK8EyR6w.png",
+            "name": "Likely Story",
+            "origin_country": "US"
+        },
+        {
+            "id": 10039,
+            "logo_path": "/b8w4LldQolMKiLZw4FQJBcXSDGI.png",
+            "name": "Anonymous Content",
+            "origin_country": "US"
+        },
+        {
+            "id": 12,
+            "logo_path": "/iaYpEp3LQmb8AfAtmTvpqd4149c.png",
+            "name": "New Line Cinema",
+            "origin_country": "US"
+        },
+        {
+            "id": 24277,
+            "logo_path": "/mRSBVNNL2lZvJKVGjlxeUQVRc6X.png",
+            "name": "PalmStar Media",
+            "origin_country": "US"
+        },
+        {
+            "id": 907,
+            "logo_path": "/ca5SWI5uvU985f8Kbb4xc8AmVWH.png",
+            "name": "Overbrook Entertainment",
+            "origin_country": "US"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2016-12-06",
+    "revenue": 88528280,
+    "runtime": 97,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Estamos todos conectados.",
+    "title": "Beleza Oculta",
+    "video": false,
+    "vote_average": 7.3,
+    "vote_count": 4721
+}

@@ -1,5 +1,5 @@
 //
-//  DiscoverNetworkSpec.swift
+//  MovieNetworkSpec.swift
 //  ServicesTests
 //
 //  Created by Breno Aquino on 18/12/21.
@@ -13,22 +13,40 @@ import Nimble
 
 @testable import Services
 
-class DiscoverNetworkSpec: QuickSpec {
+class MovieNetworkSpec: QuickSpec {
     
     override func spec() {
         super.spec()
         
-        describe("getting movies by genre") {
-            it("and returning success") { self.gettingMoviesByGenreSuccess() }
-            it("and returning wrong object") { self.gettingMoviesByGenreWrongObject() }
-            it("and returning failure") { self.gettingMoviesByGenreFailure() }
+        describe("getting upcoming movies") {
+            it("and returning success") { self.gettingUpcomingMoviesSuccess() }
+            it("and returning wrong object") { self.gettingUpcomingMoviesWrongObject() }
+            it("and returning failure") { self.gettingUpcomingMoviesFailure() }
         }
+        
+//        describe("getting movie detail") {
+//            it("and returning success") { self.gettingMovieDetailSuccess() }
+//            it("and returning wrong object") { self.gettingMovieDetailWrongObject() }
+//            it("and returning failure") { self.gettingMovieDetailFailure() }
+//        }
+//        
+//        describe("getting movie keywords") {
+//            it("and returning success") { self.gettingMovieKeywordsSuccess() }
+//            it("and returning wrong object") { self.gettingMovieKeywordsWrongObject() }
+//            it("and returning failure") { self.gettingMovieKeywordsFailure() }
+//        }
+//        
+//        describe("getting movie recommendations") {
+//            it("and returning success") { self.gettingRecommendationsSuccess() }
+//            it("and returning wrong object") { self.gettingRecommendationsWrongObject() }
+//            it("and returning failure") { self.gettingRecommendationsFailure() }
+//        }
     }
 }
 
-// MARK: - Movies by Genre
-extension DiscoverNetworkSpec {
-    func gettingMoviesByGenreSuccess() {
+// MARK: - Upcoming Movies
+extension MovieNetworkSpec {
+    func gettingUpcomingMoviesSuccess() {
         // Given
         let mock = MockNetwork()
             .mock(api: ReferenceAPIs.Discover.movies, file: .moviesSuccess, code: 200)
@@ -63,7 +81,7 @@ extension DiscoverNetworkSpec {
         })
     }
     
-    func gettingMoviesByGenreWrongObject() {
+    func gettingUpcomingMoviesWrongObject() {
         // Given
         let mock = MockNetwork()
             .mock(api: ReferenceAPIs.Discover.movies, file: .moviesWrongObject, code: 200)
@@ -84,7 +102,7 @@ extension DiscoverNetworkSpec {
         })
     }
     
-    func gettingMoviesByGenreFailure() {
+    func gettingUpcomingMoviesFailure() {
         // Given
         let mock = MockNetwork()
             .mock(api: ReferenceAPIs.Discover.movies, file: .moviesFailure, code: 401)

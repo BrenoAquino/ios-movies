@@ -26,7 +26,7 @@ class GenreNetworkSpec: QuickSpec {
     }
 }
 
-// MARK: Tests
+// MARK: - Genres
 extension GenreNetworkSpec {
     func gettingGenresSuccess() {
         // Given

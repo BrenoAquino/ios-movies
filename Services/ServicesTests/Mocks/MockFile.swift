@@ -14,14 +14,32 @@ enum MockFile: String {
     
     static var bundleId: String = "brenoaquino.ServicesTests"
     
+    // MARK: Movie
+    // Upcoming
+    case upcomingSuccess = "upcoming_success"
+    case upcomingFailure = "upcoming_failure"
+    case upcomingWrongObject = "upcoming_wrong_object"
+    // Detail
+    case detailSuccess = "detail_success"
+    case detailFailure = "detail_failure"
+    case detailWrongObject = "detail_wrong_object"
+    // Keywords
+    case keywordsSuccess = "keywords_success"
+    case keywordsFailure = "keywords_failure"
+    case keywordsWrongObject = "keywords_wrong_object"
+    // Recommendations
+    case recommendationsSuccess = "recommendations_success"
+    case recommendationsFailure = "recommendations_failure"
+    case recommendationsWrongObject = "recommendations_wrong_object"
+    
     // MARK: Genre
-    // Stats
+    // Genres
     case genresSuccess = "genres_success"
     case genresFailure = "genres_failure"
     case genresWrongObject = "genres_wrong_object"
     
     // MARK: Discover
-    // Stats
+    // Movies by Genre
     case moviesSuccess = "movies_success"
     case moviesFailure = "movies_failure"
     case moviesWrongObject = "movies_wrong_object"
