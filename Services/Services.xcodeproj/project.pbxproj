@@ -12,6 +12,8 @@
 		550905FB235AA7A800529736 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550905FA235AA7A800529736 /* Genre.swift */; };
 		550905FD235AAC3000529736 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550905FC235AAC3000529736 /* Movie.swift */; };
 		555A2CBA276D867B000E5D24 /* BusinessFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A2CB9276D867B000E5D24 /* BusinessFactory.swift */; };
+		555A2CD4276D8A3E000E5D24 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555A2CD3276D8A3E000E5D24 /* Common.framework */; };
+		555A2CD5276D8A3E000E5D24 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 555A2CD3276D8A3E000E5D24 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		55C5232923410A6A0038F6CA /* MovieDBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232823410A6A0038F6CA /* MovieDBConfig.swift */; };
 		55C5232B23410A760038F6CA /* ConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5232A23410A760038F6CA /* ConfigProtocol.swift */; };
 		55C7C88324A819A80014A70E /* DetailBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7C88224A819A80014A70E /* DetailBusiness.swift */; };
@@ -38,6 +40,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				550905F4235A8E0600529736 /* (null) in Embed Frameworks */,
+				555A2CD5276D8A3E000E5D24 /* Common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +55,7 @@
 		550905FA235AA7A800529736 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		550905FC235AAC3000529736 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		555A2CB9276D867B000E5D24 /* BusinessFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessFactory.swift; sourceTree = "<group>"; };
+		555A2CD3276D8A3E000E5D24 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C5232823410A6A0038F6CA /* MovieDBConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBConfig.swift; sourceTree = "<group>"; };
 		55C5232A23410A760038F6CA /* ConfigProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigProtocol.swift; sourceTree = "<group>"; };
 		55C7C88224A819A80014A70E /* DetailBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBusiness.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8F52422E9ED968618AB8249 /* Pods_Services.framework in Frameworks */,
+				555A2CD4276D8A3E000E5D24 /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +243,7 @@
 		77861268043ADB48F42110D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				555A2CD3276D8A3E000E5D24 /* Common.framework */,
 				550905F6235A8E1000529736 /* Alamofire.framework */,
 				2A5D4675407C588934C067D1 /* Pods_Services.framework */,
 			);

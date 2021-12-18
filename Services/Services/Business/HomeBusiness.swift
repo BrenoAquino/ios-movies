@@ -7,14 +7,14 @@
 //
 
 import Foundation
+import Common
 
 public class HomeBusiness {
     
-    // MARK: - Vars
-    var genres: [Genre]
-    var movies: [Movie]
-    var matrix: [(genre: Genre, movie: [Movie])]
-    private var error: MoviesError?
+    public struct Carousel {
+        public let genre: Genre
+        public let movies: [Movie]
+    }
     
     // MARK: Network Interfaces
     private let genreNetwork: GenreNetwork
@@ -23,74 +23,75 @@ public class HomeBusiness {
     
     // MARK: - Life Cycle
     init(genreNetwork: GenreNetwork, discoverNetwork: DiscoverNetwork, movieNetwork: MovieNetwork) {
-        genres = []
-        movies = []
-        matrix = []
-        
         self.genreNetwork = genreNetwork
         self.discoverNetwork = discoverNetwork
         self.movieNetwork = movieNetwork
     }
     
     // MARK: - Network Methods
-    private func upcoming(task: DispatchGroup? = nil, callback: ((Result<[Movie], MoviesError>) -> Void)? = nil) {
-        task?.enter()
-        movieNetwork.upcoming { [weak self] result in
-            switch result {
-            case .success(let movies):
-                let upcomingGenre = Genre(id: -1, name: "upcoming")
-                self?.matrix.append((upcomingGenre, movies))
-            case .failure(let error):
-                self?.error = error
-            }
+    private func upcoming(group: DispatchGroup? = nil, callback: ((Result<[Movie], MoviesError>) -> Void)? = nil) {
+        group?.enter()
+        movieNetwork.upcoming { result in
             callback?(result)
-            task?.leave()
+            group?.leave()
         }
     }
     
-    private func genres(task: DispatchGroup? = nil, callback: ((Result<[Genre], MoviesError>) -> Void)? = nil) {
-        task?.enter()
-        genreNetwork.genres { [weak self] result in
-            switch result {
-            case .success(let genres):
-                self?.genres = genres
-            case .failure(let error):
-                self?.error = error
-            }
+    private func genres(group: DispatchGroup? = nil, callback: ((Result<[Genre], MoviesError>) -> Void)? = nil) {
+        group?.enter()
+        genreNetwork.genres { result in
             callback?(result)
-            task?.leave()
+            group?.leave()
         }
     }
     
-    private func movies(task: DispatchGroup? = nil, genre: Genre, callback: ((Result<[Movie], MoviesError>) -> Void)? = nil) {
-        task?.enter()
-        discoverNetwork.movies(genre: genre.id) { [weak self] result in
-            switch result {
-            case .success(let movies):
-                self?.matrix.append((genre, movies))
-            case .failure(let error):
-                self?.error = error
-            }
+    private func movies(group: DispatchGroup? = nil, genre: Int, callback: ((Result<[Movie], MoviesError>) -> Void)? = nil) {
+        group?.enter()
+        discoverNetwork.movies(genre: genre) { result in
             callback?(result)
-            task?.leave()
+            group?.leave()
         }
     }
     
     // MARK: - Interfaces
-    public func home(callback: @escaping (Result<[(Genre, [Movie])], MoviesError>) -> Void) {
-        genres = []
-        movies = []
-        matrix = []
-        error = nil
+    public func home(callback: @escaping (Result<[Carousel], MoviesError>) -> Void) {
+        var carousels: [Carousel] = []
+        var movieError: MoviesError? = nil
+        let group = DispatchGroup()
         
-        let taskGroup = DispatchGroup()
-        upcoming(task: taskGroup)
-        genres(task: taskGroup) { [weak self] _ in self?.genres.forEach { self?.movies(task: taskGroup, genre: $0) } }
-        taskGroup.notify(queue: .global()) {
-            if let error = self.error {
+        upcoming(group: group) { result in
+            switch result {
+            case .success(let movies):
+                let genre = Genre(id: -1, name: "upcoming")
+                let carousel = Carousel(genre: genre, movies: movies)
+                carousels.append(carousel)
+            case .failure(let error):
+                movieError = error
+            }
+        }
+        
+        let carouselGenre: (Genre) -> Void = { [weak self] genre in
+            self?.movies(group: group, genre: genre.id) { result in
+                guard let movies = try? result.get() else { return }
+                let carousel = Carousel(genre: genre, movies: movies)
+                carousels.append(carousel)
+            }
+        }
+        
+        genres(group: group) { result in
+            switch result {
+            case .success(let genres):
+                genres.forEach { carouselGenre($0) }
+            case .failure(let error):
+                movieError = error
+            }
+        }
+        
+        group.notify(queue: .global()) {
+            if let error = movieError {
                 callback(.failure(error))
             } else {
-                callback(.success(self.matrix))
+                callback(.success(carousels))
             }
         }
     }
