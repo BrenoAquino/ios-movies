@@ -24,12 +24,13 @@ public struct HomeView: View {
     // MARK: Carousel
     func carousel(movies: [MovieUI]) -> some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
+            HStack(spacing: 8) {
                 ForEach(movies, id: \.name) { elem in
                     PosterView(movie: elem)
                         .frame(width: 150)
                 }
             }
+            .padding(.horizontal, 8)
         }
     }
 }

@@ -14,25 +14,30 @@ struct PosterView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack {
-                AsyncImageMovieDB(
-                    image: movie.poster,
-                    content: { image in
-                        image
-                            .resizable()
-                            .aspectRatio(CGSize.portrait, contentMode: .fit)
-                            .frame(width: geometry.size.width)
-                    },
-                    placeholder: {
+            AsyncImageMovieDB(
+                image: movie.poster,
+                content: { image in
+                    image
+                        .resizable()
+                        .aspectRatio(CGSize.portrait, contentMode: .fit)
+                        .frame(width: geometry.size.width)
+                },
+                placeholder: {
+                    VStack(spacing: 16) {
                         ProgressView()
-                            .frame(
-                                width: geometry.size.width,
-                                height: geometry.size.width * CGSize.portrait.proportionHW
-                            )
+                        Text(movie.name)
+                            .multilineTextAlignment(.center)
                     }
-                )
-                Text(movie.name)
-            }
+                    .padding(16)
+                    .frame(
+                        width: geometry.size.width,
+                        height: geometry.size.width * CGSize.portrait.proportionHW
+                    )
+                    .background(Color.gray)
+                }
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+            .transition(.opacity.animation(.linear(duration: 0.3)))
         }
     }
 }
