@@ -7,14 +7,14 @@
 
 import Foundation
 
-enum RequestMethod: String {
+public enum RequestMethod: String {
     case get = "GET"
     case post = "POST"
     case delete = "DELETE"
     case put = "PUT"
 }
 
-protocol APIs {
+public protocol APIs {
     var host: HostConfig { get }
     var path: String { get }
     var method: RequestMethod { get }
@@ -54,7 +54,7 @@ extension APIs {
         return allHeaders
     }
     
-    func createRequest() throws -> URLRequest {
+    public func createRequest() throws -> URLRequest {
         guard var components = URLComponents(string: host.baseURL + "/" + path) else {
             throw DataError(type: .invalidURL)
         }

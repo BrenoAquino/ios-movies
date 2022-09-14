@@ -6,15 +6,12 @@
 //
 
 import Foundation
+import Data
 
 struct TMDBConfig: HostConfig {
-    static let shared: TMDBConfig = TMDBConfig()
-    
     private let apiKey: String = "9fb1244aab053cf93fa00223bef8e80f"
     let baseURL: String = "https://api.themoviedb.org/3"
     let environment: Environment = .prd
-    
-    private init() {}
 }
 
 extension TMDBConfig {

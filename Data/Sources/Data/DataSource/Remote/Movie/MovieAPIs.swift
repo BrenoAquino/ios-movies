@@ -22,7 +22,7 @@ extension MovieAPIs: APIs {
     var path: String {
         switch self {
         case .upcoming:
-            return "/movie/upcoming"
+            return "movie/upcoming"
         }
     }
     

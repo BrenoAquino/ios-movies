@@ -8,6 +8,6 @@
 import Foundation
 import Combine
 
-protocol MoviesRemoteDataSource {
+public protocol MoviesRemoteDataSource {
     func upcoming() -> AnyPublisher<[Movie], DataError>
 }

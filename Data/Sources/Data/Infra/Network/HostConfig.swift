@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum Environment {
+public enum Environment {
     case dev
     case prd
 }
 
-protocol HostConfig {
+public protocol HostConfig {
     var baseURL: String { get }
     var environment: Environment { get }
     
@@ -20,7 +20,7 @@ protocol HostConfig {
     var additionalHeaders: [String : String] { get }
 }
 
-extension HostConfig {
+public extension HostConfig {
     var additionalQueryParams: [String : String] { [:] }
     var additionalHeaders: [String : String] { [:] }
 }

@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import Domain
 
-struct DataError: Error {
+public struct DataError: Error {
     
     // MARK: Types
-    enum ErrorType: Int {
+    public enum ErrorType: Int {
         // MARK: Network
         case invalidURL = -21
         case badServerResponse = -1011
@@ -27,11 +28,18 @@ struct DataError: Error {
     private(set) var message: String?
     
     // MARK: Inits
-    init(type: ErrorType, message: String? = nil) {
+    public init(type: ErrorType, message: String? = nil) {
         self.type = type
     }
     
-    init(code: Int, message: String? = nil) {
+    public init(code: Int, message: String? = nil) {
         type = ErrorType(rawValue: code) ?? .unkown
+    }
+}
+
+// MARK: Domain
+extension DataError {
+    func toDomain() -> Domain.DomainError {
+        return Domain.DomainError()
     }
 }

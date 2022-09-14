@@ -7,17 +7,19 @@
 
 import Foundation
 import Combine
+import Data
+import SPMCommon
 
-class URLSessionNetworkProvider {
+public class URLSessionNetworkProvider {
     private let session: URLSession
     
     // MARK: Init
-    init(session: URLSession) {
+    public init(session: URLSession) {
         self.session = session
     }
     
     // MARK: Utils
-    private func execute<Model: Decodable>(_ request: URLRequest) -> AnyPublisher<Model, DataError> {
+    private func execute<Model: Decodable>(_ request: URLRequest, keyPath: String?) -> AnyPublisher<Model, DataError> {
         session
             .dataTaskPublisher(for: request)
             .tryMap { (data: Data, response: URLResponse) -> Data in
@@ -26,7 +28,7 @@ class URLSessionNetworkProvider {
                 }
                 return data
             }
-            .decode(type: Model.self, decoder: JSONDecoder())
+            .decode(type: Model.self, decoder: JSONDecoder(), keyPath: keyPath)
             .mapError { error in
                 switch error {
                 case let error as URLError:
@@ -43,10 +45,10 @@ class URLSessionNetworkProvider {
 
 // MARK: - Implementation
 extension URLSessionNetworkProvider: NetworkProvider {
-    func execute<Model: Decodable>(endpoint: APIs, keyPath: String?) -> AnyPublisher<Model, DataError> {
+    public func execute<Model: Decodable>(endpoint: APIs, keyPath: String?) -> AnyPublisher<Model, DataError> {
         do {
             let request = try endpoint.createRequest()
-            return execute(request)
+            return execute(request, keyPath: keyPath)
         } catch let error {
             switch error {
             case let error as DataError:

@@ -8,6 +8,6 @@
 import Foundation
 import Combine
 
-protocol NetworkProvider {
+public protocol NetworkProvider {
     func execute<Model: Decodable>(endpoint: APIs, keyPath: String?) -> AnyPublisher<Model, DataError>
 }

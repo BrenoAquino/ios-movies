@@ -8,18 +8,18 @@
 import Foundation
 import Combine
 
-class MoviesRemoteDataSourceImpl {
+public class MoviesRemoteDataSourceImpl {
     private let provider: NetworkProvider
     private let hostConfig: HostConfig
     
-    init(provider: NetworkProvider, hostConfig: HostConfig) {
+    public init(provider: NetworkProvider, hostConfig: HostConfig) {
         self.provider = provider
         self.hostConfig = hostConfig
     }
 }
 
 extension MoviesRemoteDataSourceImpl: MoviesRemoteDataSource {
-    func upcoming() -> AnyPublisher<[Movie], DataError> {
+    public func upcoming() -> AnyPublisher<[Movie], DataError> {
         provider.execute(endpoint: MovieAPIs.upcoming(config: hostConfig), keyPath: "results")
     }
 }

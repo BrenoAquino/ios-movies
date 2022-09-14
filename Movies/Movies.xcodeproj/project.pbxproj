@@ -19,6 +19,18 @@
 		5514ACB128D1E58800BAA4C6 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 5514ACAE28D1E58800BAA4C6 /* Data */; };
 		5514ACB228D1E58800BAA4C6 /* Features in Resources */ = {isa = PBXBuildFile; fileRef = 5514ACAF28D1E58800BAA4C6 /* Features */; };
 		5514ACB328D1E58800BAA4C6 /* SPMCommon in Resources */ = {isa = PBXBuildFile; fileRef = 5514ACB028D1E58800BAA4C6 /* SPMCommon */; };
+		5550278728D26066003E2A74 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 5550278628D26066003E2A74 /* Data */; };
+		5550278928D2606A003E2A74 /* Features in Frameworks */ = {isa = PBXBuildFile; productRef = 5550278828D2606A003E2A74 /* Features */; };
+		5550278C28D26241003E2A74 /* RemoteDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550278B28D26241003E2A74 /* RemoteDataSourceFactory.swift */; };
+		5550278E28D26249003E2A74 /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550278D28D26249003E2A74 /* RepositoryFactory.swift */; };
+		5550279028D26251003E2A74 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550278F28D26251003E2A74 /* UseCaseFactory.swift */; };
+		5550279228D26259003E2A74 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550279128D26259003E2A74 /* ViewModelFactory.swift */; };
+		5550279828D26390003E2A74 /* URLSessionNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550279628D26390003E2A74 /* URLSessionNetworkProvider.swift */; };
+		5550279928D26390003E2A74 /* TMDBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550279728D26390003E2A74 /* TMDBConfig.swift */; };
+		5550279C28D26509003E2A74 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550279B28D26509003E2A74 /* HomeCoordinator.swift */; };
+		5550279F28D26539003E2A74 /* HomeCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550279E28D26539003E2A74 /* HomeCoordinatorViewModel.swift */; };
+		555027A128D265FD003E2A74 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555027A028D265FD003E2A74 /* CoordinatorFactory.swift */; };
+		555027A328D26D2B003E2A74 /* SPMCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 555027A228D26D2B003E2A74 /* SPMCommon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +65,15 @@
 		5514ACAE28D1E58800BAA4C6 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = ../Data; sourceTree = "<group>"; };
 		5514ACAF28D1E58800BAA4C6 /* Features */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Features; path = ../Features; sourceTree = "<group>"; };
 		5514ACB028D1E58800BAA4C6 /* SPMCommon */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SPMCommon; path = ../SPMCommon; sourceTree = "<group>"; };
+		5550278B28D26241003E2A74 /* RemoteDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceFactory.swift; sourceTree = "<group>"; };
+		5550278D28D26249003E2A74 /* RepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
+		5550278F28D26251003E2A74 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
+		5550279128D26259003E2A74 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		5550279628D26390003E2A74 /* URLSessionNetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkProvider.swift; sourceTree = "<group>"; };
+		5550279728D26390003E2A74 /* TMDBConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDBConfig.swift; sourceTree = "<group>"; };
+		5550279B28D26509003E2A74 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		5550279E28D26539003E2A74 /* HomeCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorViewModel.swift; sourceTree = "<group>"; };
+		555027A028D265FD003E2A74 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5550278928D2606A003E2A74 /* Features in Frameworks */,
+				5550278728D26066003E2A74 /* Data in Frameworks */,
+				555027A328D26D2B003E2A74 /* SPMCommon in Frameworks */,
 				5514ACAD28D1E50C00BAA4C6 /* Domain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +136,9 @@
 				5514AC7328D1E4A600BAA4C6 /* MoviesApp.swift */,
 				5514AC7528D1E4A600BAA4C6 /* ContentView.swift */,
 				5514AC7728D1E4A700BAA4C6 /* Assets.xcassets */,
+				5550279328D26325003E2A74 /* Config */,
+				5550278A28D26227003E2A74 /* Factories */,
+				5550279A28D264F1003E2A74 /* Coordinators */,
 				5514AC7928D1E4A700BAA4C6 /* Preview Content */,
 			);
 			path = Movies;
@@ -149,6 +176,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5550278A28D26227003E2A74 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				5550278B28D26241003E2A74 /* RemoteDataSourceFactory.swift */,
+				5550278D28D26249003E2A74 /* RepositoryFactory.swift */,
+				5550278F28D26251003E2A74 /* UseCaseFactory.swift */,
+				5550279128D26259003E2A74 /* ViewModelFactory.swift */,
+				555027A028D265FD003E2A74 /* CoordinatorFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		5550279328D26325003E2A74 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				5550279728D26390003E2A74 /* TMDBConfig.swift */,
+				5550279628D26390003E2A74 /* URLSessionNetworkProvider.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		5550279A28D264F1003E2A74 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				5550279D28D2652E003E2A74 /* Home */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5550279D28D2652E003E2A74 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5550279B28D26509003E2A74 /* HomeCoordinator.swift */,
+				5550279E28D26539003E2A74 /* HomeCoordinatorViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +232,9 @@
 			name = Movies;
 			packageProductDependencies = (
 				5514ACAC28D1E50C00BAA4C6 /* Domain */,
+				5550278628D26066003E2A74 /* Data */,
+				5550278828D2606A003E2A74 /* Features */,
+				555027A228D26D2B003E2A74 /* SPMCommon */,
 			);
 			productName = Movies;
 			productReference = 5514AC7028D1E4A600BAA4C6 /* Movies.app */;
@@ -286,8 +354,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5550279928D26390003E2A74 /* TMDBConfig.swift in Sources */,
 				5514AC7628D1E4A600BAA4C6 /* ContentView.swift in Sources */,
+				5550279C28D26509003E2A74 /* HomeCoordinator.swift in Sources */,
 				5514AC7428D1E4A600BAA4C6 /* MoviesApp.swift in Sources */,
+				5550279F28D26539003E2A74 /* HomeCoordinatorViewModel.swift in Sources */,
+				5550278E28D26249003E2A74 /* RepositoryFactory.swift in Sources */,
+				5550279228D26259003E2A74 /* ViewModelFactory.swift in Sources */,
+				5550279028D26251003E2A74 /* UseCaseFactory.swift in Sources */,
+				5550278C28D26241003E2A74 /* RemoteDataSourceFactory.swift in Sources */,
+				555027A128D265FD003E2A74 /* CoordinatorFactory.swift in Sources */,
+				5550279828D26390003E2A74 /* URLSessionNetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +694,18 @@
 		5514ACAC28D1E50C00BAA4C6 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
+		};
+		5550278628D26066003E2A74 /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
+		};
+		5550278828D2606A003E2A74 /* Features */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Features;
+		};
+		555027A228D26D2B003E2A74 /* SPMCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SPMCommon;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

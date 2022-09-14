@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Domain
 
-struct Movie: Decodable {
+public struct Movie: Decodable {
     
     let popularity: Double?
     let voteCount: Int?
@@ -35,5 +36,15 @@ struct Movie: Decodable {
         case genreIDs = "genre_ids"
         case voteAverage = "vote_average"
         case releaseDate = "release_date"
+    }
+}
+
+// MARK: Domain
+extension Movie {
+    func toDomain() -> Domain.Movie {
+        return Domain.Movie(
+            name: title ?? "",
+            poster: poster
+        )
     }
 }
