@@ -12,6 +12,7 @@ enum UseCaseFactory {
     
     static func home() -> HomeUseCase {
         let moviesRepository = RepositoryFactory.movies()
-        return HomeUseCaseImpl(moviesRepository: moviesRepository)
+        let genresRepository = RepositoryFactory.genres()
+        return HomeUseCaseImpl(moviesRepository: moviesRepository, genresRepository: genresRepository)
     }
 }

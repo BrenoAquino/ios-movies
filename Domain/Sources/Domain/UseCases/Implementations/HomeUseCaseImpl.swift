@@ -11,10 +11,12 @@ import Combine
 public class HomeUseCaseImpl {
     
     private let moviesRepository: MoviesRepository
+    private let genresRepository: GenreRepository
     
     // MARK: Inits
-    public init(moviesRepository: MoviesRepository) {
+    public init(moviesRepository: MoviesRepository, genresRepository: GenreRepository) {
         self.moviesRepository = moviesRepository
+        self.genresRepository = genresRepository
     }
 }
 

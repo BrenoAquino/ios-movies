@@ -12,17 +12,28 @@ import Combine
 public class MoviesRepositoryImpl {
     
     private let moviesRemoteDataSource: MoviesRemoteDataSource
+    private let discoverRemoteDataSource: DiscoverRemoteDataSource
     
-    public init(moviesRemoteDataSource: MoviesRemoteDataSource) {
+    public init(moviesRemoteDataSource: MoviesRemoteDataSource,
+                discoverRemoteDataSource: DiscoverRemoteDataSource) {
         self.moviesRemoteDataSource = moviesRemoteDataSource
+        self.discoverRemoteDataSource = discoverRemoteDataSource
     }
 }
 
 // MARK: - Implementation
 extension MoviesRepositoryImpl: Domain.MoviesRepository {
     public func upcoming() -> AnyPublisher<[Domain.Movie], Domain.DomainError> {
-        return moviesRemoteDataSource
+        moviesRemoteDataSource
             .upcoming()
+            .map { $0.map { $0.toDomain() } }
+            .mapError { $0.toDomain() }
+            .eraseToAnyPublisher()
+    }
+    
+    public func movies(genre: Int) -> AnyPublisher<[Domain.Movie], Domain.DomainError> {
+        discoverRemoteDataSource
+            .movies(genre: genre)
             .map { $0.map { $0.toDomain() } }
             .mapError { $0.toDomain() }
             .eraseToAnyPublisher()

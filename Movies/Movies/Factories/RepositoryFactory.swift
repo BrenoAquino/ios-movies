@@ -12,7 +12,13 @@ import Data
 enum RepositoryFactory {
     
     static func movies() -> MoviesRepository {
-        let remoteDateSource = RemoteDataSourceFactory.movies()
-        return MoviesRepositoryImpl(moviesRemoteDataSource: remoteDateSource)
+        let discoverRemoteDataSource = RemoteDataSourceFactory.discover()
+        let moviesRemoteDateSource = RemoteDataSourceFactory.movies()
+        return MoviesRepositoryImpl(moviesRemoteDataSource: moviesRemoteDateSource, discoverRemoteDataSource: discoverRemoteDataSource)
+    }
+    
+    static func genres() -> GenreRepository {
+        let remoteDataSource = RemoteDataSourceFactory.genres()
+        return GenreRepositoryImpl(genreRemoteDataSource: remoteDataSource)
     }
 }

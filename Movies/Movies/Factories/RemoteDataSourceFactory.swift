@@ -16,4 +16,12 @@ enum RemoteDataSourceFactory {
     static func movies() -> MoviesRemoteDataSource {
         MoviesRemoteDataSourceImpl(provider: provider, hostConfig: hostConfig)
     }
+    
+    static func discover() -> DiscoverRemoteDataSource {
+        DiscoverRemoteDataSourceImpl(provider: provider, hostConfig: hostConfig)
+    }
+    
+    static func genres() -> GenreRemoteDataSource {
+        GenreRemoteDataSourceImpl(provider: provider, hostConfig: hostConfig)
+    }
 }
