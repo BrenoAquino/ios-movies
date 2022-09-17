@@ -44,7 +44,9 @@ extension Movie {
     func toDomain() -> Domain.Movie {
         return Domain.Movie(
             name: title ?? "",
-            poster: poster
+            overview: overview ?? "",
+            poster: poster,
+            backposter: backdrop
         )
     }
 }

@@ -11,8 +11,10 @@ import Domain
 
 public extension Domain.Movie {
     static let `default`: Movie = .init(
-        name: "Movie Name",
-        poster: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80")
+        name: "Collateral Beauty",
+        overview: "Howard entra em depressão após uma tragédia pessoal e passa a escrever cartas para a Morte, o Tempo e o Amor, algo que preocupa seus amigos. Mas o que parece impossível, se torna realidade quando essas três partes do universo decidem responder. Morte, Tempo e Amor vão tentar ensinar o valor da vida para Howard.",
+        poster: "/l7rwGxhH2ZDaViuxzT0qMPfhfo3.jpg",
+        backposter: "/iovi35nPfjbYTw2gRo7uImWblRU.jpg"
+    )
 }
-
 #endif

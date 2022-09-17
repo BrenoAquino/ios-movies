@@ -22,4 +22,8 @@ extension MoviesRemoteDataSourceImpl: MoviesRemoteDataSource {
     public func upcoming() -> AnyPublisher<[Movie], DataError> {
         provider.execute(endpoint: MovieAPIs.upcoming(config: hostConfig), keyPath: "results")
     }
+    
+    public func detail(id: Int) -> AnyPublisher<Movie, DataError> {
+        provider.execute(endpoint: MovieAPIs.detail(config: hostConfig, id: id), keyPath: nil)
+    }
 }

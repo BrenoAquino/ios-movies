@@ -10,5 +10,6 @@ import Combine
 
 public protocol MoviesRepository {
     func upcoming() -> AnyPublisher<[Movie], DomainError>
-    func movies(genre: Int) -> AnyPublisher<[Movie], DomainError> 
+    func movies(genre: Int) -> AnyPublisher<[Movie], DomainError>
+    func detail(id: Int) -> AnyPublisher<Domain.Movie, Domain.DomainError>
 }

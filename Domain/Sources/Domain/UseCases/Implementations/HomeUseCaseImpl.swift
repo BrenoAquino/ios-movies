@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-public class HomeUseCaseImpl {
+public final class HomeUseCaseImpl {
     
     private let moviesRepository: MoviesRepository
     private let genresRepository: GenreRepository

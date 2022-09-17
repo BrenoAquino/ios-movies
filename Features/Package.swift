@@ -8,7 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "Features",
-            targets: ["Home"]),
+            targets: ["DesignSystem", "Home", "Detail"]),
     ],
     dependencies: [
         .package(name: "Domain", path: "../Domain"),
@@ -22,6 +22,9 @@ let package = Package(
             dependencies: []),
         .target(
             name: "Home",
+            dependencies: ["Previews", "DesignSystem", "Domain"]),
+        .target(
+            name: "Detail",
             dependencies: ["Previews", "DesignSystem", "Domain"]),
     ]
 )

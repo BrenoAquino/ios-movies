@@ -10,4 +10,5 @@ import Combine
 
 public protocol MoviesRemoteDataSource {
     func upcoming() -> AnyPublisher<[Movie], DataError>
+    func detail(id: Int) -> AnyPublisher<Movie, DataError>
 }

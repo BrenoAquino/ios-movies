@@ -38,4 +38,12 @@ extension MoviesRepositoryImpl: Domain.MoviesRepository {
             .mapError { $0.toDomain() }
             .eraseToAnyPublisher()
     }
+    
+    public func detail(id: Int) -> AnyPublisher<Domain.Movie, Domain.DomainError> {
+        moviesRemoteDataSource
+            .detail(id: id)
+            .map { $0.toDomain() }
+            .mapError { $0.toDomain() }
+            .eraseToAnyPublisher()
+    }
 }
