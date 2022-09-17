@@ -17,12 +17,16 @@ public struct HomeView: View {
     
     // MARK: - View
     public var body: some View {
-        carousel(movies: viewModel.movies)
-            .onAppear(perform: viewModel.fetchData)
+        List {
+            ForEach(viewModel.carousels, id: \.genre.id) { carousel in
+                generateCarousel(movies: carousel.movies)
+            }
+        }
+        .onAppear(perform: viewModel.fetchData)
     }
     
     // MARK: Carousel
-    func carousel(movies: [MovieUI]) -> some View {
+    func generateCarousel(movies: [MovieUI]) -> some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 8) {
                 ForEach(movies, id: \.name) { elem in

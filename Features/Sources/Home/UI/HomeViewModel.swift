@@ -16,7 +16,7 @@ public final class HomeViewModel: ObservableObject {
     private var cancellables: Set<AnyCancellable> = .init()
     
     // MARK: Publisher
-    @Published private(set) var movies: [MovieUI] = []
+    @Published private(set) var carousels: [CarouselUI] = []
     
     // MARK: - Inits
     public init(homeUseCase: Domain.HomeUseCase) {
@@ -33,8 +33,10 @@ extension HomeViewModel {
             .sink { completion in
                 
             } receiveValue: { [weak self] moviesByGenre in
-                guard let upcoming = moviesByGenre[0] else { return }
-                self?.movies = upcoming.map { MovieUI(movie: $0) }
+                for genreMovies in moviesByGenre {
+                    let carousel = CarouselUI(genre: genreMovies.key, movies: genreMovies.value)
+                    self?.carousels.append(carousel)
+                }
             }
             .store(in: &cancellables)
     }

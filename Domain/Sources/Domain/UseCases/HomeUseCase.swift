@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 public protocol HomeUseCase {
-    func moviesByGenre() -> AnyPublisher<[Int : [Movie]], DomainError>
+    func moviesByGenre() -> AnyPublisher<[Genre : [Movie]], DomainError>
 }

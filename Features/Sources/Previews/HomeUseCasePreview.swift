@@ -13,9 +13,12 @@ import Combine
 public class HomeUseCasePreview: Domain.HomeUseCase {
     public init() {}
     
-    public func moviesByGenre() -> AnyPublisher<[Int : [Domain.Movie]], Domain.DomainError> {
-        let data: [Int : [Domain.Movie]] = [
-            0: [.default, .default, .default, .default, .default, .default]
+    public func moviesByGenre() -> AnyPublisher<[Domain.Genre : [Domain.Movie]], Domain.DomainError> {
+        let data: [Domain.Genre : [Domain.Movie]] = [
+            .action: [.default, .default, .default, .default, .default, .default],
+            .commedy: [.default, .default, .default, .default, .default, .default],
+            .drama: [.default, .default, .default, .default, .default, .default],
+            .horror: [.default, .default, .default, .default, .default, .default]
         ]
         return Just(data)
             .setFailureType(to: Domain.DomainError.self)
