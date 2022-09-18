@@ -20,6 +20,6 @@ public class DiscoverRemoteDataSourceImpl {
 
 extension DiscoverRemoteDataSourceImpl: DiscoverRemoteDataSource {
     public func movies(genre: Int) -> AnyPublisher<[Movie], DataError> {
-        provider.execute(endpoint: GenreAPIs.genres(config: hostConfig), keyPath: "results")
+        provider.execute(endpoint: DiscoverAPIs.discoverMovie(config: hostConfig, genre: genre), keyPath: "results")
     }
 }

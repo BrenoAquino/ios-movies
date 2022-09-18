@@ -11,35 +11,50 @@ import Domain
 public struct DataError: Error {
     
     // MARK: Types
-    public enum ErrorType: Int {
+    public enum ErrorType {
         // MARK: Network
-        case invalidURL = -21
-        case badServerResponse = -1011
+        case invalidURL
+        case badServerResponse
         
         // MARK: Decode
-        case invalidKeyPath = -31
+        case invalidKeyPath
         
         // MARK: Unkown
-        case unkown = -11
+        case unkown
     }
     
     // MARK: Variables
     private(set) var type: ErrorType
-    private(set) var message: String?
+    private(set) var message: String
+    private(set) var additionalInfo: String
     
     // MARK: Inits
-    public init(type: ErrorType, message: String? = nil) {
+    private init(type: ErrorType, message: String, additionalInfo: String) {
         self.type = type
+        self.message = message
+        self.additionalInfo = additionalInfo
     }
     
-    public init(code: Int, message: String? = nil) {
-        type = ErrorType(rawValue: code) ?? .unkown
+    public init(type: ErrorType, message: String, url: String?) {
+        let additioalInfo = "URL: \(url ?? "nil")"
+        self.init(type: type, message: message, additionalInfo: additioalInfo)
+    }
+    
+    public init(type: ErrorType, message: String, url: URL?) {
+        let additioalInfo = "URL: \(url?.absoluteString ?? "nil")"
+        self.init(type: type, message: message, additionalInfo: additioalInfo)
+    }
+    
+    public init(type: ErrorType, message: String, endpoint: APIs) {
+        let request = try? endpoint.createRequest()
+        let additionalInfo = "URL: \(request?.url?.absoluteString ?? "nil")"
+        self.init(type: type, message: message, additionalInfo: additionalInfo)
     }
 }
 
 // MARK: Domain
 extension DataError {
     func toDomain() -> Domain.DomainError {
-        return Domain.DomainError()
+        return Domain.DomainError(layer: .data, message: message, additionalInfo: additionalInfo)
     }
 }

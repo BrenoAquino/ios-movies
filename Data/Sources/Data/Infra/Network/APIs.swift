@@ -56,12 +56,12 @@ extension APIs {
     
     public func createRequest() throws -> URLRequest {
         guard var components = URLComponents(string: host.baseURL + "/" + path) else {
-            throw DataError(type: .invalidURL)
+            throw DataError(type: .invalidURL, message: "Invalid url.", url: (host.baseURL + "/" + path))
         }
         
         components.queryItems = generateQueryItems(params: queryParams, additional: host.additionalQueryParams)
         guard let url = components.url else {
-            throw DataError(type: .invalidURL)
+            throw DataError(type: .invalidURL, message: "Invalid query params.", url: (host.baseURL + "/" + path))
         }
         
         var request = URLRequest(url: url)

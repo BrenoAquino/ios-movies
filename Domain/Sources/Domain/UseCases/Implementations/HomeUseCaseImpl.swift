@@ -29,7 +29,6 @@ extension HomeUseCaseImpl: HomeUseCase {
     public func moviesByGenre() -> AnyPublisher<[Genre : [Movie]], DomainError> {
         let upcomingPub = upcomings()
         let moviesByGenrePub = genres()
-        
         return Publishers.Zip(upcomingPub, moviesByGenrePub)
             .map { (upcoming, moviesByGenre) in
                 var allMovies = moviesByGenre

@@ -20,6 +20,6 @@ public class GenreRemoteDataSourceImpl {
 
 extension GenreRemoteDataSourceImpl: GenreRemoteDataSource {
     public func genres() -> AnyPublisher<[Genre], DataError> {
-        provider.execute(endpoint: GenreAPIs.genres(config: hostConfig), keyPath: "results")
+        provider.execute(endpoint: GenreAPIs.genres(config: hostConfig), keyPath: "genres")
     }
 }

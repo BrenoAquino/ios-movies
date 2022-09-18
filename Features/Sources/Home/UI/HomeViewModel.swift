@@ -8,6 +8,7 @@
 import Foundation
 import Domain
 import Combine
+import DesignSystem
 
 public final class HomeViewModel: ObservableObject {
     
@@ -16,6 +17,7 @@ public final class HomeViewModel: ObservableObject {
     private var cancellables: Set<AnyCancellable> = .init()
     
     // MARK: Publisher
+    @Published private(set) var state: ViewState = .loading
     @Published private(set) var carousels: [CarouselUI] = []
     
     // MARK: - Inits
@@ -30,13 +32,19 @@ extension HomeViewModel {
         homeUseCase
             .moviesByGenre()
             .receive(on: DispatchQueue.main)
-            .sink { completion in
-                
+            .sink { [weak self] completion in
+                switch completion {
+                case .finished:
+                    self?.state = .content
+                case .failure:
+                    self?.state = .failure
+                }
             } receiveValue: { [weak self] moviesByGenre in
                 for genreMovies in moviesByGenre {
                     let carousel = CarouselUI(genre: genreMovies.key, movies: genreMovies.value)
                     self?.carousels.append(carousel)
                 }
+                self?.carousels.sort(by: { $0.genre.id < $1.genre.id })
             }
             .store(in: &cancellables)
     }

@@ -23,20 +23,16 @@ struct PosterView: View {
                             .multilineTextAlignment(.center)
                     }
                     .padding(16)
-                    .frame(
-                        width: geometry.size.width,
-                        height: geometry.size.width * CGSize.portrait.proportionHW
-                    )
+                    .frame(width: geometry.size.width, height: geometry.size.height)
                     .background(Color.gray)
                 },
                 content: { image in
                     image
                         .resizable()
                         .aspectRatio(CGSize.portrait, contentMode: .fit)
-                        .frame(width: geometry.size.width)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
                 })
             .clipShape(RoundedRectangle(cornerRadius: 16))
-            .transition(.opacity.animation(.linear(duration: 0.3)))
         }
     }
 }

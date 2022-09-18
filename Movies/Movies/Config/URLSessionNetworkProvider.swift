@@ -31,12 +31,12 @@ public class URLSessionNetworkProvider {
             .decode(type: Model.self, decoder: JSONDecoder(), keyPath: keyPath)
             .mapError { error in
                 switch error {
-                case let error as URLError:
-                    return DataError(code: error.code.rawValue)
+                case _ as URLError:
+                    return DataError(type: .badServerResponse, message: "Unexpected error on request.", url: request.url)
                 case let error as DataError:
                     return error
                 default:
-                    return DataError(type: .unkown)
+                    return DataError(type: .unkown, message: "Unknow error on request.", url: request.url)
                 }
             }
             .eraseToAnyPublisher()
@@ -55,7 +55,8 @@ extension URLSessionNetworkProvider: NetworkProvider {
                 return Fail(error: error)
                     .eraseToAnyPublisher()
             default:
-                return Fail(error: DataError(type: .unkown))
+                let error = DataError(type: .unkown, message: "Unknow error on request.", endpoint: endpoint)
+                return Fail(error: error)
                     .eraseToAnyPublisher()
             }
         }
